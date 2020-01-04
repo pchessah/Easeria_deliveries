@@ -1,24 +1,65 @@
-.App {
+.split {
+  height: 100%;
+  width: 50%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+
+/* Control the left side */
+.left {
+  left: 0;
+  background-color: #ffff;
+}
+
+/* Control the right side */
+.right {
+  right: 0;
+  background-color: #fedd3e;
+}
+
+
+/* If you want the content centered horizontally and vertically */
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   text-align: center;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+/* Style the image inside the centered container, if needed */
+.centered img {
+  width: 85%;
+  border-radius: 5%;
+  height: 40vh;
+  margin-bottom: 15%;
+}
+.signupcentered {
+  position: absolute;
+  top: 47%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
 }
 
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
+.signup input {
+  margin: 10%;
+  width: 300px;
+}
+.signup button {
+  background: white;
+  font-weight: bolder;
+}
+.signup h1 {
+  font-weight: bolder;
   color: white;
 }
-
-.App-intro {
-  font-size: large;
+.signup p {
+ margin-top: 8%;
 }
-
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
-}
+.signup a {
+  color: blue;
+ }

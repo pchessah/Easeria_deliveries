@@ -7,6 +7,7 @@ import Drink from "./components/Drink";
 import Others from "./components/Others";
 import Navbar from "./components/navbar";
 import Food from "./components/Food";
+import SignupCustomer from "./components/signupCustomer";
 import { Switch, BrowserRouter as Router, Route } from "react-router-dom";
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
             <Route path="/food" component={Food} />
             <Route path="/drink" component={Drink} />
             <Route path="/others" component={Others} />
+            <Route path="/signupcustomer" component={SignupCustomer}/>
         </Switch>
       </Router>
     </div>

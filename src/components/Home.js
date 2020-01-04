@@ -48,7 +48,8 @@ const Example = props => {
           src="https://images.pexels.com/photos/95425/pexels-photo-95425.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
           alt="Card image cap"
         />
-        <Button style={{ width: "50%" }}>Sign Up as a Customer</Button>
+        <a href ="/signupcustomer"> <Button style={{ width: "50%" }}>Sign Up as a Customer</Button></a>
+        
       </Card>
       <Card style={{ border: "none" }} align="center">
         <CardBody>
