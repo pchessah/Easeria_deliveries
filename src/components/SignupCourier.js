@@ -1,8 +1,8 @@
-import React from "react";
+import React from 'react'
 
-function SignupCustomer() {
-  return (
-    <div>
+function SignupCourier() {
+    return (
+        <div>
       <div className="split right">
         <div className="signupcentered signup">
           <h1> Sign Up </h1>
@@ -22,7 +22,13 @@ function SignupCustomer() {
             className="form-control"
             type="text"
             name="text"
-            placeholder="Default delivery location..."
+            placeholder="Vehicle Registration..."
+          />
+          <input
+            className="form-control"
+            type="number"
+            name="number"
+            placeholder="Enter ID number..."
           />
           <input
             className="form-control"
@@ -30,19 +36,20 @@ function SignupCustomer() {
             name="number"
             placeholder="Enter phone number..."
           />
-          <a href="/customerlogin"><button className="btn">Sign up</button></a>          
-          <p> Have an account? <a href ="/customerlogin"> Log in</a></p>
+          <a href="/courierlogin"><button className="btn">Sign up</button></a>          
+          <p> Have an account? <a href ="/courierlogin"> Log in</a></p>
         </div>
       </div>
       <div className="split left">
         <div className="centered">
             <h1>Easeria Deliveries</h1>
             <img src ="https://d1yn1kh78jj1rr.cloudfront.net/image/preview/HxBuYgYlWj2s470fo/storyblocks-caucasian-female-delivery-courier-holding-box-on-the-background-of-truck-delivery-courier-carrying-cardboard-box-delivery-courier-with-box-in-hands-vector-flat-design-illustration-vertical-layout_HOKntzn3W_SB_PM.jpg" alt="company logo" />
-            <p>Get access to the best food, drinks and other products from your favorite local establishments at your place of convenience and affordable prices!</p>
+            <p>Get extra income delivering goods from shops and be your own boss in a flexible schedule of earning money!</p>
         </div>
       </div>
     </div>
-  );
+        
+    )
 }
 
-export default SignupCustomer;
+export default SignupCourier

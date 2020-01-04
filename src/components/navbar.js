@@ -10,46 +10,39 @@ function Navbar() {
         </a>
         <ul className="navbar-nav ml-auto">
           <li className="nav-item">
-            {" "}
             <a className="nav-link" href="/">
-              {" "}
               Home
-            </a>{" "}
+            </a>
           </li>
           <li className="nav-item">
-            {" "}
             <a className="nav-link" href="/about">
-              {" "}
-              About Us{" "}
-            </a>{" "}
+              About Us
+            </a>
           </li>
           <li className="nav-item">
-            {" "}
             <a className="nav-link" href="/shop">
-              {" "}
-              Shop{" "}
-            </a>{" "}
+              Shop
+            </a>
           </li>
           <li className="nav-item">
-            {" "}
             <a className="nav-link" href="/food">
-              {" "}
-              Food{" "}
-            </a>{" "}
+              Food
+            </a>
           </li>
           <li className="nav-item">
-            {" "}
             <a className="nav-link" href="/drink">
-              {" "}
-              Drink{" "}
-            </a>{" "}
+              Drink
+            </a>
           </li>
           <li className="nav-item">
-            {" "}
             <a className="nav-link" href="/others">
-              {" "}
               Others
-            </a>{" "}
+            </a>
+          </li>
+          <li className="nav-item">
+            <a className="nav-link" href="/customerlogin">
+              Log In
+            </a>
           </li>
         </ul>
       </div>

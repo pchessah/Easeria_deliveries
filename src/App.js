@@ -8,6 +8,11 @@ import Others from "./components/Others";
 import Navbar from "./components/navbar";
 import Food from "./components/Food";
 import SignupCustomer from "./components/signupCustomer";
+import LoginCustomer from "./components/LoginCustomer"
+import SignupShopOwner from './components/SignupShopOwner';
+import LoginShopOwner from './components/LoginShopOwner';
+import SignupCourier from './components/SignupCourier';
+import LoginCourier from './LoginCourier';
 import { Switch, BrowserRouter as Router, Route } from "react-router-dom";
 
 function App() {
@@ -23,6 +28,11 @@ function App() {
             <Route path="/drink" component={Drink} />
             <Route path="/others" component={Others} />
             <Route path="/signupcustomer" component={SignupCustomer}/>
+            <Route path="/customerlogin" component={LoginCustomer} />
+            <Route path="/signupshopowner" component={SignupShopOwner}/>
+            <Route path="/shopownerlogin" component={LoginShopOwner}/>
+            <Route path="/signupcourier" component={SignupCourier}/>
+            <Route path="/courierlogin" component={LoginCourier}/>
         </Switch>
       </Router>
     </div>

@@ -29,7 +29,7 @@ const Example = props => {
           src="https://images.pexels.com/photos/1036857/pexels-photo-1036857.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
           alt="Card image cap"
         />
-        <Button style={{ width: "50%" }}>Become a Shop Owner</Button>
+        <a href="/signupshopowner"><Button style={{ width: "50%" }}>Become a Shop Owner</Button></a>        
       </Card>
       <Card style={{ border: "none" }} align="center">
         <CardBody>
@@ -48,8 +48,7 @@ const Example = props => {
           src="https://images.pexels.com/photos/95425/pexels-photo-95425.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
           alt="Card image cap"
         />
-        <a href ="/signupcustomer"> <Button style={{ width: "50%" }}>Sign Up as a Customer</Button></a>
-        
+        <a href ="/signupcustomer"> <Button style={{ width: "50%" }}>Sign Up as a Customer</Button></a>        
       </Card>
       <Card style={{ border: "none" }} align="center">
         <CardBody>
@@ -67,7 +66,7 @@ const Example = props => {
           src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_4sMtXmY3WThMaSgZa0PqNLgu7cuYSWjiBKlSQnvCkkRLlxMmXQ&s"
           alt="Card image cap"
         />
-        <Button style={{ width: "50%" }}>Be a Courier</Button>
+        <a href ="/signupcourier"><Button style={{ width: "50%" }}>Be a Courier</Button></a>        
       </Card>
     </CardDeck>
   );
