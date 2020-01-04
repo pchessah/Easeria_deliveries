@@ -1,0 +1,22 @@
+@import url("https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css");
+
+.bg-yellow{
+    background: #fedd3e;
+}
+
+.nav-link{
+    color: black !important;
+    font-family: "Comic Sans MS", "Comic Sans", cursive;
+}
+
+.content-homepage{
+    color: black !important;
+    font-family: "Comic Sans MS", "Comic Sans", cursive;
+    padding-top: 04%;
+    padding-bottom: 04%;
+}
+
+.navbar-brand{
+    color: white !important;
+    font-family: "Comic Sans MS", "Comic Sans", cursive;
+}
