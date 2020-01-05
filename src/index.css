@@ -6,20 +6,20 @@
 
 .nav-link{
     color: black !important;
-    font-family: "Comic Sans MS", "Comic Sans", cursive;
+    font-family: 'Corben', cursive ;
 }
 
 .content-homepage{
     color: black !important;
-    font-family: "Comic Sans MS", "Comic Sans", cursive;
+    font-family: ;
     padding-top: 04%;
     padding-bottom: 04%;
 }
 
 .navbar-brand{
     color: white !important;
-    font-family: "Comic Sans MS", "Comic Sans", cursive;
+    font-family: 'Corben', cursive;
 }
 .navbar a{
-    font-family: 'Open Sans', sans-serif !important;
+    font-family: 'Corben', cursive !important;
 }
