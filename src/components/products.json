@@ -1,63 +1,63 @@
 [
   {
     "name": "Chapati",
-    "image": "",
+    "image": "https://f0.pngfuel.com/png/563/231/pile-of-pancake-with-parmesan-png-clip-art-thumbnail.png",
     "description": "Hot Chapo",
     "category": "Food",
     "price": "20"
   },
   {
     "name": "Chicken",
-    "image": "",
+    "image": "https://images.wallpaperscraft.com/image/chicken_fried_tasty_meat_86937_320x240.jpg",
     "description": "roast chicken",
     "category": "Food",
     "price": "550"
   },
   {
     "name": "Fish",
-    "image": "",
+    "image": "https://p7.hiclipart.com/preview/225/840/973/casa-jimenez-mexican-grill-fish-fry-fried-fish-riverside-pescado-frito-fish-thumbnail.jpg",
     "description": "fried",
     "category": "Food",
     "price": "250"
   },
   {
     "name": "soda",
-    "image": "",
+    "image": "http://supermarket.co.ug/934-home_default/coca-cola-glass-soda-delivey.jpg",
     "description": "300 ml",
     "category": "drink",
     "price": "20"
   },
   {
     "name": "yogurt",
-    "image": "",
+    "image": "https://p7.hiclipart.com/preview/707/16/899/parfait-chocolate-chip-cookie-chick-fil-a-yoghurt-food-fruit-pizza-thumbnail.jpg",
     "description": "350ml",
     "category": "drink",
     "price": "95"
   },
   {
     "name": "drinking water",
-    "image": "",
+    "image": "https://images.wallpaperscraft.com/image/bottle_water_drops_117460_320x240.jpg",
     "description": "500 ml",
     "category": "drink",
     "price": "55"
   },
   {
     "name": "barsoap",
-    "image": "",
+    "image": "https://f1.pngfuel.com/png/479/655/600/indian-food-soap-neem-oil-glycerol-skin-jojoba-oil-sandalwood-indian-sandalwood-png-clip-art-thumbnail.png",
     "description": "washing soap",
     "category": "others",
     "price": "55"
   },
   {
     "name": "toilet paper",
-    "image": "",
+    "image": "https://f0.pngfuel.com/png/320/128/four-white-tissue-rolls-png-clip-art-thumbnail.png",
     "description": "toileteries",
     "category": "others",
     "price": "30"
   },
   {
     "name": "T-shirt",
-    "image": "",
+    "image": "https://p7.hiclipart.com/preview/34/333/224/t-shirt-computer-icons-hoodie-casul-tshirt-thumbnail.jpg",
     "description": "men's small",
     "category": "others",
     "price": "55"

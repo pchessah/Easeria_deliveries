@@ -1,10 +1,11 @@
 import React from 'react'
+import Products from './products'
 
 function Others() {
     return (
-       <div >
-           THis is the others component
-       </div> 
+        <div>
+            <Products kind="others"/>
+        </div>
     )
 }
 

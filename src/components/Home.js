@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState, useEffect} from "react";
 import {
   Card,
   Button,
@@ -36,6 +36,7 @@ const items = [
   }
 ];
 const Example = props => {
+ 
   return (
     <div>
       <UncontrolledCarousel className="homeCarousel" style={{height:"40vh"}} items={items}/>

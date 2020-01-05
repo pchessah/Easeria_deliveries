@@ -1,10 +1,11 @@
 import React from 'react'
+import Products from './products'
 
 function Drink() {
     return (
         <div>
-            THis is the drinks page
-        </div>
+        <Products kind="drink"/>
+    </div>
     )
 }
 
