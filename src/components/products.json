@@ -1,0 +1,65 @@
+[
+  {
+    "name": "Chapati",
+    "image": "",
+    "description": "Hot Chapo",
+    "category": "Food",
+    "price": "20"
+  },
+  {
+    "name": "Chicken",
+    "image": "",
+    "description": "roast chicken",
+    "category": "Food",
+    "price": "550"
+  },
+  {
+    "name": "Fish",
+    "image": "",
+    "description": "fried",
+    "category": "Food",
+    "price": "250"
+  },
+  {
+    "name": "soda",
+    "image": "",
+    "description": "300 ml",
+    "category": "drink",
+    "price": "20"
+  },
+  {
+    "name": "yogurt",
+    "image": "",
+    "description": "350ml",
+    "category": "drink",
+    "price": "95"
+  },
+  {
+    "name": "drinking water",
+    "image": "",
+    "description": "500 ml",
+    "category": "drink",
+    "price": "55"
+  },
+  {
+    "name": "barsoap",
+    "image": "",
+    "description": "washing soap",
+    "category": "others",
+    "price": "55"
+  },
+  {
+    "name": "toilet paper",
+    "image": "",
+    "description": "toileteries",
+    "category": "others",
+    "price": "30"
+  },
+  {
+    "name": "T-shirt",
+    "image": "",
+    "description": "men's small",
+    "category": "others",
+    "price": "55"
+  }
+]

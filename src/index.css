@@ -20,3 +20,6 @@
     color: white !important;
     font-family: "Comic Sans MS", "Comic Sans", cursive;
 }
+.navbar a{
+    font-family: 'Open Sans', sans-serif !important;
+}

@@ -41,7 +41,7 @@ function Navbar() {
           </li>
           <li className="nav-item">
             <a className="nav-link" href="/customerlogin">
-              Log In
+              Log In/Register
             </a>
           </li>
         </ul>

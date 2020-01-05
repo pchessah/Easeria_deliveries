@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Adamina|Corben:700|Open+Sans:800&display=swap');
+
 .split {
   height: 100%;
   width: 50%;
@@ -77,11 +79,24 @@
   -webkit-box-shadow:0 0 20px rgba(0,0,0,0.8);
   -moz-box-shadow:0 0 20px rgba(0,0,0,0.8);
   box-shadow:0 0 20px rgba(0,0,0,0.8);
+  font-family: 'Corben', cursive;
+}
+.categories:hover{
+  text-decoration: none;
 }
 .tint{
-  background-color: rgba(0,0,0,.5) !important;
+  background-color: rgba(0,0,0,.6) !important;
   background-blend-mode: multiply;
 }
 .category_left{
   margin-left: 8.5%;
+}
+
+.categories h3{
+color: white;
+margin-top: 45%;
+font-weight: bolder;
+}
+.homeCarousel{
+  font-family: 'Open Sans', sans-serif;
 }

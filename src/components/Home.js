@@ -38,17 +38,23 @@ const items = [
 const Example = props => {
   return (
     <div>
-      <UncontrolledCarousel style={{height:"40vh"}} items={items}/>
-     <div className="row " >
-       <div className="col-md-3 categories category_left tint" style={{background:"url(https://images.pexels.com/photos/262959/pexels-photo-262959.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500)"}}>
-
+      <UncontrolledCarousel className="homeCarousel" style={{height:"40vh"}} items={items}/>
+     <div className="row">
+       <a href="/food" className="col-md-3 categories category_left tint" style={{background:"url(https://images.pexels.com/photos/262959/pexels-photo-262959.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500)"}}>
+       <div align ="center">
+        <h3>Food</h3>
        </div>
-       <div className="col-md-3 categories tint" style={{background:"url(https://images.pexels.com/photos/605408/pexels-photo-605408.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500)"}}>
-         
+       </a>       
+       <a href="/drink" className="col-md-3 categories tint" style={{background:"url(https://images.pexels.com/photos/605408/pexels-photo-605408.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500)"}}>
+       <div align="center">
+         <h3>Drinks</h3>
          </div>
-         <div className="col-md-3 categories tint"style={{background:"url(https://images.pexels.com/photos/322207/pexels-photo-322207.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500)"}}>
-         
-         </div>
+         </a>        
+        <a href="/others" className="col-md-3 categories tint"style={{background:"url(https://images.pexels.com/photos/322207/pexels-photo-322207.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500)"}}>
+          <div align="center">
+            <h3>Others</h3>
+            </div>
+        </a>               
      </div>
     </div>
   );

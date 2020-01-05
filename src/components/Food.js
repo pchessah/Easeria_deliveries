@@ -1,9 +1,10 @@
 import React from 'react'
+import Products from './products'
 
 function Food() {
     return (
         <div>
-            This is the food Module
+            <Products/>
         </div>
         
     )
