@@ -12,7 +12,7 @@ import LoginCustomer from "./components/LoginCustomer"
 import SignupShopOwner from './components/SignupShopOwner';
 import LoginShopOwner from './components/LoginShopOwner';
 import SignupCourier from './components/SignupCourier';
-import LoginCourier from './LoginCourier';
+import LoginCourier from './components/LoginCourier';
 import { Switch, BrowserRouter as Router, Route } from "react-router-dom";
 
 function App() {

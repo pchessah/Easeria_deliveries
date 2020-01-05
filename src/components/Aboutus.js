@@ -1,46 +1,80 @@
-// import React from 'react'
 
-// function Aboutus() {
-//     return (
-//         <div>
-//             This is the about us page
-//         </div>
-//     )
-// }
 
-// export default Aboutus
-
-import React from 'react';
-import { Jumbotron, Button, CardImg } from 'reactstrap';
-
-const Example = (props) => {
+import React from "react";
+import {
+  Jumbotron,
+  Button,
+  Card,
+  CardImg,
+  CardImgCard,
+  CardTitle,
+  CardText,
+  CardDeck,
+  CardSubtitle,
+  CardBody
+} from "reactstrap";
+const Example = props => {
   return (
-    <div>
-      <Jumbotron>
-        <h3 className="display-3" align="centre">Easeria Deliveries </h3>
+    <div>      
+      <CardDeck>
+      <Card style={{ border: "none" }} align="center">
+        <CardBody>
+          <CardTitle className="content-homepage" style={{ background: "#fedd3e" }}> Shop Owner </CardTitle>
+          <CardSubtitle></CardSubtitle>
+          <CardText>
+            Reach out to new and a wide range of customers while getting
+            increased profits in a larger market.
+          </CardText>
+        </CardBody>
         <CardImg
-          style={{ width: "25%"}}
+          style={{ width: "70%", paddingBottom: "8%" }}
           top
-          width="50%"
-          src="https://images.pexels.com/photos/264771/pexels-photo-264771.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+          width="75%"
+          src="https://images.pexels.com/photos/1036857/pexels-photo-1036857.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
           alt="Card image cap"
         />
-        <p className="lead"> A great platform to order food, drinks and other products</p>
-        <hr className="my-2" />
-        <p>Get access to the best food, drinks and other products from your favorite local establishments at your place of convenience and affordable prices.</p>
-        <p>Easeria Deliveries allows shop owners to reach out to new and a wide range of customers while getting increased profits in a larger market.</p>
-        <p>The platform also allows for couriers to get extra income delivering goods from shops and be your own boss in a flexible schedule of earning money!</p>
-        <p> For more information contact below: </p>
-        <p className="lead">
-          <Button color="primary">contact us</Button>
-        </p>        
-      </Jumbotron>
+        <a href="/signupshopowner"><Button style={{ width: "50%" }}>Become a Shop Owner</Button></a>        
+      </Card>
+      <Card style={{ border: "none" }} align="center">
+        <CardBody>
+          <CardTitle className="content-homepage" style={{ background: "#fedd3e" }}> Customer </CardTitle>
+          <CardSubtitle></CardSubtitle>
+          <CardText>
+            Get access to the best food, drinks and other products from your
+            favorite local establishments at your place of convenience and
+            affordable prices!
+          </CardText>
+        </CardBody>
+        <CardImg
+          style={{ width: "70%", paddingBottom: "8%" }}
+          top
+          width="100%"
+          src="https://images.pexels.com/photos/95425/pexels-photo-95425.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+          alt="Card image cap"
+        />
+        <a href ="/signupcustomer"> <Button style={{ width: "50%" }}>Sign Up as a Customer</Button></a>        
+      </Card>
+      <Card style={{ border: "none" }} align="center">
+        <CardBody>
+          <CardTitle className="content-homepage" style={{ background: "#fedd3e" }}>Courier</CardTitle>
+          <CardSubtitle></CardSubtitle>
+          <CardText>
+            Get extra income delivering goods from shops and be your own boss in
+            a flexible schedule of earning money!
+          </CardText>
+        </CardBody>
+        <CardImg
+          style={{ width: "50%", paddingBottom: "8%" }}
+          top
+          width="100%"
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_4sMtXmY3WThMaSgZa0PqNLgu7cuYSWjiBKlSQnvCkkRLlxMmXQ&s"
+          alt="Card image cap"
+        />
+        <a href ="/signupcourier"><Button style={{ width: "50%" }}>Be a Courier</Button></a>        
+      </Card>
+    </CardDeck>
     </div>
   );
 };
 
 export default Example;
-
-
-
-
