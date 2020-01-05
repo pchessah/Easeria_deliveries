@@ -16,22 +16,22 @@ const items = [
   {
     src: 'https://images.pexels.com/photos/616404/pexels-photo-616404.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
     altText: 'Slide 1',
-    caption: 'Slide 1',
-    header: 'Slide 1 Header',
+    caption: 'Get your goods fast!',
+    header: 'Easeria Deliveries',
     key: '1'
   },
   {
     src: 'https://images.pexels.com/photos/2159065/pexels-photo-2159065.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
     altText: 'Slide 2',
-    caption: 'Slide 2',
-    header: 'Slide 2 Header',
+    caption: '',
+    header: 'Affordable prices',
     key: '2'
   },
   {
     src: 'https://images.pexels.com/photos/264636/pexels-photo-264636.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
     altText: 'Slide 3',
-    caption: 'Slide 3',
-    header: 'Slide 3 Header',
+    caption: 'Great customer experience',
+    header: 'Trusted Vendors',
     key: '3'
   }
 ];
