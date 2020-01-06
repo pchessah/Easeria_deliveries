@@ -1,10 +1,26 @@
-import React from 'react'
-import Shop from './Shop'
+import React from "react";
+import {UncontrolledCarousel} from 'reactstrap'
+
+const items1 = [
+  {
+    src:
+      "https://images.pexels.com/photos/2159065/pexels-photo-2159065.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    altText: "",
+    caption: "",
+    header: "",
+    key: "1"
+  }
+];
 
 function ShopHome() {
-    return (
-        <div>
-            <div className="row">
+  return (
+    <div>
+      <UncontrolledCarousel
+        className="homeCarousel"
+        style={{ height: "30vh" }}
+        items={items1}
+      />
+      <div className="row">
         <a
           href="/fooddrinkshop"
           className="col-md-3 categories category_left tint"
@@ -42,8 +58,8 @@ function ShopHome() {
           </div>
         </a>
       </div>
-        </div>        
-    )
+    </div>
+  );
 }
 
-export default ShopHome
+export default ShopHome;

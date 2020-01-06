@@ -1,16 +1,5 @@
-import React, { useState, useEffect } from "react";
-import {
-  Card,
-  Button,
-  CardImg,
-  CardTitle,
-  CardText,
-  CardDeck,
-  CardSubtitle,
-  CardBody,
-  UncontrolledCarousel,
-  CardImgOverlay
-} from "reactstrap";
+import React from "react";
+import { UncontrolledCarousel } from "reactstrap";
 
 const items = [
   {
