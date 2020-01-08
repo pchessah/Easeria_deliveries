@@ -1,8 +1,8 @@
-import React from 'react'
+import React from 'react';
 
 function LoginShopOwner() {
-    return (
-        <div>
+  return (
+    <div>
       <div className="split right">
         <div className="signupcentered signup">
           <h1> Log In </h1>
@@ -20,7 +20,10 @@ function LoginShopOwner() {
           />
 
           <button className="btn">Log In</button>
-          <p> Don't have an account? <a href="/signupshopowner">Create Account</a>
+          <p>
+            {' '}
+Don't have an account?
+            <a href="/signupshopowner">Create Account</a>
           </p>
         </div>
       </div>
@@ -37,8 +40,8 @@ function LoginShopOwner() {
         </div>
       </div>
     </div>
-        
-    )
+
+  );
 }
 
-export default LoginShopOwner
+export default LoginShopOwner;

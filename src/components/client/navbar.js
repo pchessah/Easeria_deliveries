@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 
 
 function Navbar() {
@@ -20,7 +20,7 @@ function Navbar() {
             </a>
           </li>
           <li className="nav-item">
-            <a className="nav-link" href="/shop">
+            <a className="nav-link" href="/shophome">
               Shop
             </a>
           </li>
@@ -40,7 +40,7 @@ function Navbar() {
             </a>
           </li>
           <li className="nav-item">
-            <a className="nav-link" href="/customerlogin">
+            <a className="nav-link" href="/login">
               Log In/Register
             </a>
           </li>

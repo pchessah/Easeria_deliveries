@@ -1,12 +1,12 @@
-import React from 'react'
-import Products from './products'
+import React from 'react';
+import Products from './products';
 
 function Drink() {
-    return (
-        <div>
-        <Products kind="drink"/>
+  return (
+    <div>
+      <Products kind="drink" />
     </div>
-    )
+  );
 }
 
-export default Drink
+export default Drink;

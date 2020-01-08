@@ -1,15 +1,15 @@
-import React from "react";
-import {UncontrolledCarousel} from 'reactstrap'
+import React from 'react';
+import { UncontrolledCarousel } from 'reactstrap';
 
 const items1 = [
   {
     src:
-      "https://images.pexels.com/photos/2159065/pexels-photo-2159065.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
-    altText: "",
-    caption: "",
-    header: "",
-    key: "1"
-  }
+      'https://images.pexels.com/photos/2159065/pexels-photo-2159065.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
+    altText: '',
+    caption: '',
+    header: '',
+    key: '1',
+  },
 ];
 
 function ShopHome() {
@@ -17,7 +17,7 @@ function ShopHome() {
     <div>
       <UncontrolledCarousel
         className="homeCarousel"
-        style={{ height: "30vh" }}
+        style={{ height: '30vh' }}
         items={items1}
       />
       <div className="row">
@@ -26,7 +26,7 @@ function ShopHome() {
           className="col-md-3 categories category_left tint"
           style={{
             background:
-              "url(https://images.pexels.com/photos/262959/pexels-photo-262959.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500)"
+              'url(https://images.pexels.com/photos/262959/pexels-photo-262959.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500)',
           }}
         >
           <div align="center">
@@ -38,7 +38,7 @@ function ShopHome() {
           className="col-md-3 categories tint"
           style={{
             background:
-              "url(https://images.pexels.com/photos/605408/pexels-photo-605408.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500)"
+              'url(https://images.pexels.com/photos/605408/pexels-photo-605408.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500)',
           }}
         >
           <div align="center">
@@ -50,7 +50,7 @@ function ShopHome() {
           className="col-md-3 categories tint"
           style={{
             background:
-              "url(https://images.pexels.com/photos/322207/pexels-photo-322207.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500)"
+              'url(https://images.pexels.com/photos/322207/pexels-photo-322207.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500)',
           }}
         >
           <div align="center">

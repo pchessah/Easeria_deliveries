@@ -1,17 +1,14 @@
-import React,{useState, useEffect} from "react";
+import React, { useState, useEffect } from 'react';
 import Products from './products';
 
 
 function Food() {
+  return (
+    <div>
+      <Products kind="Food" />
+    </div>
 
-  
-
-    return (
-        <div>
-            <Products kind="Food"/>
-        </div>
-        
-    )
+  );
 }
 
-export default Food
+export default Food;

@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 
 function LoginCustomer() {
   return (
@@ -20,7 +20,10 @@ function LoginCustomer() {
           />
 
           <button className="btn">Log In</button>
-          <p> Don't have an account? <a href="/signupcustomer">Create Account</a>
+          <p>
+            {' '}
+Don't have an account?
+            <a href="/signupcustomer">Create Account</a>
           </p>
         </div>
       </div>

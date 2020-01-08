@@ -1,11 +1,9 @@
-import React from 'react'
+import React from 'react';
 
-const ShopOwnerDashboard = () => {
-    return (
-        <div>
-            <h1> Dashboard </h1>
-        </div>
-    )
-}
+const ShopOwnerDashboard = () => (
+  <div>
+    <h1> Dashboard </h1>
+  </div>
+);
 
 export default ShopOwnerDashboard;

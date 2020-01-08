@@ -1,6 +1,17 @@
-import React from "react";
+import React, { useState } from "react";
 
 function LoginCourier() {
+  const [logins, setLogins] = useState(null);
+
+  const handleChange = e => {
+    const { name, value } = e.target;
+    setLogins({ ...logins, [name]: value });
+  };
+
+  function handleSubmit(data) {
+    localStorage.setItem("roles", JSON.stringify(["admin"]));
+    history.push("/app");
+  }
   return (
     <div>
       <div className="split right">
@@ -11,16 +22,23 @@ function LoginCourier() {
             type="email"
             name="email"
             placeholder="Enter Email..."
+            onChange={handleChange}
           />
           <input
             className="form-control"
             type="password"
             name="password"
             placeholder="Enter password..."
+            onChange={handleChange}
           />
 
-          <button className="btn">Log In</button>
-          <p>Don't have an account? <a href="/signupcourier">Create Account</a></p>
+          <button onClick={handleSubmit} type="submit" className="btn">
+            Log In
+          </button>
+          <p>
+            Don't have an account?
+            <a href="/signupcourier">Create Account</a>
+          </p>
         </div>
       </div>
       <div className="split left">
