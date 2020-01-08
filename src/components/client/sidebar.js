@@ -10,28 +10,28 @@ import { Link } from 'react-router-dom';
 
 const mainListItems = (
   <div className="sideText">
-    <Link to='/app/dashboard'>
+    <Link to='/app/addProduct'>
       <ListItem button>
         <ListItemIcon>
           <BarChartIcon style={{color: "#ffff"}}/>
         </ListItemIcon>
-        <ListItemText primary='Dashboard' />
+        <ListItemText primary='Add product' />
       </ListItem>
     </Link>
-    <Link to='/app/sacco'>
+    <Link to='/app/editProduct'>
       <ListItem button>
         <ListItemIcon>
           <PeopleIcon style={{color: "#ffff"}}/>
         </ListItemIcon>
-        <ListItemText primary='Sacco' />
+        <ListItemText primary='Edit product' />
       </ListItem>
     </Link>
-    <Link to='/app/riders'>
+    <Link to='/app/'>
       <ListItem button>
         <ListItemIcon>
           <Person style={{color: "#ffff"}}/>
         </ListItemIcon >
-        <ListItemText primary='Riders' />
+        <ListItemText primary='Delete product' />
       </ListItem>
     </Link>
     <Link to='/app/sms'>
@@ -39,7 +39,23 @@ const mainListItems = (
         <ListItemIcon>
           <MailIcon style={{color: "#ffff"}} />
         </ListItemIcon >
-        <ListItemText primary='Messages' />
+        <ListItemText primary='Contact customer' />
+      </ListItem>
+    </Link>
+    <Link to='/app/sms'>
+      <ListItem button>
+        <ListItemIcon>
+          <MailIcon style={{color: "#ffff"}} />
+        </ListItemIcon >
+        <ListItemText primary='Contact Admin' />
+      </ListItem>
+    </Link>
+    <Link to='/app/sms'>
+      <ListItem button>
+        <ListItemIcon>
+          <MailIcon style={{color: "#ffff"}} />
+        </ListItemIcon >
+        <ListItemText primary='Contact Courier' />
       </ListItem>
     </Link>
   </div>
