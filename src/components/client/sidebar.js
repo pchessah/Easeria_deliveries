@@ -34,7 +34,7 @@ const mainListItems = (
         <ListItemText primary='Delete product' />
       </ListItem>
     </Link>
-    <Link to='/app/sms'>
+    <Link to='/app/contact'>
       <ListItem button>
         <ListItemIcon>
           <MailIcon style={{color: "#ffff"}} />
@@ -42,7 +42,7 @@ const mainListItems = (
         <ListItemText primary='Contact customer' />
       </ListItem>
     </Link>
-    <Link to='/app/sms'>
+    <Link to='/app/contact'>
       <ListItem button>
         <ListItemIcon>
           <MailIcon style={{color: "#ffff"}} />
@@ -50,7 +50,7 @@ const mainListItems = (
         <ListItemText primary='Contact Admin' />
       </ListItem>
     </Link>
-    <Link to='/app/sms'>
+    <Link to='/app/contact'>
       <ListItem button>
         <ListItemIcon>
           <MailIcon style={{color: "#ffff"}} />

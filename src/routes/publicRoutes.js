@@ -13,6 +13,7 @@ import Others from '../components/client/Others';
 import FoodShop from '../components/client/FoodShop';
 import OtherShops from '../components/client/OtherShops';
 import { loginCourier } from '.';
+import Contact from '../components/client/Contact';
 // import NotFound from '../components/NotFound';
 
 // const Register = () => (
@@ -46,6 +47,7 @@ const PublicRoutes = ({ match }) => (
       <Route exact path="/othershop" component={OtherShops}/>
       <Route exact path="/login" component={loginCourier}/>
       <Route exact path="/" component={Home} />
+      <Route exact path="/contact" component={Contact} />
       {/* <Route component={NotFound} /> */}
     </Switch>
   </div>
