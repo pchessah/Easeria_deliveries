@@ -17,8 +17,8 @@ const components = {
     url: '/signupshopowner',
     module: 1,
   },
-  loginShopowner: {
-    component: 'loginShopowner',
+  loginShopOwner: {
+    component: 'loginShopOwner',
     url: '/loginshopowner',
     module: 1,
   },
@@ -42,6 +42,11 @@ const components = {
     url: '/admin',
     module:1,
   },
+  signUpCourier:{
+    component:'signUpCourier',
+    url: 'signUpCourier',
+    module: 1
+  }
 };
 
 // modules for grouping.

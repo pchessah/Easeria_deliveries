@@ -1,4 +1,4 @@
-import history from "../../util/history";
+import history from "../../../util/history";
 import React, { useState} from "react";
 import { Link } from "react-router-dom";
 import clsx from "clsx";
@@ -14,8 +14,11 @@ import ChevronLeftIcon from "@material-ui/icons/ChevronLeft";
 import NotificationsIcon from "@material-ui/icons/Notifications";
 import InputBase from "@material-ui/core/InputBase";
 import SearchIcon from "@material-ui/icons/Search";
-import mainListItems from "../client/sidebar";
+// import mainListItems from "../client/sidebar";
 import Avatar from "@material-ui/icons/Person";
+import ListItem from '@material-ui/core/ListItem';
+
+import ListItemText from '@material-ui/core/ListItemText'
 import { fade, makeStyles } from "@material-ui/core/styles";
 import {
   UncontrolledDropdown,
@@ -147,7 +150,7 @@ const useStyles = makeStyles(theme => ({
   }
 }));
 
-const Header = () => {
+const Header = ({sideLinks}) => {
   // const [isOpen, setIsOpen] = useState(false);
 
   // const toggle = () => setIsOpen(!isOpen);
@@ -216,7 +219,24 @@ const Header = () => {
           </IconButton>
         </div>
         <Divider />
-        <List className="sideText">{mainListItems}</List>
+        <List className="sideText">
+          
+          {sideLinks && sideLinks.map((item, i)=>{
+            const {name, link} = item
+          return (
+            <div className="sideText">
+            <Link to={link}>
+              <ListItem button>
+           
+                <ListItemText primary={name}/>
+              </ListItem>
+            </Link>
+           
+          </div>
+          )
+          })
+          
+          }</List>
       </Drawer>
     </div>
   );

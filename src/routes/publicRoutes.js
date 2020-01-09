@@ -1,19 +1,16 @@
 import React from 'react';
-import {
-  Link, Route, Switch, Redirect,
-} from 'react-router-dom';
-import Login from '../components/client/LoginCourier';
-import Home from '../components/client/Home';
-import Aboutus from '../components/client/Aboutus'
-import Navbar from '../components/client/navbar';
-import ShopHome from '../components/client/ShopHome';
-import Drink from '../components/client/Drink';
-import Food from '../components/client/Food';
-import Others from '../components/client/Others';
-import FoodShop from '../components/client/FoodShop';
-import OtherShops from '../components/client/OtherShops';
+import { Route, Switch } from 'react-router-dom';
 import { loginCourier } from '.';
-import Contact from '../components/client/Contact';
+import Aboutus from '../components/client/Aboutus';
+import Drink from '../components/client/products/Drink';
+import Food from '../components/client/products/Food';
+import FoodShop from '../components/client/products/Drink';
+import Home from '../components/client/Home';
+import Login from '../components/client/courier/LoginCourier';
+import Navbar from '../components/client/navbar';
+import Others from '../components/client/products/Others';
+import OtherShops from '../components/client/products/OtherShops';
+import ShopHome from '../components/client/products/ShopHome';
 // import NotFound from '../components/NotFound';
 
 // const Register = () => (
@@ -47,7 +44,6 @@ const PublicRoutes = ({ match }) => (
       <Route exact path="/othershop" component={OtherShops}/>
       <Route exact path="/login" component={loginCourier}/>
       <Route exact path="/" component={Home} />
-      <Route exact path="/contact" component={Contact} />
       {/* <Route component={NotFound} /> */}
     </Switch>
   </div>
