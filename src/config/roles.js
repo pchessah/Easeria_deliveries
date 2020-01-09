@@ -44,7 +44,7 @@ const components = {
   },
   signUpCourier:{
     component:'signUpCourier',
-    url: 'signUpCourier',
+    url: '/signUpCourier',
     module: 1
   }
 };

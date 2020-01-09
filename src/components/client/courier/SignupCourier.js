@@ -1,6 +1,27 @@
-import React from 'react';
+import React , {useState} from 'react';
+import axios from 'axios';
+
+
 
 function SignupCourier() {
+  const [inputs, setInputs]=useState(null);
+  const[response, setResponse]=useState(null)
+
+
+  function handleChange(e) {
+    e.preventDefault()
+    const {name, value} = e.target
+    setInputs({...inputs,[name]: value})
+  }
+  function handleSubmit(){
+    axios.post("/courier/register", inputs)
+    .then(res=>{
+      setResponse(res.data)
+
+    })
+    .catch(err=>console.log(err))
+  }
+
   return (
     <div>
       <div className="split right">
@@ -10,36 +31,42 @@ function SignupCourier() {
             className="form-control"
             type="email"
             name="email"
+            onChange={handleChange}
             placeholder="Enter Email..."
           />
           <input
             className="form-control"
             type="password"
             name="password"
+            onChange={handleChange}
             placeholder="Enter password..."
           />
           <input
             className="form-control"
             type="password"
-            name="password"
+            name="password2"
+            onChange={handleChange}
             placeholder="Confirm password..."
           />
           <input
             className="form-control"
             type="text"
-            name="text"
+            name="vehicleReg"
+            onChange={handleChange}
             placeholder="Vehicle Registration..."
           />
           <input
             className="form-control"
             type="number"
             name="number"
+            onChange={handleChange}
             placeholder="Enter ID number..."
           />
           <input
             className="form-control"
             type="number"
             name="number"
+            onChange={handleChange}
             placeholder="Enter phone number..."
           />
           <a href="/courierlogin"><button className="btn">Sign up</button></a>
