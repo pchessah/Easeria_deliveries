@@ -21,7 +21,7 @@ function SignupCourier() {
     })
     .catch(err=>console.log(err))
   }
-
+console.log(response)
   return (
     <div>
       <div className="split right">
@@ -58,18 +58,18 @@ function SignupCourier() {
           <input
             className="form-control"
             type="number"
-            name="number"
+            name="ID"
             onChange={handleChange}
             placeholder="Enter ID number..."
           />
           <input
             className="form-control"
             type="number"
-            name="number"
+            name="phone"
             onChange={handleChange}
             placeholder="Enter phone number..."
           />
-          <a href="/courierlogin"><button className="btn">Sign up</button></a>
+          <button className="btn" onClick={handleSubmit}>Sign up</button>
           <p>
             {' '}
 Have an account?
