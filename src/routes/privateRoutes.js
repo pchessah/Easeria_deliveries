@@ -35,6 +35,7 @@ const PrivateRoutes = props => {
     { name: "Contact Customer", link: "/app/contactCustomer" },
     { name: "Contact Courier", link: "/app/contactCourier" }
   ];
+  const customer = []
   const classes = useStyles();
   useEffect(() => {
     let roles = JSON.parse(localStorage.getItem("roles"));

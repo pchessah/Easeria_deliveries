@@ -11,6 +11,14 @@ import Navbar from '../components/client/navbar';
 import Others from '../components/client/products/Others';
 import OtherShops from '../components/client/products/OtherShops';
 import ShopHome from '../components/client/products/ShopHome';
+import AddressForm from '../components/client/customer/checkout/AddressForm';
+import Checkout from '../components/client/customer/checkout/Checkout';
+import PaymentForm from '../components/client/customer/checkout/PaymentForm';
+import Review from '../components/client/customer/checkout/Review';
+import Payment from '../components/client/customer/checkout/Payment';
+import SignupCourier from '../components/client/courier/SignupCourier';
+import SignupShopOwner from '../components/client/shopOwner/SignupShopOwner';
+import SignupCustomer from '../components/client/customer/signupCustomer';
 // import NotFound from '../components/NotFound';
 
 // const Register = () => (
@@ -44,6 +52,15 @@ const PublicRoutes = ({ match }) => (
       <Route exact path="/othershop" component={OtherShops}/>
       <Route exact path="/login" component={loginCourier}/>
       <Route exact path="/" component={Home} />
+      <Route path='/address' component={AddressForm}/>
+      <Route path='/checkout' component={Checkout}/>
+      <Route path='/paymentform' component={PaymentForm}/>
+      <Route path='/review' component={Review}/>
+      <Route path='/payment' component={Payment}/>
+      <Route exact path='/signupcourier' component={SignupCourier}/>
+      <Route exact path='/signupshopowner' component={SignupShopOwner}/>
+      <Route exact path='/signupcustomer' component={SignupCustomer}/>
+      
       {/* <Route component={NotFound} /> */}
     </Switch>
   </div>

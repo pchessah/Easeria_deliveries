@@ -1,32 +1,36 @@
-import React , {useState} from 'react';
-import axios from 'axios';
-
-
+import React, { useState } from "react";
+import axios from "axios";
 
 function SignupCourier() {
-  const [inputs, setInputs]=useState(null);
-  const[response, setResponse]=useState(null)
-
+  const [inputs, setInputs] = useState(null);
+  const [response, setResponse] = useState(null);
 
   function handleChange(e) {
-    e.preventDefault()
-    const {name, value} = e.target
-    setInputs({...inputs,[name]: value})
+    e.preventDefault();
+    const { name, value } = e.target;
+    setInputs({ ...inputs, [name]: value });
   }
-  function handleSubmit(){
-    axios.post("/courier/register", inputs)
-    .then(res=>{
-      setResponse(res.data)
-
-    })
-    .catch(err=>console.log(err))
+  function handleSubmit() {
+    axios
+      .post("/courier/register", inputs)
+      .then(res => {
+        setResponse(res.data);
+      })
+      .catch(err => console.log(err));
   }
-console.log(response)
+  console.log(response);
   return (
     <div>
       <div className="split right">
         <div className="signupcentered signup">
           <h1> Sign Up </h1>
+          <input
+            className="form-control"
+            type="text"
+            name="name"
+            onChange={handleChange}
+            placeholder="Enter full name..."
+          />
           <input
             className="form-control"
             type="email"
@@ -69,10 +73,11 @@ console.log(response)
             onChange={handleChange}
             placeholder="Enter phone number..."
           />
-          <button className="btn" onClick={handleSubmit}>Sign up</button>
+          <button className="btn" onClick={handleSubmit}>
+            Sign up
+          </button>
           <p>
-            {' '}
-Have an account?
+            Have an account?
             <a href="/courierlogin"> Log in</a>
           </p>
         </div>
@@ -80,12 +85,17 @@ Have an account?
       <div className="split left">
         <div className="centered">
           <h1>Easeria Deliveries</h1>
-          <img src="https://d1yn1kh78jj1rr.cloudfront.net/image/preview/HxBuYgYlWj2s470fo/storyblocks-caucasian-female-delivery-courier-holding-box-on-the-background-of-truck-delivery-courier-carrying-cardboard-box-delivery-courier-with-box-in-hands-vector-flat-design-illustration-vertical-layout_HOKntzn3W_SB_PM.jpg" alt="company logo" />
-          <p>Get extra income delivering goods from shops and be your own boss in a flexible schedule of earning money!</p>
+          <img
+            src="https://d1yn1kh78jj1rr.cloudfront.net/image/preview/HxBuYgYlWj2s470fo/storyblocks-caucasian-female-delivery-courier-holding-box-on-the-background-of-truck-delivery-courier-carrying-cardboard-box-delivery-courier-with-box-in-hands-vector-flat-design-illustration-vertical-layout_HOKntzn3W_SB_PM.jpg"
+            alt="company logo"
+          />
+          <p>
+            Get extra income delivering goods from shops and be your own boss in
+            a flexible schedule of earning money!
+          </p>
         </div>
       </div>
     </div>
-
   );
 }
 
