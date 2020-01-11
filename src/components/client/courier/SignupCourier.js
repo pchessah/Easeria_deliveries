@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import axios from "axios";
 
 function SignupCourier() {
-  const [inputs, setInputs] = useState(null);
+  const [inputs, setInputs] = useState({role:["courier"]});
   const [response, setResponse] = useState(null);
 
   function handleChange(e) {

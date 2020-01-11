@@ -1,6 +1,27 @@
-import React from 'react';
+import React , {useState}from 'react';
+import axios from "axios";
+
 
 function SignupShopOwner() {
+  const [inputs, setInputs] = useState({role:["shopOwner"]});
+  const [response, setResponse] = useState(null);
+
+  function handleChange(e) {
+    e.preventDefault();
+    const { name, value } = e.target;
+    setInputs({ ...inputs, [name]: value });
+  }
+
+  function handleSubmit() {
+    axios
+      .post("/courier/register", inputs)
+      .then(res => {
+        setResponse(res.data);
+      })
+      .catch(err => console.log(err));
+  }
+  console.log(response);
+
   return (
     <div>
       <div className="split right">
@@ -8,44 +29,55 @@ function SignupShopOwner() {
           <h1> Sign Up </h1>
           <input
             className="form-control"
+            type="text"
+            name="name"
+            onChange={handleChange}
+            placeholder="Enter full name..."
+          />
+          <input
+            className="form-control"
             type="email"
             name="email"
+            onChange={handleChange}
             placeholder="Enter Email..."
           />
           <input
             className="form-control"
             type="password"
             name="password"
+            onChange={handleChange}
             placeholder="Enter password..."
           />
           <input
             className="form-control"
             type="password"
-            name="password"
+            name="password2"
+            onChange={handleChange}
             placeholder="Confirm password..."
           />
           <input
             className="form-control"
             type="text"
-            name="text"
+            name="shopName"
+            onChange={handleChange}
             placeholder="Enter Shop Name..."
           />
           <input
             className="form-control"
             type="text"
-            name="text"
+            name="shopLocation"
+            onChange={handleChange}
             placeholder="Enter Shop location..."
           />
           <input
             className="form-control"
             type="number"
-            name="number"
+            name="phone"
+            onChange={handleChange}
             placeholder="Enter phone number..."
           />
-          <a href="/shopownerlogin"><button className="btn">Sign up</button></a>
-          <p>
-            {' '}
-Have an account?
+          <button className="btn" onClick={handleSubmit}>Sign up</button>
+          <p>Have an account?
             <a href="/shopownerlogin"> Log in</a>
           </p>
         </div>
