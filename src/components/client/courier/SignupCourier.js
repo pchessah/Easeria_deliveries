@@ -12,7 +12,7 @@ function SignupCourier() {
   }
   function handleSubmit() {
     axios
-      .post("/courier/register", inputs)
+      .post("/register", inputs)
       .then(res => {
         setResponse(res.data);
       })
@@ -78,7 +78,7 @@ function SignupCourier() {
           </button>
           <p>
             Have an account?
-            <a href="/courierlogin"> Log in</a>
+            <a href="/login"> Log in</a>
           </p>
         </div>
       </div>

@@ -1,6 +1,8 @@
 import React, { useState } from "react";
+import axios from "axios";
+import {Redirect} from 'react-router-dom'
 
-function LoginCourier() {
+function LoginCourier({history}) {
   const [logins, setLogins] = useState(null);
 
   const handleChange = e => {
@@ -8,9 +10,18 @@ function LoginCourier() {
     setLogins({ ...logins, [name]: value });
   };
 
-  function handleSubmit(data) {
-    localStorage.setItem("roles", JSON.stringify(["admin"]));
-    history.push("/app");
+  async function handleSubmit(data) {
+    const sendlogin = await axios.post("/login", logins);
+    // console.log(sendlogin)
+    let role = sendlogin.data.role
+    if(role){
+      localStorage.setItem("roles", JSON.stringify(role));
+
+      history.push("/app");
+    }else{
+      alert(sendlogin.data)
+    }
+   
   }
   return (
     <div>

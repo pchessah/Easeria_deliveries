@@ -7,9 +7,7 @@ import Others from '../components/client/products/Others';
 import Navbar from '../components/client/navbar';
 import Food from '../components/client/products/Food';
 import SignupCustomer from '../components/client/customer/signupCustomer';
-import LoginCustomer from '../components/client/customer/LoginCustomer';
 import SignupShopOwner from '../components/client/shopOwner/SignupShopOwner';
-import LoginShopOwner from '../components/client/shopOwner/LoginShopOwner';
 import SignupCourier from '../components/client/courier/SignupCourier';
 import LoginCourier from '../components/client/courier/LoginCourier';
 import FoodShop from '../components/client/products/FoodShop';
@@ -33,9 +31,7 @@ const others = () => <Others />;
 const navbar = () => <Navbar />;
 const food = () => <Food />;
 const signUpCustomer = () => <SignupCustomer />;
-const loginCustomer = () => <LoginCustomer />;
 const signUpShopOwner = () => <SignupShopOwner />;
-const loginShopOwner = () => <LoginShopOwner />;
 const signUpCourier = () => <SignupCourier />;
 const loginCourier = () => <LoginCourier />;
 const foodShop = () => <FoodShop />;
@@ -62,8 +58,6 @@ export {
   signUpCustomer,
   signUpShopOwner,
   loginCourier,
-  loginCustomer,
-  loginShopOwner,
   foodShop,
   otherShops,
   shopOwnerDashboard,

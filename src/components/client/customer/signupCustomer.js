@@ -14,7 +14,7 @@ function SignupCustomer() {
 
   function handleSubmit() {
     axios
-      .post("/courier/register", inputs)
+      .post("/register", inputs)
       .then(res => {
         setResponse(res.data);
       })
@@ -70,7 +70,7 @@ function SignupCustomer() {
           />
           <button className="btn" onClick={handleSubmit}>Sign up</button>
           <p>Have an account?
-            <a href="/customerlogin"> Log in</a>
+            <a href="/login"> Log in</a>
           </p>
         </div>
       </div>

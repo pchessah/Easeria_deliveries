@@ -14,7 +14,7 @@ function SignupShopOwner() {
 
   function handleSubmit() {
     axios
-      .post("/courier/register", inputs)
+      .post("/register", inputs)
       .then(res => {
         setResponse(res.data);
       })
@@ -78,7 +78,7 @@ function SignupShopOwner() {
           />
           <button className="btn" onClick={handleSubmit}>Sign up</button>
           <p>Have an account?
-            <a href="/shopownerlogin"> Log in</a>
+            <a href="/login"> Log in</a>
           </p>
         </div>
       </div>
