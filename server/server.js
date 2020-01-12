@@ -4,6 +4,7 @@ const morgan = require("morgan");
 const mongoose = require("mongoose");
 const passport = require("passport");
 const session = require("express-session");
+const path = require("path")
 const port = process.env.PORT || 4000;
 
 const app = express();
@@ -18,7 +19,8 @@ mongoose
   .catch(err => console.error(err.stack));
 
 require("./config/passport")(passport);
-
+app.use(express.static("build"))
+app.use(express.static("public"))
 // Express session
 app.use(
   session({
@@ -27,6 +29,10 @@ app.use(
     saveUninitialized: true
   })
 );
+
+app.get("/*", (req,res)=>{
+  res.sendFile(path.join(__dirname, "build", "index.html"))
+})
 
 app.use(passport.initialize());
 app.use(passport.session());
