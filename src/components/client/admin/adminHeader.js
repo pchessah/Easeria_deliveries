@@ -27,7 +27,7 @@ import {
   Media,
   DropdownItem
 } from "reactstrap";
-import Navbar from '../navbar';
+// import Navbar from '../navbar';
 export const drawerWidth = 240;
 const useStyles = makeStyles(theme => ({
   root: {
@@ -169,7 +169,7 @@ const Header = ({sideLinks}) => {
   };
   return (
     <div>
-      <Navbar />
+      {/* <Navbar /> */}
       <AppBar
         position="absolute"
         className={clsx(classes.appBar, open && classes.appBarShift)}
