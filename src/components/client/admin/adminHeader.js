@@ -27,7 +27,7 @@ import {
   Media,
   DropdownItem
 } from "reactstrap";
-
+import Navbar from '../navbar';
 export const drawerWidth = 240;
 const useStyles = makeStyles(theme => ({
   root: {
