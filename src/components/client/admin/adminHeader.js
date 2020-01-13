@@ -1,5 +1,5 @@
 import history from "../../../util/history";
-import React, { useState} from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import clsx from "clsx";
 import Drawer from "@material-ui/core/Drawer";
@@ -16,9 +16,9 @@ import InputBase from "@material-ui/core/InputBase";
 import SearchIcon from "@material-ui/icons/Search";
 // import mainListItems from "../client/sidebar";
 import Avatar from "@material-ui/icons/Person";
-import ListItem from '@material-ui/core/ListItem';
+import ListItem from "@material-ui/core/ListItem";
 
-import ListItemText from '@material-ui/core/ListItemText'
+import ListItemText from "@material-ui/core/ListItemText";
 import { fade, makeStyles } from "@material-ui/core/styles";
 import {
   UncontrolledDropdown,
@@ -27,7 +27,7 @@ import {
   Media,
   DropdownItem
 } from "reactstrap";
-// import Navbar from '../navbar';
+import Navbar from "../navbar";
 export const drawerWidth = 240;
 const useStyles = makeStyles(theme => ({
   root: {
@@ -72,7 +72,7 @@ const useStyles = makeStyles(theme => ({
     position: "relative",
     backgroundColor: "#fedd3e",
     whiteSpace: "nowrap",
-    height:"100vh",
+    height: "100vh",
     width: drawerWidth,
     transition: theme.transitions.create("width", {
       easing: theme.transitions.easing.sharp,
@@ -110,47 +110,47 @@ const useStyles = makeStyles(theme => ({
     height: 400,
     width: 508,
     padding: "10px"
-  },
-  search: {
-    position: "relative",
-    borderRadius: theme.shape.borderRadius,
-    backgroundColor: fade(theme.palette.common.white, 0.15),
-    "&:hover": {
-      backgroundColor: fade(theme.palette.common.white, 0.25)
-    },
-    marginLeft: 0,
-    width: "100%",
-    [theme.breakpoints.up("sm")]: {
-      marginLeft: theme.spacing(1),
-      width: "auto"
-    }
-  },
-  searchIcon: {
-    width: theme.spacing(5),
-    height: "100%",
-    position: "absolute",
-    pointerEvents: "none",
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "center"
-  },
-  inputRoot: {
-    color: "disabled"
-  },
-  inputInput: {
-    padding: theme.spacing(1, 1, 1, 7),
-    transition: theme.transitions.create("width"),
-    width: "100%",
-    [theme.breakpoints.up("sm")]: {
-      width: 120,
-      "&:focus": {
-        width: 200
-      }
-    }
   }
+  // search: {
+  //   position: "relative",
+  //   borderRadius: theme.shape.borderRadius,
+  //   backgroundColor: fade(theme.palette.common.white, 0.15),
+  //   "&:hover": {
+  //     backgroundColor: fade(theme.palette.common.white, 0.25)
+  //   },
+  //   marginLeft: 0,
+  //   width: "100%",
+  //   [theme.breakpoints.up("sm")]: {
+  //     marginLeft: theme.spacing(1),
+  //     width: "auto"
+  //   }
+  // },
+  // searchIcon: {
+  //   width: theme.spacing(5),
+  //   height: "100%",
+  //   position: "absolute",
+  //   pointerEvents: "none",
+  //   display: "flex",
+  //   alignItems: "center",
+  //   justifyContent: "center"
+  // },
+  // inputRoot: {
+  //   color: "disabled"
+  // },
+  // inputInput: {
+  //   padding: theme.spacing(1, 1, 1, 7),
+  //   transition: theme.transitions.create("width"),
+  //   width: "100%",
+  //   [theme.breakpoints.up("sm")]: {
+  //     width: 120,
+  //     "&:focus": {
+  //       width: 200
+  //     }
+  //   }
+  // }
 }));
 
-const Header = ({sideLinks}) => {
+const Header = ({ sideLinks }) => {
   // const [isOpen, setIsOpen] = useState(false);
 
   // const toggle = () => setIsOpen(!isOpen);
@@ -187,7 +187,7 @@ const Header = ({sideLinks}) => {
           >
             <MenuIcon />
           </IconButton>
-          <div className={classes.search}>
+          {/* <div className={classes.search}>
             <div className={classes.searchIcon}>
               <SearchIcon color="disabled" />
             </div>
@@ -199,9 +199,9 @@ const Header = ({sideLinks}) => {
               }}
               inputProps={{ "aria-label": "search" }}
             />
-          </div>
+          </div> */}
           <div className={classes.title}></div>
-          <Notification  />
+          <Notification />
           <ProfileDropdown logout={handleLogout} />
         </Toolbar>
       </AppBar>
@@ -213,31 +213,27 @@ const Header = ({sideLinks}) => {
         open={open}
       >
         <div className={classes.toolbarIcon}>
-          <span style={{ paddingRight: "20%", color: "white" }}>
-          </span>
+          <span style={{ paddingRight: "20%", color: "white" }}></span>
           <IconButton onClick={handleDrawerClose}>
             <ChevronLeftIcon style={{ color: "#ffff" }} />
           </IconButton>
         </div>
         <Divider />
         <List className="sideText">
-          
-          {sideLinks && sideLinks.map((item, i)=>{
-            const {name, link} = item
-          return (
-            <div className="sideText">
-            <Link to={link}>
-              <ListItem button>
-           
-                <ListItemText primary={name}/>
-              </ListItem>
-            </Link>
-           
-          </div>
-          )
-          })
-          
-          }</List>
+          {sideLinks &&
+            sideLinks.map((item, i) => {
+              const { name, link } = item;
+              return (
+                <div className="sideText">
+                  <Link to={link}>
+                    <ListItem button>
+                      <ListItemText primary={name} />
+                    </ListItem>
+                  </Link>
+                </div>
+              );
+            })}
+        </List>
       </Drawer>
     </div>
   );
@@ -306,17 +302,17 @@ const Notification = () => {
           </DropdownItem>
           <hr />
           <DropdownItem to="/admin/admin-profile" tag={Link}>
-          <Avatar />            <span className="search-query">New search query.</span>
+            <Avatar /> <span className="search-query">New search query.</span>
             <div className="mins-ago">4 mins ago</div>
           </DropdownItem>
           <hr />
           <DropdownItem to="/admin/admin-profile" tag={Link}>
-          <Avatar />            <span className="search-query">New search query.</span>
+            <Avatar /> <span className="search-query">New search query.</span>
             <div className="mins-ago">4 mins ago</div>
           </DropdownItem>
           <hr />
           <DropdownItem to="/admin/admin-profile" tag={Link}>
-          <Avatar />          <span className="search-query">New search query.</span>
+            <Avatar /> <span className="search-query">New search query.</span>
             <div className="mins-ago">4 mins ago</div>
           </DropdownItem>
           <hr />

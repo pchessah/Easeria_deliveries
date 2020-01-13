@@ -13,8 +13,8 @@ const PrivateRoutes = props => {
   const [nav_links, setLinks] = useState();
   const shopOwner = [
     { name: "Edit Shop Details", link: "/app/shopDetails" },
-    { name: "Add Product", link: "/app/addProduct" },
-    { name: "Edit Product", link: "/app/editProduct" },
+    { name: "Add Product", link: "/app/productForm" },
+    { name: "Edit Product", link: "/app/productForm" },
     { name: "Delete Product", link: "/app/deleteProduct" },
     { name: "Contact Admin", link: "/app/contactAdmin" },
     { name: "Contact Customer", link: "/app/contactCustomer" },

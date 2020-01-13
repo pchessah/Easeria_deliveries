@@ -19,6 +19,7 @@ import Payment from '../components/client/customer/checkout/Payment';
 import SignupCourier from '../components/client/courier/SignupCourier';
 import SignupShopOwner from '../components/client/shopOwner/SignupShopOwner';
 import SignupCustomer from '../components/client/customer/signupCustomer';
+import ProductForm from '../components/client/shopOwner/ProductForm'
 // import NotFound from '../components/NotFound';
 
 // const Register = () => (
@@ -60,6 +61,7 @@ const PublicRoutes = ({ match }) => (
       <Route exact path='/signupcourier' component={SignupCourier}/>
       <Route exact path='/signupshopowner' component={SignupShopOwner}/>
       <Route exact path='/signupcustomer' component={SignupCustomer}/>
+      <Route exact path='/productForm' component={ProductForm} />
       
       {/* <Route component={NotFound} /> */}
     </Switch>
