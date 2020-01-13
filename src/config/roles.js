@@ -38,15 +38,13 @@ const {
   others,
   food,
   shopHome,
-  signUpCourier,
-  signUpCustomer,
-  signUpShopOwner,
   loginCourier,
   foodShop,
   otherShops,
   shopOwnerDashboard,
   courierDashboard,
-  admin
+  admin,
+  productForm
 } = components;
 const rolesConfig = {
   admin: {
@@ -125,6 +123,10 @@ const rolesConfig = {
         component: "signUpCustomer",
         url: "/signupcustomer",
         module: 1
+      },
+      {
+        component: "productForm",
+        url: "/app/productForm"
       }
     ]
   }

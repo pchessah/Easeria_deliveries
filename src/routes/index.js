@@ -45,7 +45,7 @@ const contactCourier = () => <ContactCourier />;
 const contactCustomer = () => <ContactCustomer/>;
 const courierDashboard= () => <CourierDashboard />;
 const contactShopOwner = () => <ContactShopOwner />;
-const productForm =()=> <ProductForm />
+const productForm =()=> <ProductForm />;
 
 export {
   home,

@@ -36,13 +36,7 @@ const useStyles = makeStyles(theme => ({
   toolbar: {
     paddingRight: 24 // keep right padding when drawer closed
   },
-  toolbarIcon: {
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "flex-end",
-    padding: "0 8px",
-    ...theme.mixins.toolbar
-  },
+  
   appBar: {
     background: "#ffff",
     zIndex: theme.zIndex.drawer + 1,
@@ -240,7 +234,10 @@ const Header = ({ sideLinks }) => {
 };
 export default Header;
 const ProfileDropdown = ({ logout }) => (
-  <UncontrolledDropdown nav>
+  
+  <div>
+    <Navbar />
+    <UncontrolledDropdown nav>
     <DropdownToggle className="pr-0" nav>
       <Media className="align-items-center">
         <span className="user_name">
@@ -274,6 +271,9 @@ const ProfileDropdown = ({ logout }) => (
       </DropdownItem>
     </DropdownMenu>
   </UncontrolledDropdown>
+
+  </div>
+  
 );
 const Notification = () => {
   return (
