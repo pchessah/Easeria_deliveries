@@ -19,6 +19,11 @@ const components = {
     component: "admin",
     url: "/admin",
     module: 1
+  },
+  productForm: {
+    component: "productForm",
+    url: "/productForm",
+    module: 1
   }
 };
 
@@ -65,7 +70,7 @@ const rolesConfig = {
     routes: [loginCourier, courierDashboard]
   },
   shopOwner: {
-    routes: [shopOwnerDashboard]
+    routes: [shopOwnerDashboard, productForm]
   },
   common: {
     routes: [
@@ -123,11 +128,13 @@ const rolesConfig = {
         component: "signUpCustomer",
         url: "/signupcustomer",
         module: 1
-      },
-      {
-        component: "productForm",
-        url: "/app/productForm"
       }
+      // ,
+      // {
+      //   component: "productForm",
+      //   url: "/productForm",
+      //   module: 1
+      // }
     ]
   }
 };

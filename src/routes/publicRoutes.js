@@ -61,7 +61,7 @@ const PublicRoutes = ({ match }) => (
       <Route exact path='/signupcourier' component={SignupCourier}/>
       <Route exact path='/signupshopowner' component={SignupShopOwner}/>
       <Route exact path='/signupcustomer' component={SignupCustomer}/>
-      <Route exact path="/app/productForm" component={ProductForm} />
+      {/* <Route exact path="/app/productForm" component={ProductForm} /> */}
       
       {/* <Route component={NotFound} /> */}
     </Switch>

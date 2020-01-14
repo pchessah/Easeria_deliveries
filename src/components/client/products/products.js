@@ -81,7 +81,7 @@ function Products({ kind }) {
                       <div className="separator clear-left">
                         <p className="btn-add">
                           <i className="fa fa-shopping-cart" />
-                          <a href="#" className="hidden-sm">
+                          <a href="/checkout" className="hidden-sm">
                             Add to cart
                           </a>
                         </p>

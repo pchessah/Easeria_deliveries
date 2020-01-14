@@ -34,7 +34,7 @@ const useStyles = makeStyles(theme => ({
     display: "flex"
   },
   toolbar: {
-    paddingRight: 24 // keep right padding when drawer closed
+    paddingRight: 10 // keep right padding when drawer closed
   },
   
   appBar: {
@@ -207,7 +207,7 @@ const Header = ({ sideLinks }) => {
         open={open}
       >
         <div className={classes.toolbarIcon}>
-          <span style={{ paddingRight: "20%", color: "white" }}></span>
+          <span style={{  color: "white" }}></span>
           <IconButton onClick={handleDrawerClose}>
             <ChevronLeftIcon style={{ color: "#ffff" }} />
           </IconButton>
@@ -220,7 +220,7 @@ const Header = ({ sideLinks }) => {
               return (
                 <div className="sideText">
                   <Link to={link}>
-                    <ListItem button>
+                    <ListItem button>                      
                       <ListItemText primary={name} />
                     </ListItem>
                   </Link>
@@ -235,8 +235,9 @@ const Header = ({ sideLinks }) => {
 export default Header;
 const ProfileDropdown = ({ logout }) => (
   
+  
   <div>
-    <Navbar />
+    <Navbar  />
     <UncontrolledDropdown nav>
     <DropdownToggle className="pr-0" nav>
       <Media className="align-items-center">
@@ -249,7 +250,7 @@ const ProfileDropdown = ({ logout }) => (
     <DropdownMenu className="dropdown-menu-arrow dropdown_container" right>
       <DropdownItem className="noti-title" header tag="div">
         <h6 className="text-overflow m-0">
-          <strong>Satus:</strong> online
+          <strong>Status:</strong> online
         </h6>
       </DropdownItem>
       <hr />

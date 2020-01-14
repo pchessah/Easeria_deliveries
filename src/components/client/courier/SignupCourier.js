@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
+import { Link } from 'react-router-dom';
 
 function SignupCourier() {
   const [inputs, setInputs] = useState({role:["courier"]});
@@ -73,9 +74,13 @@ function SignupCourier() {
             onChange={handleChange}
             placeholder="Enter phone number..."
           />
+          
+          <Link to="/login">
           <button className="btn" onClick={handleSubmit}>
             Sign up
           </button>
+          </Link>
+          
           <p>
             Have an account?
             <a href="/login"> Log in</a>

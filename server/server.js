@@ -5,12 +5,13 @@ const mongoose = require("mongoose");
 const passport = require("passport");
 const session = require("express-session");
 const path = require("path")
+require("dotenv").config()
 const port = process.env.PORT || 4000;
 
 const app = express();
 
 mongoose
-  .connect("mongodb://localhost:27017/deliveries", {
+  .connect(process.env.MONGO_URI, {
     useNewUrlParser: true,
     useCreateIndex: true,
     useUnifiedTopology: true
