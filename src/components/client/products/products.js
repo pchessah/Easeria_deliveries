@@ -65,9 +65,9 @@ function Products({ kind }) {
                 name, price, description, image,
               } = item;
               return (
-                <div className="col-sm-3 listing">
+                <div id="photo"className="col-sm-3 listing">
                   <div className="col-item">
-                    <div
+                    <div 
                       className="photo"
                       style={{ background: `url(${image})` }}
                     />

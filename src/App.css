@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Adamina|Corben:700|Open+Sans:800&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Adamina|Corben:700|Open+Sans:800&display=swap");
 
 .split {
   height: 100%;
@@ -59,149 +59,131 @@
   color: white;
 }
 .signup p {
- margin-top: 8%;
+  margin-top: 8%;
 }
 .signup a {
   color: blue;
- }
+}
 
-
-.carousel-item{
+.carousel-item {
   height: 60vh !important;
 }
 
-.categories{
+.categories {
   height: 20rem;
-  margin:20px;
-  left:2%;
+  margin: 20px;
+  left: 2%;
   border-radius: 5px;
-  -webkit-box-shadow:0 0 20px rgba(0,0,0,0.8);
-  -moz-box-shadow:0 0 20px rgba(0,0,0,0.8);
-  box-shadow:0 0 20px rgba(0,0,0,0.8);
-  font-family: 'Corben', cursive;
+  -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+  -moz-box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+  font-family: "Corben", cursive;
 }
-.categories:hover{
+.categories:hover {
   text-decoration: none;
 }
-.tint{
-  background-color: rgba(0,0,0,.6) !important;
+.tint {
+  background-color: rgba(0, 0, 0, 0.6) !important;
   background-blend-mode: multiply;
 }
-.category_left{
+.category_left {
   margin-left: 8.5%;
 }
 
-.categories h3{
-color: white;
-margin-top: 45%;
-font-weight: bolder;
+.categories h3 {
+  color: white;
+  margin-top: 45%;
+  font-weight: bolder;
 }
-.homeCarousel{
-  font-family: 'Corben', cursive;
+.homeCarousel {
+  font-family: "Corben", cursive;
 }
 
 /* -----------------------------items---------------------- */
-.col-item
-{
-    border: 1px solid #E1E1E1;
-    border-radius: 5px;
-    background: #FFF;
+.col-item {
+  border: 1px solid #e1e1e1;
+  border-radius: 5px;
+  background: #fff;
 }
-.col-item .photo 
-{
-    margin: 0 auto;
-    width: 100%;
-    height: 12rem;
+.col-item .photo {
+  margin: 0 auto;
+  width: 100%;
+  height: 15rem;
 }
 
-.col-item .info
-{
-    padding: 10px;
-    border-radius: 0 0 5px 5px;
-    margin-top: 1px;
+.col-item .info {
+  padding: 10px;
+  border-radius: 0 0 5px 5px;
+  margin-top: 1px;
 }
 
 .col-item:hover .info {
-    background-color: #F5F5DC;
+  background-color: #f5f5dc;
 }
-.col-item .price
-{
-    /*width: 50%;*/
-    float: left;
-    margin-top: 5px;
-}
-
-.col-item .price h5
-{
-    line-height: 20px;
-    margin: 0;
+.col-item .price {
+  /*width: 50%;*/
+  float: left;
+  margin-top: 5px;
 }
 
-.price-text-color
-{
-    color: #219FD1;
+.col-item .price h5 {
+  line-height: 20px;
+  margin: 0;
 }
 
-.col-item .info .rating
-{
-    color: #777;
+.price-text-color {
+  color: #219fd1;
 }
 
-.col-item .rating
-{
-    /*width: 50%;*/
-    float: left;
-    font-size: 17px;
-    text-align: right;
-    line-height: 52px;
-    margin-bottom: 10px;
-    height: 52px;
+.col-item .info .rating {
+  color: #777;
 }
 
-.col-item .separator
-{
-    border-top: 1px solid #E1E1E1;
+.col-item .rating {
+  /*width: 50%;*/
+  float: left;
+  font-size: 17px;
+  text-align: right;
+  line-height: 52px;
+  margin-bottom: 10px;
+  height: 52px;
 }
 
-.clear-left
-{
-    clear: left;
+.col-item .separator {
+  border-top: 1px solid #e1e1e1;
 }
 
-.col-item .separator p
-{
-    line-height: 20px;
-    margin-bottom: 0;
-    margin-top: 10px;
-    text-align: center;
+.clear-left {
+  clear: left;
 }
 
-.col-item .separator p i
-{
-    margin-right: 5px;
-}
-.col-item .btn-add
-{
-    width: 50%;
-    float: left;
+.col-item .separator p {
+  line-height: 20px;
+  margin-bottom: 0;
+  margin-top: 10px;
+  text-align: center;
 }
 
-.col-item .btn-add
-{
-    border-right: 1px solid #E1E1E1;
+.col-item .separator p i {
+  margin-right: 5px;
+}
+.col-item .btn-add {
+  width: 50%;
+  float: left;
 }
 
-.col-item .btn-details
-{
-    width: 50%;
-    float: left;
-    padding-left: 10px;
+.col-item .btn-add {
+  border-right: 1px solid #e1e1e1;
 }
-.controls
-{
-    margin-top: 20px;
+
+.col-item .btn-details {
+  width: 50%;
+  float: left;
+  padding-left: 10px;
 }
-[data-slide="prev"]
-{
-    margin-right: 10px;
+.controls {
+  margin-top: 20px;
+}
+[data-slide="prev"] {
+  margin-right: 10px;
 }

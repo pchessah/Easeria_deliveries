@@ -34,11 +34,11 @@ const useStyles = makeStyles(theme => ({
     display: "flex"
   },
   toolbar: {
-    paddingRight: 10 // keep right padding when drawer closed
+    paddingRight: 10// keep right padding when drawer closed
   },
   
   appBar: {
-    background: "#ffff",
+    background: "#FEDD3E",
     zIndex: theme.zIndex.drawer + 1,
     transition: theme.transitions.create(["width", "margin"], {
       easing: theme.transitions.easing.sharp,
@@ -72,18 +72,20 @@ const useStyles = makeStyles(theme => ({
       easing: theme.transitions.easing.sharp,
       duration: theme.transitions.duration.enteringScreen
     })
-  },
+  }
+  ,
   drawerPaperClose: {
     overflowX: "hidden",
     transition: theme.transitions.create("width", {
       easing: theme.transitions.easing.sharp,
       duration: theme.transitions.duration.leavingScreen
     }),
-    width: theme.spacing(7),
+    width: theme.spacing(0),
     [theme.breakpoints.up("sm")]: {
-      width: theme.spacing(9)
+      width: theme.spacing(0)
     }
-  },
+  }
+  ,
   appBarSpacer: theme.mixins.toolbar,
   content: {
     flexGrow: 1,
@@ -93,18 +95,20 @@ const useStyles = makeStyles(theme => ({
   container: {
     paddingTop: theme.spacing(4),
     paddingBottom: theme.spacing(4)
-  },
-  paper: {
-    padding: theme.spacing(2),
-    display: "flex",
-    overflow: "auto",
-    flexDirection: "column"
-  },
-  fixedHeight: {
-    height: 400,
-    width: 508,
-    padding: "10px"
   }
+  // ,
+  // paper: {
+  //   padding: theme.spacing(2),
+  //   display: "flex",
+  //   overflow: "auto",
+  //   flexDirection: "column"
+  // }
+  // ,
+  // fixedHeight: {
+  //   height: 400,
+  //   width: 508,
+  //   padding: "10px"
+  // }
   // search: {
   //   position: "relative",
   //   borderRadius: theme.shape.borderRadius,
@@ -162,12 +166,13 @@ const Header = ({ sideLinks }) => {
     history.push("/");
   };
   return (
-    <div>
-      {/* <Navbar /> */}
+    <div>    
       <AppBar
+        style={{height:"2px"}}
         position="absolute"
         className={clsx(classes.appBar, open && classes.appBarShift)}
       >
+          <Navbar />
         <Toolbar className={`navcolor ${classes.toolbar}`}>
           <IconButton
             edge="start"
@@ -195,7 +200,7 @@ const Header = ({ sideLinks }) => {
             />
           </div> */}
           <div className={classes.title}></div>
-          <Notification />
+          {/* <Notification /> */}
           <ProfileDropdown logout={handleLogout} />
         </Toolbar>
       </AppBar>
@@ -236,13 +241,12 @@ export default Header;
 const ProfileDropdown = ({ logout }) => (
   
   
-  <div>
-    <Navbar  />
+  <div>   
     <UncontrolledDropdown nav>
     <DropdownToggle className="pr-0" nav>
       <Media className="align-items-center">
         <span className="user_name">
-          John Doe
+          User
           <Avatar />
         </span>
       </Media>
@@ -253,19 +257,19 @@ const ProfileDropdown = ({ logout }) => (
           <strong>Status:</strong> online
         </h6>
       </DropdownItem>
-      <hr />
+      {/* <hr /> */}
       {/* <Link to="admin/admin-profile"> */}
-      <DropdownItem to="/admin/admin-profile" tag={Link}>
+      {/* <DropdownItem to="/admin/admin-profile" tag={Link}>
         <i className="fas fa-user" />
         <span> profile</span>
-      </DropdownItem>
-      <hr />
+      </DropdownItem> */}
+      {/* <hr />
       {/* </Link> */}
-      <DropdownItem to="/admin/logs" tag={Link}>
+      {/* <DropdownItem to="/admin/logs" tag={Link}>
         <i className="fas fa-folder" />
         <span> Logs</span>
       </DropdownItem>
-      <hr />
+      <hr /> */}
       <DropdownItem onClick={logout}>
         <i className="fas fa-running" />
         <span> Logout</span>

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Route, Switch } from 'react-router-dom';
+import { Route, Router,Switch } from 'react-router-dom';
 import { loginCourier } from '.';
 import Aboutus from '../components/client/Aboutus';
 import Drink from '../components/client/products/Drink';
@@ -39,8 +39,9 @@ import ProductForm from '../components/client/shopOwner/ProductForm'
 
 const PublicRoutes = ({ match }) => (
   <div>
-    <Navbar />
+    <Navbar/>      
     <Switch>
+    
       {/* <Route path="/forgot-password" component={ForgotPassword} />
 			<Route path="/register" component={Register} /> */}
       <Route exact path="/login" component={Login} />
@@ -65,6 +66,7 @@ const PublicRoutes = ({ match }) => (
       
       {/* <Route component={NotFound} /> */}
     </Switch>
+  
   </div>
 );
 
