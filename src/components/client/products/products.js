@@ -69,7 +69,7 @@ function Products({ kind }) {
                   <div className="col-item">
                     <div 
                       className="photo"
-                      style={{ background: `url(${image})` }}
+                      style={{ backgroundImage: `url(${image})` }}
                     />
                     <div className="info">
                       <div className="row">

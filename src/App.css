@@ -111,6 +111,9 @@
   margin: 0 auto;
   width: 100%;
   height: 15rem;
+  background-size:cover;
+  background-repeat:no-repeat;
+  background-position: 50% 50%
 }
 
 .col-item .info {
