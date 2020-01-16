@@ -31,7 +31,7 @@ const Example = (props) => (
   <div>
     <UncontrolledCarousel
       className="homeCarousel"
-      style={{ height: '40vh' }}
+      style={{ height: '50vh' }}
       items={items}
     />
     <div className="row">

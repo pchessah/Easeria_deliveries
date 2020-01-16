@@ -1,79 +1,55 @@
-import React from 'react';
-import { Button, Form, FormGroup, Label, Input, FormText } from 'reactstrap';
+import React from "react";
+import { Button, Form, FormGroup, Label, Input, FormText } from "reactstrap";
 
-const Example = (props) => {
+const Example = props => {
   return (
-    <Form>
+    <div className="product-form-container">
+<Form className="productForm">
       <FormGroup>
-        <Label for="exampleEmail">Email</Label>
-        <Input type="email" name="email" id="exampleEmail" placeholder="with a placeholder" />
+        <Label for="productName">Name</Label>
+        <Input
+          type="text"
+          name="productName"
+          id="productName"
+          placeholder="Enter Product Name"
+        />
       </FormGroup>
+
       <FormGroup>
-        <Label for="examplePassword">Password</Label>
-        <Input type="password" name="password" id="examplePassword" placeholder="password placeholder" />
+        <Label for="productPrice">Price</Label>
+        <Input
+          type="number"
+          name="productPrice"
+          id="productPrice"
+          placeholder="Enter Product Price"
+        />
       </FormGroup>
+
       <FormGroup>
-        <Label for="exampleSelect">Select</Label>
-        <Input type="select" name="select" id="exampleSelect">
-          <option>1</option>
-          <option>2</option>
-          <option>3</option>
-          <option>4</option>
-          <option>5</option>
+        <Label for="category">Select Category</Label>
+        <Input type="select" name="category" id="category">
+          <option>Food</option>
+          <option>Clothes</option>
+          <option>Others</option>
         </Input>
       </FormGroup>
+
       <FormGroup>
-        <Label for="exampleSelectMulti">Select Multiple</Label>
-        <Input type="select" name="selectMulti" id="exampleSelectMulti" multiple>
-          <option>1</option>
-          <option>2</option>
-          <option>3</option>
-          <option>4</option>
-          <option>5</option>
-        </Input>
+        <Label for="description">Enter Description </Label>
+        <Input type="textarea" name="description" id="description" />
       </FormGroup>
+
       <FormGroup>
-        <Label for="exampleText">Text Area</Label>
-        <Input type="textarea" name="text" id="exampleText" />
+        <Label for="image">Upload product image</Label>
+        <Input type="file" name="image" id="image" />
+        <FormText color="muted">Upload product image with size</FormText>
       </FormGroup>
-      <FormGroup>
-        <Label for="exampleFile">File</Label>
-        <Input type="file" name="file" id="exampleFile" />
-        <FormText color="muted">
-          This is some placeholder block-level help text for the above input.
-          It's a bit lighter and easily wraps to a new line.
-        </FormText>
-      </FormGroup>
-      <FormGroup tag="fieldset">
-        <legend>Radio Buttons</legend>
-        <FormGroup check>
-          <Label check>
-            <Input type="radio" name="radio1" />{' '}
-            Option one is this and that—be sure to include why it's great
-          </Label>
-        </FormGroup>
-        <FormGroup check>
-          <Label check>
-            <Input type="radio" name="radio1" />{' '}
-            Option two can be something else and selecting it will deselect option one
-          </Label>
-        </FormGroup>
-        <FormGroup check disabled>
-          <Label check>
-            <Input type="radio" name="radio1" disabled />{' '}
-            Option three is disabled
-          </Label>
-        </FormGroup>
-      </FormGroup>
-      <FormGroup check>
-        <Label check>
-          <Input type="checkbox" />{' '}
-          Check me out
-        </Label>
-      </FormGroup>
-      <Button>Submit</Button>
+
+      <Button type="submit">Submit</Button>
     </Form>
+    </div>
+    
   );
-}
+};
 
 export default Example;

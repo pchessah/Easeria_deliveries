@@ -97,6 +97,8 @@
 }
 .homeCarousel {
   font-family: "Corben", cursive;
+  margin-top: 0%;
+  height: '50vh' !important;
 }
 
 /* -----------------------------items---------------------- */

@@ -29,11 +29,22 @@ const loginsSchema = new mongoose.Schema({
   role:{type:Object, required:true}
 });
 
+const productSchema = new mongoose.Schema({
+  name:{required: true, type: String},
+  description:{required: true, type: String},
+  category:{required: true, type: String},
+  price:{required: true, type: Number},
+  image:{required:true, type: Object}
+  
+
+})
+
 
 
 const Customer = mongoose.model("Customer", customerSchema)
 const Courier = mongoose.model("Courier", courierSchema)
 const ShopOwner = mongoose.model("ShopOwner", shopOwnerSchema)
 const Logins = mongoose.model("Logins", loginsSchema)
+const ProductSchema = mongoose.model("Products", productSchema)
 
-module.exports = {Courier, Customer, ShopOwner, Logins}
+module.exports = {Courier, Customer, ShopOwner, Logins, ProductSchema}

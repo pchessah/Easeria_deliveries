@@ -1,5 +1,9 @@
 // component's config object.
 const components = {
+  contactShopOwner:{
+    component:"contactShopOwner",
+    url:"/contactShopOwner"
+  },
   loginCourier: {
     component: "loginCourier",
     url: "/logincourier",
@@ -84,7 +88,8 @@ const {
   shopOwnerDashboard,
   courierDashboard,
   admin,
-  productForm
+  productForm,
+  contactShopOwner
 } = components;
 const rolesConfig = {
   admin: {
@@ -98,11 +103,12 @@ const rolesConfig = {
       foodShop,
       otherShops,
       food,
-      shopHome
+      shopHome,
+      contactShopOwner
     ]
   },
   courier: {
-    routes: [loginCourier, courierDashboard]
+    routes: [loginCourier, courierDashboard,contactShopOwner]
   },
   shopOwner: {
     routes: [shopOwnerDashboard, productForm]
