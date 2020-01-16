@@ -24,6 +24,41 @@ const components = {
     component: "productForm",
     url: "/productForm",
     module: 1
+  },
+  drink:{    
+      component: "drink",
+      url: "/drink",
+      module: 1
+  },
+  aboutus:{
+    component: "aboutus",
+        url: "/about",
+        module: 1
+  },
+  food:{
+    component: "food",
+        url: "/food",
+        module: 1
+  },
+  foodShop:{
+    component: "foodShop",
+        url: "/foodshop",
+        module: 1
+  },
+  others:{
+    component: "others",
+        url: "/others",
+        module: 1
+  },
+  shopHome:{
+    component: "shopHome",
+        url: "/shophome",
+        module: 1
+  },
+  otherShops:{
+    component: "otherShops",
+        url: "/othershop",
+        module: 1
   }
 };
 
@@ -57,7 +92,6 @@ const rolesConfig = {
   },
   customer: {
     routes: [
-      shop,
       drink,
       others,
       foodShop,
@@ -79,41 +113,41 @@ const rolesConfig = {
         url: "/",
         module: 1
       },
-      {
-        component: "aboutus",
-        url: "/about",
-        module: 1
-      },
-      {
-        component: "drink",
-        url: "/drink",
-        module: 1
-      },
-      {
-        component: "food",
-        url: "/food",
-        module: 1
-      },
-      {
-        component: "foodShop",
-        url: "/foodShop",
-        module: 1
-      },
-      {
-        component: "others",
-        url: "/others",
-        module: 1
-      },
-      {
-        component: "otherShops",
-        url: "/othershops",
-        module: 1
-      },
-      {
-        component: "shopHome",
-        url: "/shophome",
-        module: 1
-      },
+      // {
+      //   component: "aboutus",
+      //   url: "/about",
+      //   module: 1
+      // },
+      // {
+      //   component: "drink",
+      //   url: "/drink",
+      //   module: 1
+      // },
+      // {
+      //   component: "food",
+      //   url: "/food",
+      //   module: 1
+      // },
+      // {
+      //   component: "foodShop",
+      //   url: "/foodshop",
+      //   module: 1
+      // },
+      // {
+      //   component: "others",
+      //   url: "/others",
+      //   module: 1
+      // },
+      // {
+      //   component: "otherShops",
+      //   url: "/othershop",
+      //   module: 1
+      // },
+      // {
+      //   component: "shopHome",
+      //   url: "/shophome",
+      //   module: 1
+      // },
       {
         component: "signUpCourier",
         url: "/signupcourier",

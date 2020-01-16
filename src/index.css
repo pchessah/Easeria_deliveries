@@ -1,4 +1,5 @@
 @import url("https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css");
+@import url('https://fonts.googleapis.com/css?family=Lobster+Two&display=swap');
 /* // Extra small devices (portrait phones, less than 576px)
 // No media query for `xs` since this is the default in Bootstrap
 
@@ -27,6 +28,8 @@
     color: black !important;    
     padding-top: 04%;
     padding-bottom: 04%;
+    font-family: 'Corben', cursive;
+    font-weight: lighter !important;
 }
 
 .navbar-brand{
@@ -35,4 +38,9 @@
 }
 .navbar a{
     font-family: 'Corben', cursive !important;
+}
+
+.card-text{
+    font-family: 'Lobster', cursive !important;
+    font-weight: bolder !important;
 }

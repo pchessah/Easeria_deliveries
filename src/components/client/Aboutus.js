@@ -24,7 +24,7 @@ const Example = props => (
             Shop Owner
           </CardTitle>
           <CardSubtitle />
-          <CardText>
+          <CardText className="card-text">
             Reach out to new and a wide range of customers while getting
             increased profits in a larger market.
           </CardText>
@@ -52,7 +52,7 @@ const Example = props => (
             Customer
           </CardTitle>
           <CardSubtitle />
-          <CardText>
+          <CardText className="card-text">
             Get access to the best food, drinks and other products from your
             favorite local establishments at your place of convenience and
             affordable prices!
@@ -81,7 +81,7 @@ const Example = props => (
             Courier
           </CardTitle>
           <CardSubtitle />
-          <CardText>
+          <CardText className="card-text">
             Get extra income delivering goods from shops and be your own boss in
             a flexible schedule of earning money!
           </CardText>
@@ -97,7 +97,7 @@ const Example = props => (
           <Button style={{ width: "50%" }}>Be a Courier</Button>
         </a>
         <a href="/login">
-          <Button style={{ marginTop: "10px",width: "50%" }}>Log in</Button>
+          <Button style={{ marginTop: "10px", width: "50%" }}>Log in</Button>
         </a>
       </Card>
     </CardDeck>

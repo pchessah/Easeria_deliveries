@@ -44,25 +44,25 @@ const PublicRoutes = ({ match }) => (
     
       {/* <Route path="/forgot-password" component={ForgotPassword} />
 			<Route path="/register" component={Register} /> */}
-      <Route exact path="/login" component={Login} />
-      <Route exact path="/about" component={Aboutus} />
-      <Route exact path="/shophome" component={ShopHome}/>
-      <Route exact path="/drink" component={Drink}/>
-      <Route exact path="/food" component={Food}/>
-      <Route exact path="/others" component={Others}/>
-      <Route exact path="/foodshop" component={FoodShop}/>
-      <Route exact path="/othershop" component={OtherShops}/>
-      <Route exact path="/login" component={loginCourier}/>
+      <Route path="/login" component={Login} />
+      <Route path="/about" component={Aboutus} />
+      <Route path="/shophome" component={ShopHome}/>
+      <Route path="/drink" component={Drink}/>
+      <Route path="/food" component={Food}/>
+      <Route path="/others" component={Others}/>
+      <Route path="/foodshop" component={FoodShop}/>
+      <Route path="/othershop" component={OtherShops}/>
+      <Route path="/login" component={loginCourier}/>
       <Route exact path="/" component={Home} />
       <Route path='/address' component={AddressForm}/>
       <Route path='/checkout' component={Checkout}/>
       <Route path='/paymentform' component={PaymentForm}/>
       <Route path='/review' component={Review}/>
       <Route path='/payment' component={Payment}/>
-      <Route exact path='/signupcourier' component={SignupCourier}/>
-      <Route exact path='/signupshopowner' component={SignupShopOwner}/>
-      <Route exact path='/signupcustomer' component={SignupCustomer}/>
-      {/* <Route exact path="/app/productForm" component={ProductForm} /> */}
+      <Route path='/signupcourier' component={SignupCourier}/>
+      <Route path='/signupshopowner' component={SignupShopOwner}/>
+      <Route path='/signupcustomer' component={SignupCustomer}/>
+      {/* <Route path="/app/productForm" component={ProductForm} /> */}
       
       {/* <Route component={NotFound} /> */}
     </Switch>

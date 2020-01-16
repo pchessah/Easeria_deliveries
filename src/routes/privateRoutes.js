@@ -35,7 +35,14 @@ const PrivateRoutes = props => {
     { name: "Contact Customer", link: "/app/contactCustomer" },
     { name: "Contact Courier", link: "/app/contactCourier" }
   ];
-  const customer = []
+  const customer = [
+    { name: "View Profile", link: "/app/profile" },   
+    { name: "Refund Customer", link: "/app/refundCustomer" },
+    { name: "Contact Shop Owner", link: "/app/contactShopOwner" },
+    { name: "Contact Admin", link: "/app/contactAdmin" },
+    { name: "Contact Courier", link: "/app/contactCourier" }
+
+  ]
   const classes = useStyles();
   useEffect(() => {
     let roles = JSON.parse(localStorage.getItem("roles"));
@@ -44,6 +51,8 @@ const PrivateRoutes = props => {
         setLinks(shopOwner);
       } else if (roles.join("") == "courier") {
         setLinks(courier);
+      } else if (roles.join("") == "customer") {
+        setLinks(customer);
       } else if (roles.join("") == "admin") {
         setLinks(admin);
       }
