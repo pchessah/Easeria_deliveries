@@ -17,7 +17,7 @@ function LoginCourier({history}) {
     if(role){
       localStorage.setItem("roles", JSON.stringify(role));
 
-      history.push("/");
+      history.push("/app");
     }else{
       alert(sendlogin.data)
     }

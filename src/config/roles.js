@@ -92,6 +92,7 @@ const rolesConfig = {
   },
   customer: {
     routes: [
+      // aboutus,
       drink,
       others,
       foodShop,

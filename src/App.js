@@ -8,18 +8,18 @@ import PrivateRoutes from './routes/privateRoutes';
 import history from './util/history';
 // import 'react-widgets/dist/css/react-widgets.css';
 
-const authentication = () => (JSON.parse(localStorage.getItem('roles')) ? (
-  <Redirect to="/app" />
-) : (
-  <PublicRoutes />
-));
+// const authentication = () => (JSON.parse(localStorage.getItem('roles')) ? (
+//   <Redirect to="/app" />
+// ) : (
+//   <PublicRoutes />
+// ));
 
 const App = () => (
   <div>
     <Router history={history}>
       <Switch>
         <Route path="/app" component={PrivateRoutes} />
-        <Route path="" render={authentication} />
+        <Route path="" component={PublicRoutes} />
       </Switch>
     </Router>
   </div>
