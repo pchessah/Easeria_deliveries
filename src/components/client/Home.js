@@ -27,7 +27,7 @@ const items = [
     key: '3',
   },
 ];
-const Example = (props) => (
+const Home = (props) => (
   <div>
     <UncontrolledCarousel
       className="homeCarousel"
@@ -75,4 +75,4 @@ const Example = (props) => (
   </div>
 );
 
-export default Example;
+export default Home;
