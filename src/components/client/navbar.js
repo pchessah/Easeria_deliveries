@@ -8,7 +8,7 @@ function Navbar() {
         <a className="navbar-brand" href="/">
           <h2> Easeria Deliveries </h2>
         </a>
-        <ul className="navbar-nav ml-auto">
+        <ul className="navbar-nav ml-auto" style={{marginRight:"50px"}}>
           <li className="nav-item">
             <a className="nav-link" href="/">
               Home

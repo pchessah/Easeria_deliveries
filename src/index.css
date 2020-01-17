@@ -128,26 +128,28 @@
   }
 }
 
-#contact-form{
+#contact-form {
   width: 440px;
   margin: 30px auto 0;
   /* border: 1px solid grey; */
   box-shadow: 0px 10px 50px #555;
   padding: 15px;
   border-radius: 4px;
-
 }
 
-
-.product-form-container{
+.product-form-container {
   width: 440px;
   margin: 30px auto 0;
   /* border: 1px solid grey; */
   box-shadow: 0px 10px 50px #555;
   padding: 15px;
   border-radius: 4px;
-
 }
 
-
-
+.avatar {
+  position: fixed;
+  top: 50px;
+  right: 90px;
+  padding-left: 900px !important;
+  padding-bottom: 50px;
+}
