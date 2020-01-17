@@ -30,7 +30,7 @@ const loginsSchema = new mongoose.Schema({
 });
 
 const productSchema = new mongoose.Schema({
-  name:{required: true, type: String},
+  productName:{required: true, type: String},
   description:{required: true, type: String},
   category:{required: true, type: String},
   price:{required: true, type: Number},

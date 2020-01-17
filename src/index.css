@@ -129,8 +129,13 @@
 }
 
 #contact-form{
-  padding-left: 300px !important;
-  align-items: center !important;
+  width: 440px;
+  margin: 30px auto 0;
+  /* border: 1px solid grey; */
+  box-shadow: 0px 10px 50px #555;
+  padding: 15px;
+  border-radius: 4px;
+
 }
 
 

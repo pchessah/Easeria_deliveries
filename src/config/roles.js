@@ -29,6 +29,21 @@ const components = {
     url: "/productForm",
     module: 1
   },
+  contactCustomer:{
+    component: "contactCustomer",
+    url: "/contactCustomer",
+    module: 1
+  },
+  contactAdmin:{
+    component: "contactAdmin",
+    url: "/contactAdmin",
+    module: 1
+  },
+  contactCourier:{
+    component: "contactCourier",
+    url: "/contactCourier",
+    module: 1
+  },
   drink:{    
       component: "drink",
       url: "/drink",
@@ -89,7 +104,10 @@ const {
   courierDashboard,
   admin,
   productForm,
-  contactShopOwner
+  contactShopOwner,
+  contactCourier,
+  contactCustomer,
+  contactAdmin
 } = components;
 const rolesConfig = {
   admin: {
@@ -104,14 +122,16 @@ const rolesConfig = {
       otherShops,
       food,
       shopHome,
-      contactShopOwner
+      contactShopOwner,
+      contactCourier,
+      contactAdmin,
     ]
   },
   courier: {
-    routes: [loginCourier, courierDashboard,contactShopOwner]
+    routes: [loginCourier, courierDashboard,contactShopOwner,contactAdmin, contactCustomer ]
   },
   shopOwner: {
-    routes: [shopOwnerDashboard, productForm]
+    routes: [shopOwnerDashboard, productForm, contactAdmin, contactCourier, contactCustomer]
   },
   common: {
     routes: [
