@@ -26,7 +26,7 @@ const components = {
   },
   productForm: {
     component: "productForm",
-    url: "/productForm",
+    url: "/addproduct",
     module: 1
   },
   contactCustomer:{
@@ -139,42 +139,7 @@ const rolesConfig = {
         component: "home",
         url: "/",
         module: 1
-      },
-      // {
-      //   component: "aboutus",
-      //   url: "/about",
-      //   module: 1
-      // },
-      // {
-      //   component: "drink",
-      //   url: "/drink",
-      //   module: 1
-      // },
-      // {
-      //   component: "food",
-      //   url: "/food",
-      //   module: 1
-      // },
-      // {
-      //   component: "foodShop",
-      //   url: "/foodshop",
-      //   module: 1
-      // },
-      // {
-      //   component: "others",
-      //   url: "/others",
-      //   module: 1
-      // },
-      // {
-      //   component: "otherShops",
-      //   url: "/othershop",
-      //   module: 1
-      // },
-      // {
-      //   component: "shopHome",
-      //   url: "/shophome",
-      //   module: 1
-      // },
+      },     
       {
         component: "signUpCourier",
         url: "/signupcourier",
@@ -189,13 +154,7 @@ const rolesConfig = {
         component: "signUpCustomer",
         url: "/signupcustomer",
         module: 1
-      }
-      // ,
-      // {
-      //   component: "productForm",
-      //   url: "/productForm",
-      //   module: 1
-      // }
+      }     
     ]
   }
 };

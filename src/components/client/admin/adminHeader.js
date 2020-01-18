@@ -155,7 +155,7 @@ const Header = ({ sideLinks }) => {
             sideLinks.map((item, i) => {
               const { name, link } = item;
               return (
-                <div className="sideText">
+                <div key={i} className="sideText">
                   <Link to={link}>
                     <ListItem button>
                       <ListItemText primary={name} />

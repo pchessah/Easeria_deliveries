@@ -27,7 +27,7 @@
   "proxy": "http://localhost:4000",
   "devDependencies": {},
   "scripts": {
-    "start": "react-scripts start & node server/server.js",
+    "start": "react-scripts start & nodemon server/server.js",
     "build": "react-scripts build  & node server/server.js",
     "heroku-postbuild": "react-scripts build  & node server/server.js",
     "test": "react-scripts test --env=jsdom",
