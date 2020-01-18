@@ -5,6 +5,8 @@ const mongoose = require("mongoose");
 const passport = require("passport");
 const session = require("express-session");
 const path = require("path")
+const expressFile = require("express-fileupload")
+
 require("dotenv").config()
 const port = process.env.PORT || 4000;
 
@@ -20,8 +22,12 @@ mongoose
   .catch(err => console.error(err.stack));
 
 require("./config/passport")(passport);
+
+app.use(expressFile())
 app.use(express.static("build"))
 app.use(express.static("public"))
+app.use(express.static("uploads"))
+
 // Express session
 app.use(
   session({
@@ -31,7 +37,7 @@ app.use(
   })
 );
 
-app.get("*", (req,res)=>{
+app.get("/*", (req,res)=>{
   res.sendFile(path.join(__dirname, "../../dist", "index.html"))
 })
 
@@ -42,7 +48,7 @@ app.use(morgan("dev"));
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
-
+app.use(expressFile());
 app.use("/", require("./routes"));
 
 app.listen(port, () => console.log(`server running on port ${port}`));
