@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Button, Form, FormGroup, Label, Input, FormText } from "reactstrap";
 import axios from "axios";
 
-const Example = props => {
+const ProductForm = props => {
   const [inputs, setInputs] = useState();
   const [files, setFiles] = useState();
   const [response, setResponse] = useState();
@@ -11,8 +11,18 @@ const Example = props => {
     const { name, value, files } = e.target;
     setInputs({ ...inputs, [name]: value, image:files[0] });
   };
-  const handleSubmit = async () => {
-    const addProduct = await axios.post("/addproduct", { ...inputs, ...files });
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    const formData = new FormData();
+    formData.append("image",inputs)
+
+    const addProduct = await axios.post("/addproduct",formData,{
+      headers:{
+        'Content-Type':'multipart/form-data'
+      }
+      
+    });
     setResponse(addProduct.data);
   };
   console.log(inputs);
@@ -85,4 +95,4 @@ const Example = props => {
   );
 };
 
-export default Example;
+export default ProductForm;
