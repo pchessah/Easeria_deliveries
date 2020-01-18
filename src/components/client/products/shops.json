@@ -1,0 +1,23 @@
+[
+  {
+    "name": "Dondez",
+    "image": "",
+    "description": "Hotel",
+    "location": "milimani",
+    "category": "food"
+  },
+  {
+    "name": "Amaya",
+    "image": "",
+    "description": "Minimart",
+    "location": "milimani",
+    "category":"other"
+  },
+  {
+    "name": "Ojijo",
+    "image": "",
+    "description": "Clothes stall",
+    "location": "milimani",
+    "category":"other"
+  }
+]

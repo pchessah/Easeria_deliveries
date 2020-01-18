@@ -1,26 +1,28 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import {
+  Router, Route, Switch, Redirect,
+} from 'react-router-dom';
+import PublicRoutes from './routes/publicRoutes';
+import PrivateRoutes from './routes/privateRoutes';
+import history from './util/history';
+// import 'react-widgets/dist/css/react-widgets.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+// const authentication = () => (JSON.parse(localStorage.getItem('roles')) ? (
+//   <Redirect to="/app" />
+// ) : (
+//   <PublicRoutes />
+// ));
+
+const App = () => (
+  <div>
+    <Router history={history}>
+      <Switch>
+        <Route path="/app" component={PrivateRoutes} />
+        <Route path="" component={PublicRoutes} />
+      </Switch>
+    </Router>
+  </div>
+);
 
 export default App;

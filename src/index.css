@@ -1,13 +1,155 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url("https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css");
+@import url("https://fonts.googleapis.com/css?family=Lobster+Two&display=swap");
+/* @import url("//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"); */
+/* // Extra small devices (portrait phones, less than 576px)
+// No media query for `xs` since this is the default in Bootstrap
+
+// Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* // Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+}
+
+/* // Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+}
+
+/* // Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+}
+
+.bg-yellow {
+  background: #fedd3e;
+}
+.navbar {
+  height: 90px !important;
+}
+
+.nav-link {
+  color: black !important;
+  font-family: "Corben", cursive;
+}
+
+.content-homepage {
+  color: black !important;
+  padding-top: 04%;
+  padding-bottom: 04%;
+  font-family: "Corben", cursive;
+  font-weight: lighter !important;
+}
+
+.navbar-brand {
+  color: white !important;
+  font-family: "Corben", cursive;
+}
+.navbar a {
+  font-family: "Corben", cursive !important;
+}
+
+.card-text {
+  font-family: "Lobster", cursive !important;
+  font-weight: bolder !important;
+}
+
+.red {
+  color: red;
+}
+.form-area {
+  background-color: #fafafa;
+  padding: 10px 40px 60px;
+  margin: 10px 0px 60px;
+  border: 1px solid GREY;
+}
+
+.form-area h3 {
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+#home {
+  clip-path: url(#cache);
+}
+
+#red {
+  fill: none;
+  opacity: 0.15;
+  stroke: #ce1b5f;
+  stroke-width: 12;
+  stroke-miterlimit: 10;
+  animation: show 4s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+
+#blue {
+  fill: none;
+  opacity: 0.15;
+  stroke: #06a1c4;
+  stroke-width: 12;
+  stroke-miterlimit: 10;
+  animation: show 4s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+
+#light-blue {
+  fill: none;
+  opacity: 0.15;
+  stroke: #06a1c4;
+  stroke-width: 6;
+  stroke-miterlimit: 10;
+  stroke-dasharray: 200;
+  stroke-dashoffset: 800;
+  animation: draw 4s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes draw {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes show {
+  0% {
+    opacity: 0.15;
+  }
+  50% {
+    opacity: 0.2;
+  }
+  100% {
+    opacity: 0.15;
+  }
+}
+
+#contact-form {
+  width: 440px;
+  margin: 30px auto 0;
+  /* border: 1px solid grey; */
+  box-shadow: 0px 10px 50px #555;
+  padding: 15px;
+  border-radius: 4px;
+}
+
+.product-form-container {
+  width: 440px;
+  margin: 30px auto 0;
+  /* border: 1px solid grey; */
+  box-shadow: 0px 10px 50px #555;
+  padding: 15px;
+  border-radius: 4px;
+}
+
+.avatar {
+  position: fixed;
+  top: 50px;
+  right: 90px;
+  padding-left: 900px !important;
+  padding-bottom: 50px;
 }
