@@ -15,20 +15,20 @@ const ProductForm = props => {
     e.preventDefault();
 
     const formData = new FormData();
-    formData.append("image",inputs)
+    formData.append('image',inputs.image)
 
     const addProduct = await axios.post("/addproduct",formData,{
       headers:{
-        'Content-Type':'multipart/form-data'
+        'Content-Type': 'multipart/form-data'
       }
       
     });
     setResponse(addProduct.data);
   };
-  console.log(inputs);
+  console.log(inputs && inputs.image);
   return (
     <div className="product-form-container">
-      <Form className="productForm" onSubmit={handleSubmit} encType="multipart/form-data">
+      <Form className="productForm" onSubmit={handleSubmit}>
         <FormGroup>
           <Label for="productName">Name</Label>
           <Input

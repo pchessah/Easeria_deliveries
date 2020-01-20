@@ -3,11 +3,14 @@ const { Courier, Customer, ShopOwner, Logins, ProductSchema} = require("../model
 const path = require ("path")
 
 
-router.post("/addproduct", (req, res, next)=>{
-    const {productName, productPrice, category, description, image } = req.body;
 
-    image.mv(path.join(__dirname,"/uploads", image.name))
-    .then(()=>console.log("success chessah"))
+router.post("/addproduct", (req, res, next)=>{
+    const {productName, productPrice, category, description } = req.body;
+    const {image}=req.files
+  
+console.log(req.files);
+    image.mv(path.join(__dirname,"../../uploads", image.name))
+    .then(()=>res.send("success chessah"))
     .catch(err=>console.log(err.stack))
     
     console.log(image)
