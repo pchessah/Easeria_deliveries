@@ -52,6 +52,7 @@ function ContactCourier() {
             ></textarea>
           </div>
 
+          <a href="/courierConfirm">
           <button
             type="button"
             id="submit"
@@ -60,7 +61,9 @@ function ContactCourier() {
           >
             Send
           </button>
+          </a>        
 
+          <a href="/courierConfirm">
           <button
             style={{margin:"10px"}}
             type="button"
@@ -70,6 +73,9 @@ function ContactCourier() {
           >
             Call
           </button>
+          </a>
+
+          
         </form>
       </div>
     </div>
