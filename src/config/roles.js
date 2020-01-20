@@ -83,6 +83,11 @@ const components = {
     component: "courierList",
     url:"/courierList",
     module: 1
+  },
+  courierConfirm:{
+    component:"courierConfirm",
+    url:"/courierConfirm",
+    module: 1
   }
 };
 
@@ -113,7 +118,8 @@ const {
   contactCourier,
   contactCustomer,
   contactAdmin,
-  courierList
+  courierList,
+  courierConfirm
 } = components;
 const rolesConfig = {
   admin: {
@@ -131,7 +137,8 @@ const rolesConfig = {
       contactShopOwner,
       contactCourier,
       contactAdmin,
-      courierList
+      courierList,
+      courierConfirm
     ]
   },
   courier: {

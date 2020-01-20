@@ -41,6 +41,6 @@ const Customer = mongoose.model("Customer", customerSchema);
 const Courier = mongoose.model("Courier", courierSchema);
 const ShopOwner = mongoose.model("ShopOwner", shopOwnerSchema);
 const Logins = mongoose.model("Logins", loginsSchema);
-const ProductSchema = mongoose.model("Products", productSchema);
+const Products = mongoose.model("Products", productSchema);
 
-module.exports = { Courier, Customer, ShopOwner, Logins, ProductSchema };
+module.exports = { Courier, Customer, ShopOwner, Logins, Products };

@@ -23,6 +23,7 @@ import ProductForm from '../components/client/shopOwner/ProductForm'
 import Footer from '../components/client/Footer';
 import CourierList from '../components/client/courier/CourierList';
 import ContactCourier from '../components/client/courier/ContactCourier';
+import CourierConfirm from '../components/client/courier/CourierConfirm';
 // import NotFound from '../components/NotFound';
 
 // const Register = () => (
@@ -67,6 +68,7 @@ const PublicRoutes = ({ match }) => (
       <Route path='/signupshopowner' component={SignupShopOwner}/>
       <Route path='/signupcustomer' component={SignupCustomer}/>
       <Route path="/courierList" component={CourierList} />
+      <Route path="/courierConfirm" component={CourierConfirm}/>
       
       {/* <Route component={NotFound} /> */}
     </Switch>

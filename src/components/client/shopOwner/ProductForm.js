@@ -4,28 +4,28 @@ import axios from "axios";
 
 const ProductForm = props => {
   const [inputs, setInputs] = useState();
-  const [files, setFiles] = useState();
+  const [images, setFiles] = useState();
   const [response, setResponse] = useState();
 
   const handleChange = e => {
-    const { name, value, files } = e.target;
-    setInputs({ ...inputs, [name]: value, image:files[0] });
+    const { name, value } = e.target;
+    setInputs({ ...inputs, [name]: value });
   };
   const handleSubmit = async (e) => {
     e.preventDefault();
 
     const formData = new FormData();
-    formData.append('image',inputs.image)
+    formData.append('image',images)
 
-    const addProduct = await axios.post("/addproduct",formData,{
+    const addProduct = await (axios.post("/addproduct",formData,{
       headers:{
         'Content-Type': 'multipart/form-data'
       }
       
-    });
+    }) && axios.post("/addproduct", inputs));
     setResponse(addProduct.data);
   };
-  console.log(inputs && inputs.image);
+  console.log(inputs && inputs);
   return (
     <div className="product-form-container">
       <Form className="productForm" onSubmit={handleSubmit}>
@@ -82,7 +82,7 @@ const ProductForm = props => {
             type="file"
             name="image"
             id="image"
-            onChange={handleChange}
+            onChange={(e)=>setFiles(e.target.files[0])}
           />
           <FormText color="muted">Upload product image with size</FormText>
         </FormGroup>

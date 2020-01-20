@@ -1,21 +1,42 @@
 const router = require("express").Router();
-const { Courier, Customer, ShopOwner, Logins, ProductSchema} = require("../models/data")
-const path = require ("path")
 
+const {
+  Courier,
+  Customer,
+  ShopOwner,
+  Logins,
+  Products
+} = require("../models/data");
+const path = require("path");
 
+let imgname;
+router.post("/addproduct", (req, res, next) => {
+  const imageName = n => {
+    let nm;
+    if (n.mimetype === "image/png") {
+      nm = `${Date.now()}.png`;
+    } else if (n.mimetype === "image/jpeg") {
+      nm = `${Date.now()}.jpeg`;
+    }
+    return nm;
+  };
+  if (Object.keys(req.body).length > 0) {
+      console.log(req.body);
+    const newProduct = new Products({ ...req.body, image: imgname });
+    newProduct
+      .save()
+      .then(() => {
+        res.send("Saved Successfully!");
+      })
+      .catch(err => console.log(err));
+  }
+  if (req.files) {
+    const { image } = req.files;
+    const imgVar = imageName(image);
+    image.mv(path.join(__dirname, "../../uploads", imgVar));
+    imgname = imgVar;
+    console.log(imgVar);
+  }
+});
 
-router.post("/addproduct", (req, res, next)=>{
-    const {productName, productPrice, category, description } = req.body;
-    const {image}=req.files
-  
-console.log(req.files);
-    image.mv(path.join(__dirname,"../../uploads", image.name))
-    .then(()=>res.send("success chessah"))
-    .catch(err=>console.log(err.stack))
-    
-    console.log(image)
-   
-
-})
-
-module.exports = router
+module.exports = router;

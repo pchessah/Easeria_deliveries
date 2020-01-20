@@ -7,18 +7,15 @@ import ListItemText from '@material-ui/core/ListItemText';
 import Grid from '@material-ui/core/Grid';
 
 const products = [
-  { name: 'Product 1', desc: 'A nice thing', price: '$9.99' },
-  { name: 'Product 2', desc: 'Another thing', price: '$3.45' },
-  { name: 'Product 3', desc: 'Something else', price: '$6.51' },
-  { name: 'Product 4', desc: 'Best thing of all', price: '$14.11' },
-  { name: 'Shipping', desc: '', price: 'Free' },
+  { name: 'Rice', desc: '2 kg rice', price: 'Ksh 210' },
+ 
 ];
-const addresses = ['1 Material-UI Drive', 'Reactville', 'Anytown', '99999', 'USA'];
+const addresses = ['Lolwe', 'Savannah court', 'Near Mama Lynn'];
 const payments = [
-  { name: 'Card type', detail: 'Visa' },
-  { name: 'Card holder', detail: 'Mr John Smith' },
-  { name: 'Card number', detail: 'xxxx-xxxx-xxxx-1234' },
-  { name: 'Expiry date', detail: '04/2024' },
+  { name: 'Mobile Money Payment', detail: 'mpesa' },
+  { name: 'Mpesa Name', detail: 'Customer Mail' },
+  { name: 'Amount Payable', detail: 'Ksh 210.00' },
+  { name: 'Date', detail: '21/01/2020' },
 ];
 
 const useStyles = makeStyles(theme => ({
@@ -51,7 +48,7 @@ export default function Review() {
         <ListItem className={classes.listItem}>
           <ListItemText primary="Total" />
           <Typography variant="subtitle1" className={classes.total}>
-            $34.06
+            Ksh 210.00
           </Typography>
         </ListItem>
       </List>

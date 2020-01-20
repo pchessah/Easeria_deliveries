@@ -22,6 +22,7 @@ import ContactShopOwner from '../components/client/shopOwner/ContactShopOwner';
 import CourierDashboard from '../components/client/courier/CourierDashboard';
 import ProductForm from '../components/client/shopOwner/ProductForm'
 import CourierList from '../components/client/courier/CourierList';
+import CourierConfirm from '../components/client/courier/CourierConfirm';
 
 
 // Private routes.
@@ -48,6 +49,7 @@ const courierDashboard= () => <CourierDashboard />;
 const contactShopOwner = () => <ContactShopOwner />;
 const productForm =()=> <ProductForm />;
 const courierList =()=> <CourierList/>
+const courierConfirm = ()=> <CourierConfirm/>
 
 export {
   home,
@@ -72,5 +74,6 @@ export {
   contactCourier,
   contactAdmin,
   productForm,
-  courierList
+  courierList,
+  courierConfirm
 };
