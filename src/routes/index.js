@@ -21,6 +21,7 @@ import ContactCustomer from '../components/client/customer/ContactCustomer';
 import ContactShopOwner from '../components/client/shopOwner/ContactShopOwner';
 import CourierDashboard from '../components/client/courier/CourierDashboard';
 import ProductForm from '../components/client/shopOwner/ProductForm'
+import CourierList from '../components/client/courier/CourierList';
 
 
 // Private routes.
@@ -46,6 +47,7 @@ const contactCustomer = () => <ContactCustomer/>;
 const courierDashboard= () => <CourierDashboard />;
 const contactShopOwner = () => <ContactShopOwner />;
 const productForm =()=> <ProductForm />;
+const courierList =()=> <CourierList/>
 
 export {
   home,
@@ -69,5 +71,6 @@ export {
   contactCustomer,
   contactCourier,
   contactAdmin,
-  productForm
+  productForm,
+  courierList
 };

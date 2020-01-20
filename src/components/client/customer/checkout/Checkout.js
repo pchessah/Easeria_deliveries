@@ -115,6 +115,7 @@ export default function Checkout() {
                 <Typography variant="subtitle1">
                   Your order number is #2001539. We have emailed your order confirmation, and will
                   send you an update when your order has shipped.
+                  <a href="/courierList"> <button> See Available Couriers </button></a>
                 </Typography>
               </React.Fragment>
             ) : (

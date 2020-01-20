@@ -20,6 +20,9 @@ import SignupCourier from '../components/client/courier/SignupCourier';
 import SignupShopOwner from '../components/client/shopOwner/SignupShopOwner';
 import SignupCustomer from '../components/client/customer/signupCustomer';
 import ProductForm from '../components/client/shopOwner/ProductForm'
+import Footer from '../components/client/Footer';
+import CourierList from '../components/client/courier/CourierList';
+import ContactCourier from '../components/client/courier/ContactCourier';
 // import NotFound from '../components/NotFound';
 
 // const Register = () => (
@@ -39,7 +42,8 @@ import ProductForm from '../components/client/shopOwner/ProductForm'
 
 const PublicRoutes = ({ match }) => (
   <div>
-    <Navbar/>      
+    <Navbar/> 
+         
     <Switch>
     
       {/* <Route path="/forgot-password" component={ForgotPassword} />
@@ -62,10 +66,11 @@ const PublicRoutes = ({ match }) => (
       <Route path='/signupcourier' component={SignupCourier}/>
       <Route path='/signupshopowner' component={SignupShopOwner}/>
       <Route path='/signupcustomer' component={SignupCustomer}/>
-      {/* <Route path="/app/productForm" component={ProductForm} /> */}
+      <Route path="/courierList" component={CourierList} />
       
       {/* <Route component={NotFound} /> */}
     </Switch>
+    {/* <Footer/> */}
   
   </div>
 );

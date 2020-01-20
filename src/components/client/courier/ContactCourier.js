@@ -60,6 +60,16 @@ function ContactCourier() {
           >
             Send
           </button>
+
+          <button
+            style={{margin:"10px"}}
+            type="button"
+            id="submit"
+            name="submit"
+            className="btn btn-primary pull-right"
+          >
+            Call
+          </button>
         </form>
       </div>
     </div>

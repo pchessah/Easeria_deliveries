@@ -78,6 +78,11 @@ const components = {
     component: "otherShops",
         url: "/othershop",
         module: 1
+  },
+  courierList:{
+    component: "courierList",
+    url:"/courierList",
+    module: 1
   }
 };
 
@@ -107,7 +112,8 @@ const {
   contactShopOwner,
   contactCourier,
   contactCustomer,
-  contactAdmin
+  contactAdmin,
+  courierList
 } = components;
 const rolesConfig = {
   admin: {
@@ -125,6 +131,7 @@ const rolesConfig = {
       contactShopOwner,
       contactCourier,
       contactAdmin,
+      courierList
     ]
   },
   courier: {
