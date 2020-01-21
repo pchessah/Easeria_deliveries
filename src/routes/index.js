@@ -78,5 +78,5 @@ export {
   productForm,
   courierList,
   courierConfirm,
-  productLIst
+  productList
 };
