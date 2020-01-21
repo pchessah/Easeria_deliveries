@@ -88,6 +88,11 @@ const components = {
     component:"courierConfirm",
     url:"/courierConfirm",
     module: 1
+  },
+  productList:{
+    component: "productList",
+    url:"/productList",
+    module:1
   }
 };
 
@@ -119,7 +124,8 @@ const {
   contactCustomer,
   contactAdmin,
   courierList,
-  courierConfirm
+  courierConfirm,
+  productList
 } = components;
 const rolesConfig = {
   admin: {
@@ -145,7 +151,7 @@ const rolesConfig = {
     routes: [loginCourier, courierDashboard,contactShopOwner,contactAdmin, contactCustomer ]
   },
   shopOwner: {
-    routes: [shopOwnerDashboard, productForm, contactAdmin, contactCourier, contactCustomer]
+    routes: [shopOwnerDashboard, productForm, contactAdmin, contactCourier, contactCustomer,productList]
   },
   common: {
     routes: [

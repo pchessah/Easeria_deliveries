@@ -14,6 +14,7 @@ const PrivateRoutes = props => {
   const shopOwner = [
     { name: "Edit Shop Details", link: "/app/shopDetails" },
     { name: "Add Product", link: "/app/addproduct" },
+    { name: "View Products", link: "/app/productList" },
     { name: "Edit Product", link: "/app/productForm" },
     { name: "Delete Product", link: "/app/deleteProduct" },
     { name: "Contact Admin", link: "/app/contactAdmin" },
