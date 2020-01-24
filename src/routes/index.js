@@ -24,6 +24,7 @@ import ProductForm from '../components/client/shopOwner/ProductForm'
 import CourierList from '../components/client/courier/CourierList';
 import CourierConfirm from '../components/client/courier/CourierConfirm';
 import ProductList from '../components/client/products/ProductList';
+import AvailableOrders from '../components/client/courier/AvailableOrders';
 
 
 // Private routes.
@@ -52,6 +53,7 @@ const productForm =()=> <ProductForm />;
 const courierList =()=> <CourierList/>
 const courierConfirm = ()=> <CourierConfirm/>
 const productList = () => <ProductList/>
+const availableOrders = () => <AvailableOrders/>
 
 export {
   home,
@@ -78,5 +80,6 @@ export {
   productForm,
   courierList,
   courierConfirm,
-  productList
+  productList,
+  availableOrders
 };

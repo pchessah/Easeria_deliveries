@@ -22,10 +22,12 @@ const PrivateRoutes = props => {
     { name: "Contact Courier", link: "/app/contactCourier" }
   ];
   const courier = [
+    { name: "Available Orders", link: "/app/availableOrders"},
     { name: "Edit Courier Details", link: "/app/courierDetails" },
     { name: "Contact Admin", link: "/app/contactAdmin" },
     { name: "Contact Customer", link: "/app/contactCustomer" },
     { name: "Contact ShopOwner", link: "/app/contactShopOwner" }
+    
   ];
   const admin = [
     { name: "View Customer Details", link: "/app/customerDetails" },
@@ -38,7 +40,6 @@ const PrivateRoutes = props => {
   ];
   const customer = [
     { name: "View Profile", link: "/app/profile" },   
-    { name: "Refund Customer", link: "/app/refundCustomer" },
     { name: "Contact Shop Owner", link: "/app/contactShopOwner" },
     { name: "Contact Admin", link: "/app/contactAdmin" },
     { name: "Contact Courier", link: "/app/contactCourier" }

@@ -1,8 +1,19 @@
 // component's config object.
 const components = {
-  contactShopOwner:{
-    component:"contactShopOwner",
-    url:"/contactShopOwner"
+  home: {
+    component: "home",
+    url: "/",
+    module: 1
+  },
+  availableOrders: {
+    component: "availableOrders",
+    url: "/availableOrders",
+    module: 1
+  },
+  contactShopOwner: {
+    component: "contactShopOwner",
+    url: "/contactShopOwner",
+    module: 1
   },
   loginCourier: {
     component: "loginCourier",
@@ -29,70 +40,70 @@ const components = {
     url: "/addproduct",
     module: 1
   },
-  contactCustomer:{
+  contactCustomer: {
     component: "contactCustomer",
     url: "/contactCustomer",
     module: 1
   },
-  contactAdmin:{
+  contactAdmin: {
     component: "contactAdmin",
     url: "/contactAdmin",
     module: 1
   },
-  contactCourier:{
+  contactCourier: {
     component: "contactCourier",
     url: "/contactCourier",
     module: 1
   },
-  drink:{    
-      component: "drink",
-      url: "/drink",
-      module: 1
+  drink: {
+    component: "drink",
+    url: "/drink",
+    module: 1
   },
-  aboutus:{
+  aboutus: {
     component: "aboutus",
-        url: "/about",
-        module: 1
+    url: "/about",
+    module: 1
   },
-  food:{
+  food: {
     component: "food",
-        url: "/food",
-        module: 1
+    url: "/food",
+    module: 1
   },
-  foodShop:{
+  foodShop: {
     component: "foodShop",
-        url: "/foodshop",
-        module: 1
+    url: "/foodshop",
+    module: 1
   },
-  others:{
+  others: {
     component: "others",
-        url: "/others",
-        module: 1
+    url: "/others",
+    module: 1
   },
-  shopHome:{
+  shopHome: {
     component: "shopHome",
-        url: "/shophome",
-        module: 1
+    url: "/shophome",
+    module: 1
   },
-  otherShops:{
+  otherShops: {
     component: "otherShops",
-        url: "/othershop",
-        module: 1
+    url: "/othershop",
+    module: 1
   },
-  courierList:{
+  courierList: {
     component: "courierList",
-    url:"/courierList",
+    url: "/courierList",
     module: 1
   },
-  courierConfirm:{
-    component:"courierConfirm",
-    url:"/courierConfirm",
+  courierConfirm: {
+    component: "courierConfirm",
+    url: "/courierConfirm",
     module: 1
   },
-  productList:{
+  productList: {
     component: "productList",
-    url:"/productList",
-    module:1
+    url: "/productList",
+    module: 1
   }
 };
 
@@ -125,7 +136,9 @@ const {
   contactAdmin,
   courierList,
   courierConfirm,
-  productList
+  productList,
+  home,
+  availableOrders
 } = components;
 const rolesConfig = {
   admin: {
@@ -134,6 +147,7 @@ const rolesConfig = {
   customer: {
     routes: [
       // aboutus,
+      home,
       drink,
       others,
       foodShop,
@@ -148,18 +162,27 @@ const rolesConfig = {
     ]
   },
   courier: {
-    routes: [loginCourier, courierDashboard,contactShopOwner,contactAdmin, contactCustomer ]
+    routes: [
+      loginCourier,
+      courierDashboard,
+      contactShopOwner,
+      contactAdmin,
+      contactCustomer,
+      availableOrders
+    ]
   },
   shopOwner: {
-    routes: [shopOwnerDashboard, productForm, contactAdmin, contactCourier, contactCustomer,productList]
+    routes: [
+      shopOwnerDashboard,
+      productForm,
+      contactAdmin,
+      contactCourier,
+      contactCustomer,
+      productList
+    ]
   },
   common: {
     routes: [
-      {
-        component: "home",
-        url: "/",
-        module: 1
-      },     
       {
         component: "signUpCourier",
         url: "/signupcourier",
@@ -174,7 +197,7 @@ const rolesConfig = {
         component: "signUpCustomer",
         url: "/signupcustomer",
         module: 1
-      }     
+      }
     ]
   }
 };
