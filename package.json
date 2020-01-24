@@ -31,7 +31,9 @@
   "devDependencies": {},
   "scripts": {
     "start": "react-scripts start & node server/server.js",
+    "serve": "node server",
     "build": "node server/server.js & react-scripts build",
+    "heroku-postbuild": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
   }
