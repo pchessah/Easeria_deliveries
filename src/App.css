@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Adamina|Corben:700|Open+Sans:800&display=swap");
+@import url('https://fonts.googleapis.com/css?family=IBM+Plex+Sans+Condensed&display=swap');
 
 @media (max-width: 576px) {
   .navbar #contact-form .content-homepage .split .left .right .centered .signup .categories .homeCarousel{
@@ -82,7 +83,9 @@
   -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
   -moz-box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
-  font-family: "Corben", cursive;
+  font-family: 'IBM Plex Sans Condensed', sans-serif;
+  font-weight: bolder;
+
 }
 .categories:hover {
   text-decoration: none;
@@ -101,7 +104,8 @@
   font-weight: bolder;
 }
 .homeCarousel {
-  font-family: "Corben", cursive;
+  font-family: 'IBM Plex Sans Condensed', sans-serif;
+  font-weight: bolder;
   margin-top: 0%;
   height: '50vh' !important;
 }

@@ -1,5 +1,7 @@
 @import url("https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css");
 @import url("https://fonts.googleapis.com/css?family=Lobster+Two&display=swap");
+@import url('https://fonts.googleapis.com/css?family=IBM+Plex+Sans+Condensed&display=swap');
+
 /* @import url("//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"); */
 /* // Extra small devices (portrait phones, less than 576px)
 // No media query for `xs` since this is the default in Bootstrap
@@ -33,28 +35,32 @@
 
 .nav-link {
   color: black !important;
-  font-family: "Corben", cursive;
+  font-family: 'IBM Plex Sans Condensed', sans-serif;
   position: relative !important;
+  font-weight: bolder;
+
 }
 
 .content-homepage {
   color: black !important;
   padding-top: 04%;
   padding-bottom: 04%;
-  font-family: "Corben", cursive;
-  font-weight: lighter !important;
+  font-family: 'IBM Plex Sans Condensed', sans-serif;
+  font-weight: bolder;
 }
 
 .navbar-brand {
   color: white !important;
-  font-family: "Corben", cursive;
+  font-weight: bolder;
+  font-family: 'IBM Plex Sans Condensed', sans-serif;
 }
 .navbar a {
-  font-family: "Corben", cursive !important;
+  font-family: 'IBM Plex Sans Condensed', sans-serif;
+  font-weight: bolder;
 }
 
 .card-text {
-  font-family: "Lobster", cursive !important;
+  font-family: 'IBM Plex Sans Condensed', sans-serif !important;
   font-weight: bolder !important;
 }
 
