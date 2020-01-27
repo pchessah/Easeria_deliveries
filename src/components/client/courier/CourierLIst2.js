@@ -1,7 +1,7 @@
 import React from "react";
 import { Table } from "reactstrap";
 
-function CourierList() {
+function CourierList2() {
   return (
     <div>
         <h2> Available Couriers </h2>
@@ -55,4 +55,4 @@ function CourierList() {
   );
 }
 
-export default CourierList;
+export default CourierList2;
