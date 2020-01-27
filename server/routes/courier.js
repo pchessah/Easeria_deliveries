@@ -37,6 +37,23 @@ router.post("/addproduct", (req, res, next) => {
     imgname = imgVar;
     console.log(imgVar);
   }
+  
 });
+
+router.get("/products", function(req, res){
+  Products.find(function(err, products){
+    res.json(products)
+  })
+})
+
+router.get("/products/:id", function(req, res){
+  Products.findById(req.params.id, function(err, product){
+    if(!product){
+      res.status(404).send("No product found")
+    } else {
+      res.json(product)
+    }
+  })
+})
 
 module.exports = router;

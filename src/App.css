@@ -1,5 +1,10 @@
 @import url("https://fonts.googleapis.com/css?family=Adamina|Corben:700|Open+Sans:800&display=swap");
 
+@media (max-width: 576px) {
+  .navbar #contact-form .content-homepage .split .left .right .centered .signup .categories .homeCarousel{
+   width:100%; 
+}
+}
 .split {
   height: 100%;
   width: 50%;
@@ -66,7 +71,7 @@
 }
 
 .carousel-item {
-  height: 60vh !important;
+  max-height: 60vh !important;
 }
 
 .categories {
