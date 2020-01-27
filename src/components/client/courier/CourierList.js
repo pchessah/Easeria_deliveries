@@ -12,6 +12,7 @@ function CourierList() {
             <th>Name</th>
             <th>Location</th>
             <th>Availability</th>
+            <th>Destination</th>
             <th>Contact Courier</th>
           </tr>
         </thead>
@@ -21,6 +22,7 @@ function CourierList() {
             <td>Mark</td>
             <td>Milimani</td>
             <td>Yes</td>
+            <td><input type="text"/></td>            
             <td><a href="/app/contactCourier"><button>Contact Me</button></a></td>
           </tr>
           <tr>
@@ -28,6 +30,7 @@ function CourierList() {
             <td>Chris</td>
             <td>Town</td>
             <td>Yes</td>
+            <td><input type="text"/></td> 
             <td><a href="/app/contactCourier"><button>Contact Me</button></a></td>
           </tr>
           <tr>
@@ -35,6 +38,7 @@ function CourierList() {
             <td>Paul</td>
             <td>Lolwe</td>
             <td>Yes</td>
+            <td><input type="text"/></td> 
             <td><a href="/app/contactCourier"><button>Contact Me</button></a></td>
           </tr>
           <tr>
@@ -42,6 +46,7 @@ function CourierList() {
             <td>Ashley</td>
             <td>Nyalenda</td>
             <td>No</td>
+            <td><input type="text"/></td> 
             <td><a href="/app/contactCourier"><button>Contact Me</button></a></td>
           </tr>
         </tbody>
