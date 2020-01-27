@@ -1,51 +1,59 @@
-import React, { useState, useEffect } from 'react';
-import { makeStyles } from '@material-ui/core/styles';
-import Paper from '@material-ui/core/Paper';
-import InputBase from '@material-ui/core/InputBase';
-import Divider from '@material-ui/core/Divider';
-import IconButton from '@material-ui/core/IconButton';
-import MenuIcon from '@material-ui/icons/Menu';
-import SearchIcon from '@material-ui/icons/Search';
-import Data from './products.json';
+import React, { useState, useEffect } from "react";
+import { makeStyles } from "@material-ui/core/styles";
+import Paper from "@material-ui/core/Paper";
+import InputBase from "@material-ui/core/InputBase";
+import Divider from "@material-ui/core/Divider";
+import IconButton from "@material-ui/core/IconButton";
+import MenuIcon from "@material-ui/icons/Menu";
+import SearchIcon from "@material-ui/icons/Search";
+import Data from "./products.json";
+import axios from "axios";
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles(theme => ({
   root: {
-    padding: '2px 4px',
-    display: 'flex',
-    alignItems: 'center',
+    padding: "2px 4px",
+    display: "flex",
+    alignItems: "center",
     width: 300,
-    margin: '1%',
-    marginLeft: '75%',
+    margin: "1%",
+    marginLeft: "75%"
   },
   input: {
     marginLeft: theme.spacing(1),
-    flex: 1,
+    flex: 1
   },
   iconButton: {
-    padding: 10,
+    padding: 10
   },
   divider: {
     height: 28,
-    margin: 4,
-  },
+    margin: 4
+  }
 }));
 
 function Products({ kind }) {
   const classes = useStyles();
-  const [shopItems, setShopItems] = useState(null);
+  const [shopItems, setShopItems] = useState([]);
 
   useEffect(() => {
-    const items = Data && Data.filter((item) => item.category == kind);
-    setShopItems(items);
-  }, []);
-
+    async function getProducts() {
+      try {
+        const response = await axios.post("/products");
+        setShopItems(response.data);
+      } catch (error) {
+        console.log("error", error);
+      }
+    }
+    getProducts();
+  }, [kind]);
+  console.log(shopItems);
   return (
     <div>
       <Paper component="form" className={classes.root}>
         <InputBase
           className={classes.input}
           placeholder="Search..."
-          inputProps={{ 'aria-label': 'search...' }}
+          inputProps={{ "aria-label": "search..." }}
         />
         <IconButton
           type="submit"
@@ -58,24 +66,24 @@ function Products({ kind }) {
       <br />
       <hr />
       <div className="container">
-        <div className="row" style={{ marginLeft: '30px !important' }}>
-          {shopItems
-            && shopItems.map((item) => {
-              const {
-                name, price, description, image,
-              } = item;
+        <div className="row" style={{ marginLeft: "30px !important" }}>
+          <img src={shopItems.img}/>
+          {/* {shopItems &&
+            shopItems.map((item, i) => {
+              const { productName, productPrice, description, image } = item;
               return (
-                <div id="photo"className="col-sm-3 listing">
+                <div id="photo" className="col-sm-3 listing">
                   <div className="col-item">
-                    <div 
+                    <div
                       className="photo"
-                      style={{ backgroundImage: `url(${image})` }}
+                      style={{ backgroundImage: `url(${item.image})` }}
                     />
+                    <img src={image} />
                     <div className="info">
                       <div className="row">
                         <div className="price col-md-6">
-                          <h5>{name}</h5>
-                          <h5 className="price-text-color">{`Ksh ${price}`}</h5>
+                          <h5>{productName}</h5>
+                          <h5 className="price-text-color">{`Ksh ${productPrice}`}</h5>
                         </div>
                       </div>
                       <div className="separator clear-left">
@@ -97,7 +105,7 @@ function Products({ kind }) {
                   </div>
                 </div>
               );
-            })}
+            })} */}
         </div>
       </div>
     </div>

@@ -4,11 +4,10 @@ const morgan = require("morgan");
 const mongoose = require("mongoose");
 const passport = require("passport");
 const session = require("express-session");
-const path = require("path")
-const expressFile = require("express-fileupload")
+const path = require("path");
+const expressFile = require("express-fileupload");
 
-
-require("dotenv").config()
+require("dotenv").config();
 const port = process.env.PORT || 4000;
 
 const app = express();
@@ -23,11 +22,11 @@ mongoose
   .catch(err => console.error(err.stack));
 
 require("./config/passport")(passport);
-app.use(expressFile())
+app.use(expressFile());
 
-app.use(express.static("build"))
-app.use(express.static("public"))
-app.use(express.static("uploads"))
+app.use(express.static("build"));
+app.use(express.static("public"));
+app.use(express.static("uploads"));
 
 // Express session
 app.use(
@@ -38,9 +37,9 @@ app.use(
   })
 );
 
-app.get("/*", (req,res)=>{
-  res.sendFile(path.join(__dirname, "../build", "index.html"))
-})
+app.get("/*", (req, res) => {
+  res.sendFile(path.join(__dirname, "../build", "index.html"));
+});
 
 app.use(passport.initialize());
 app.use(passport.session());

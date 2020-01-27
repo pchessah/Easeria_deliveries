@@ -21,7 +21,7 @@ router.post("/addproduct", (req, res, next) => {
     return nm;
   };
   if (Object.keys(req.body).length > 0) {
-      console.log(req.body);
+    console.log(req.body);
     const newProduct = new Products({ ...req.body, image: imgname });
     newProduct
       .save()
@@ -37,23 +37,24 @@ router.post("/addproduct", (req, res, next) => {
     imgname = imgVar;
     console.log(imgVar);
   }
-  
+});
+console.log("../../uploads/1579528013892.jpeg");
+router.post("/products", function(req, res) {
+  Products.find(function(err, products) {
+    console.log("../../uploads/1579528320914.jpeg");
+    // res.json(products);
+    res.send({img:"../../uploads/1579528320914.jpeg"})
+  });
 });
 
-router.get("/products", function(req, res){
-  Products.find(function(err, products){
-    res.json(products)
-  })
-})
-
-router.get("/products/:id", function(req, res){
-  Products.findById(req.params.id, function(err, product){
-    if(!product){
-      res.status(404).send("No product found")
+router.get("/products/:id", function(req, res) {
+  Products.findById(req.params.id, function(err, product) {
+    if (!product) {
+      res.status(404).send("No product found");
     } else {
-      res.json(product)
+      res.json(product);
     }
-  })
-})
+  });
+});
 
 module.exports = router;
