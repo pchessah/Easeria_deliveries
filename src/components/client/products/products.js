@@ -67,8 +67,8 @@ function Products({ kind }) {
       <hr />
       <div className="container">
         <div className="row" style={{ marginLeft: "30px !important" }}>
-          <img src={shopItems.img}/>
-          {/* {shopItems &&
+          
+           {shopItems &&
             shopItems.map((item, i) => {
               const { productName, productPrice, description, image } = item;
               return (
@@ -105,7 +105,7 @@ function Products({ kind }) {
                   </div>
                 </div>
               );
-            })} */}
+            })}
         </div>
       </div>
     </div>
