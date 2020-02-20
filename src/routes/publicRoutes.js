@@ -7,7 +7,7 @@ import Food from '../components/client/products/Food';
 import FoodShop from '../components/client/products/Drink';
 import Home from '../components/client/Home';
 import Login from '../components/client/courier/LoginCourier';
-import Navbar from '../components/client/navbar';
+import NavigationBar from '../components/client/navbar';
 import Others from '../components/client/products/Others';
 import OtherShops from '../components/client/products/OtherShops';
 import ShopHome from '../components/client/products/ShopHome';
@@ -43,7 +43,7 @@ import CourierConfirm from '../components/client/courier/CourierConfirm';
 
 const PublicRoutes = ({ match }) => (
   <div>
-    <Navbar/> 
+    <NavigationBar/> 
          
     <Switch>
     

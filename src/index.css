@@ -41,6 +41,13 @@
 
 }
 
+.home-link {
+  color: #000000;
+}
+.home-link:hover {
+  color: #fff;
+  text-decoration: none;
+}
 .content-homepage {
   color: black !important;
   padding-top: 04%;
