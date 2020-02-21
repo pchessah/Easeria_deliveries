@@ -1,10 +1,26 @@
 @import url("https://fonts.googleapis.com/css?family=Adamina|Corben:700|Open+Sans:800&display=swap");
 @import url('https://fonts.googleapis.com/css?family=IBM+Plex+Sans+Condensed&display=swap');
 
+*{
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
 @media (max-width: 576px) {
   .navbar #contact-form .content-homepage .split .left .right .centered .signup .categories .homeCarousel{
    width:100%; 
 }
+}
+
+html{
+  width:100%;
+  height:100%;
+}
+body{
+  width:100%;
+  height:100%;
+  background-color:#DDD;
 }
 .split {
   height: 100%;
@@ -78,7 +94,6 @@
 .categories {
   height: 20rem;
   margin: 20px;
-  left: 2%;
   border-radius: 5px;
   -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
   -moz-box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
@@ -201,3 +216,4 @@
 [data-slide="prev"] {
   margin-right: 10px;
 }
+

@@ -17,6 +17,7 @@ import SearchIcon from "@material-ui/icons/Search";
 // import mainListItems from "../client/sidebar";
 import Avatar from "@material-ui/icons/Person";
 import ListItem from "@material-ui/core/ListItem";
+import {Container} from "react-bootstrap"
 
 import ListItemText from "@material-ui/core/ListItemText";
 import { fade, makeStyles } from "@material-ui/core/styles";
@@ -89,11 +90,12 @@ const useStyles = makeStyles(theme => ({
     flexGrow: 1,
     height: "100vh",
     overflow: "auto"
-  },
-  container: {
-    paddingTop: theme.spacing(4),
-    paddingBottom: theme.spacing(4)
   }
+  // ,
+  // container: {
+  //   paddingTop: theme.spacing(4),
+  //   paddingBottom: theme.spacing(4)
+  // }
 }));
 
 const Header = ({ sideLinks }) => {
@@ -112,6 +114,7 @@ const Header = ({ sideLinks }) => {
   };
   return (
     <div>
+      <Container>
       <AppBar
         style={{ height: "2px" }}
         position="absolute"
@@ -166,6 +169,7 @@ const Header = ({ sideLinks }) => {
             })}
         </List>
       </Drawer>
+      </Container>
     </div>
   );
 };

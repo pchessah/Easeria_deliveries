@@ -30,15 +30,16 @@ const items = [
 ];
 const Home = (props) => (
   <div>
+    
     <UncontrolledCarousel
       className="homeCarousel"
       style={{ height: '50vh' }}
       items={items}
     />
-    <div className="row">
+    <div className="row contain mx-auto">
       <a
         href="/food"
-        className="col-md-3 categories category_left tint"
+        className="col-md-3 categories  tint"
         style={{
           background:
               'url(https://images.pexels.com/photos/262959/pexels-photo-262959.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500)',

@@ -6,6 +6,7 @@ import { Link } from "react-router-dom";
 const Styles = styled.div`
   .navbar {
     background-color: #ffe900;
+    position:relative
   }
 
   .nav-link {
@@ -21,10 +22,10 @@ function NavigationBar() {
     <Styles>
       <Navbar expand="lg">
         <Navbar.Brand href="/">
-          <h2>Easeria Deliveries </h2>
+          <h2 className= "home-link">Easeria Deliveries </h2>
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
-        <Navbar.Collapse id="basic-navbar-nav">
+        <Navbar.Collapse className="navigation-bar-collapse" id="basic-navbar-nav">
           <Nav className="ml-auto">
             <Nav.Item className="nav-item">
               <Nav.Link className="nav-link">
