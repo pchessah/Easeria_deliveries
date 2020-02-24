@@ -22,7 +22,7 @@ function ShopHome() {
       />
       <div className="row">
         <a
-          href="/fooddrinkshop"
+          href="/foodshop"
           className="col-md-3 categories category_left tint"
           style={{
             background:
@@ -34,7 +34,7 @@ function ShopHome() {
           </div>
         </a>
         <a
-          href="/fooddrinkshop"
+          href="/foodshop"
           className="col-md-3 categories tint"
           style={{
             background:

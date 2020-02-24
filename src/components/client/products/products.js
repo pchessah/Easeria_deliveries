@@ -23,17 +23,16 @@ function Products() {
               <CardImg
                 top
                 width="100%"
-                src="/assets/318x180.svg"
+                src={value.image}
                 alt="Card image cap"
               />
               <CardBody>
                 <CardTitle>{value.name}</CardTitle>
-                <CardSubtitle>Card subtitle</CardSubtitle>
+                <CardSubtitle>Ksh {value.price}</CardSubtitle>
                 <CardText>
-                  This card has supporting text below as a natural lead-in to
-                  additional content.
+               {value.description}
                 </CardText>
-                <Button>Button</Button>
+                <Button>Add to cart</Button>
               </CardBody>
             </Card>
       </CardGroup>

@@ -4,7 +4,7 @@ import Shop from './Shop';
 function FoodShop() {
   return (
     <div>
-      <Shop type="food" />
+      <Shop />
     </div>
 
   );
