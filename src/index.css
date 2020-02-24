@@ -213,3 +213,9 @@
   justify-content: center;
   width: 100%;
 }
+
+.calculate {
+  margin: 5px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
