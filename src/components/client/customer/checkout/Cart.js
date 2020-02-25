@@ -70,7 +70,7 @@ export default function Cart(props) {
                   cartItems && cartItems.map((item,i)=>{
                     const {name, price} = item;
                     return (
-                      <tr>
+                      <tr key={i}>
                       <td>{name}</td>
                       <td>1</td>
                       <td>{price}</td>
