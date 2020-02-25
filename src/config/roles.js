@@ -104,6 +104,11 @@ const components = {
     component: "productList",
     url: "/productList",
     module: 1
+  },
+  cart: {
+    component: "cart",
+    url: "/cart",
+    module: 1
   }
 };
 
@@ -138,7 +143,8 @@ const {
   courierConfirm,
   productList,
   home,
-  availableOrders
+  availableOrders,
+  cart
 } = components;
 const rolesConfig = {
   admin: {
@@ -158,7 +164,8 @@ const rolesConfig = {
       contactCourier,
       contactAdmin,
       courierList,
-      courierConfirm
+      courierConfirm,
+      cart
     ]
   },
   courier: {

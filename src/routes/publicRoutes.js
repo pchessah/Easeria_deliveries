@@ -24,6 +24,7 @@ import Footer from "../components/client/Footer";
 import CourierList from "../components/client/courier/CourierList";
 import ContactCourier from "../components/client/courier/ContactCourier";
 import CourierConfirm from "../components/client/courier/CourierConfirm";
+import Cart from "../components/client/customer/checkout/Cart";
 
 const PublicRoutes = ({ match }) => (
   <div>
@@ -50,6 +51,7 @@ const PublicRoutes = ({ match }) => (
       <Route path="/signupcustomer" component={SignupCustomer} />
       <Route path="/courierList" component={CourierList} />
       <Route path="/courierConfirm" component={CourierConfirm} />
+      <Route path="/cart" component={Cart}/>
 
       {/* <Route component={NotFound} /> */}
     </Switch>

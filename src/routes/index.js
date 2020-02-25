@@ -25,6 +25,7 @@ import CourierList from '../components/client/courier/CourierList';
 import CourierConfirm from '../components/client/courier/CourierConfirm';
 import ProductList from '../components/client/products/ProductList';
 import AvailableOrders from '../components/client/courier/AvailableOrders';
+import Cart from '../components/client/customer/checkout/Cart'
 
 
 // Private routes.
@@ -54,6 +55,7 @@ const courierList =()=> <CourierList/>
 const courierConfirm = ()=> <CourierConfirm/>
 const productList = () => <ProductList/>
 const availableOrders = () => <AvailableOrders/>
+const cart = () => <Cart/>
 
 export {
   home,
@@ -81,5 +83,6 @@ export {
   courierList,
   courierConfirm,
   productList,
-  availableOrders
+  availableOrders,
+  cart
 };

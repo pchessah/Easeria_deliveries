@@ -225,3 +225,17 @@ body{
   background-repeat:no-repeat;
   background-position: 50% 50%
 }
+
+.cart{
+  font-size: 15px;
+  text-align: justify;
+}
+
+.cartTotal{
+  font-size: 17px;
+  font-weight: bolder;
+}
+
+.cartButton{
+  padding-bottom: 12px;
+}

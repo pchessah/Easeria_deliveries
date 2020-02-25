@@ -82,6 +82,15 @@ function NavigationBar() {
                 </Link>
               </Nav.Link>
             </Nav.Item>
+
+            <Nav.Item className="nav-item">
+              <Nav.Link className="nav-link">
+                <Link className="home-link" to="/cart">
+                  Cart
+                </Link>
+              </Nav.Link>
+            </Nav.Item>
+
           </Nav>
         </Navbar.Collapse>
       </Navbar>
