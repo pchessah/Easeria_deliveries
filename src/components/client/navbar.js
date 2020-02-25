@@ -21,7 +21,7 @@ function NavigationBar() {
   return (
     <Styles>
       <Navbar expand="lg">
-        <Navbar.Brand href="/">
+        <Navbar.Brand Link to="/">
           <h2 className="home-link">Easeria Deliveries </h2>
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />

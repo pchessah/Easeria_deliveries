@@ -15,8 +15,7 @@ import { toast } from "react-toastify";
 import productData from "../products/products.json";
 
 function Products(props) {
-
-  const initialCart =() => JSON.parse(localStorage.getItem("productData"))
+  const initialCart = () => JSON.parse(localStorage.getItem("productData"));
   const [data, setData] = useState();
   const [cartProduct, setCartProduct] = useState([...initialCart]);
 
@@ -25,13 +24,13 @@ function Products(props) {
   }, []);
 
   console.log(initialCart());
-  
-  useEffect(()=>{
+
+  useEffect(() => {
     // set the browser stoarge with the cart products
-    initialCart()
-      const json = JSON.stringify(cartProduct);
-      localStorage.setItem("productData", json);
-  },[cartProduct])
+    initialCart();
+    const json = JSON.stringify(cartProduct);
+    localStorage.setItem("productData", json);
+  }, [cartProduct]);
 
   // useEffect(()=>{
   //     try {
@@ -49,17 +48,27 @@ function Products(props) {
   // },[])
 
   const handleAddCart = indx => {
-    if (JSON.parse(localStorage.getItem("productData")).includes(data[indx])) {
-      toast.error("Item already in cart");
-    } else {
-      setCartProduct([...cartProduct, data[indx]]);
-      toast.success("successfully added");
+    const local = JSON.parse(localStorage.getItem("productData"));
+    const inputProduct = data[indx];
+    console.log(local);
+    if (local.length===0){
+      console.log(cartProduct);
+        setCartProduct([...cartProduct, data[indx]]);
+        return toast.success("Item added successfuly");
+    }
+    for (let i = 0; i < local.length; i++) {
+      const { values } = Object;
+      if (values(inputProduct).join("")===values(local).join("")) {
+        console.log("cannot send");
+        return toast.error("Cannot add item");
+      } else {
+        console.log(cartProduct);
+        setCartProduct([...cartProduct, data[indx]]);
+        return toast.success("Item added successfuly");
+      }
     }
   };
-  const json = localStorage.getItem("productData");
-  const parsedData = JSON.parse(json);
 
-  console.log(parsedData);
 
   return (
     <div className="container">
