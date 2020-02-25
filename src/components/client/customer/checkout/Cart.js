@@ -45,11 +45,12 @@ const useStyles = makeStyles(theme => ({
 
 export default function Cart(props) {
   const classes = useStyles();
+
   const [cartItems, setItems] = useState([]);
   useEffect(()=>{
     const cartData = JSON.parse(localStorage.getItem("productData"))
     setItems([...cartData])
-  })
+  },[])
   return (
     <React.Fragment>
       <CssBaseline />
