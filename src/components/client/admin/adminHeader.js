@@ -8,19 +8,15 @@ import Toolbar from "@material-ui/core/Toolbar";
 import List from "@material-ui/core/List";
 import Divider from "@material-ui/core/Divider";
 import IconButton from "@material-ui/core/IconButton";
-import Badge from "@material-ui/core/Badge";
 import MenuIcon from "@material-ui/icons/Menu";
 import ChevronLeftIcon from "@material-ui/icons/ChevronLeft";
-import NotificationsIcon from "@material-ui/icons/Notifications";
-import InputBase from "@material-ui/core/InputBase";
-import SearchIcon from "@material-ui/icons/Search";
 // import mainListItems from "../client/sidebar";
 import Avatar from "@material-ui/icons/Person";
 import ListItem from "@material-ui/core/ListItem";
 import {Container} from "react-bootstrap"
 
 import ListItemText from "@material-ui/core/ListItemText";
-import { fade, makeStyles } from "@material-ui/core/styles";
+import { makeStyles } from "@material-ui/core/styles";
 import {
   UncontrolledDropdown,
   DropdownMenu,

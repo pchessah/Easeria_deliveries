@@ -1,10 +1,8 @@
 import React from "react";
 import {
-  Jumbotron,
   Button,
   Card,
   CardImg,
-  CardImgCard,
   CardTitle,
   CardText,
   CardDeck,

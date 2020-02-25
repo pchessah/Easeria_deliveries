@@ -22,7 +22,7 @@ function NavigationBar() {
     <Styles>
       <Navbar expand="lg">
         <Navbar.Brand href="/">
-          <h2 className= "home-link">Easeria Deliveries </h2>
+          <h2 className="home-link">Easeria Deliveries </h2>
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse className="navigation-bar-collapse" id="basic-navbar-nav">

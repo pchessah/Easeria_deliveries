@@ -49,13 +49,13 @@ const PrivateRoutes = props => {
   useEffect(() => {
     let roles = JSON.parse(localStorage.getItem("roles"));
     if (roles) {
-      if (roles.join("") == "shopOwner") {
+      if (roles.join("") === "shopOwner") {
         setLinks(shopOwner);
-      } else if (roles.join("") == "courier") {
+      } else if (roles.join("") === "courier") {
         setLinks(courier);
-      } else if (roles.join("") == "customer") {
+      } else if (roles.join("") === "customer") {
         setLinks(customer);
-      } else if (roles.join("") == "admin") {
+      } else if (roles.join("") === "admin") {
         setLinks(admin);
       }
       roles = ["common", ...roles];

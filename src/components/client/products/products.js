@@ -56,7 +56,6 @@ function Products(props) {
       toast.success("successfully added");
     }
   };
-  // console.log(cartProduct);
   const json = localStorage.getItem("productData");
   const parsedData = JSON.parse(json);
 
@@ -81,8 +80,6 @@ function Products(props) {
                     <CardTitle>{productValue.name}</CardTitle>
                     <CardSubtitle>Ksh {productValue.price}</CardSubtitle>
                     <CardText>{productValue.description}</CardText>
-                    {/* <button className="calculate">+</button>
-                <button className="calculate">-</button> */}
                     <br />
                     <Button onClick={() => handleAddCart(indx)}>
                       Add to cart

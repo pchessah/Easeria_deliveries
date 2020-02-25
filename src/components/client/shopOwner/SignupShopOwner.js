@@ -77,7 +77,7 @@ function SignupShopOwner() {
             onChange={handleChange}
             placeholder="Enter phone number..."
           />
-          <Link to ="/login">
+          <Link to="/login">
           <button className="btn" onClick={handleSubmit}>Sign up</button>
           </Link>
           

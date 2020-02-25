@@ -1,5 +1,5 @@
 import React from "react";
-import { Route, Router, Switch } from "react-router-dom";
+import { Route, Switch } from "react-router-dom";
 import { loginCourier } from ".";
 import Aboutus from "../components/client/Aboutus";
 import Drink from "../components/client/products/Drink";
@@ -19,14 +19,11 @@ import Payment from "../components/client/customer/checkout/Payment";
 import SignupCourier from "../components/client/courier/SignupCourier";
 import SignupShopOwner from "../components/client/shopOwner/SignupShopOwner";
 import SignupCustomer from "../components/client/customer/signupCustomer";
-import ProductForm from "../components/client/shopOwner/ProductForm";
-import Footer from "../components/client/Footer";
 import CourierList from "../components/client/courier/CourierList";
-import ContactCourier from "../components/client/courier/ContactCourier";
 import CourierConfirm from "../components/client/courier/CourierConfirm";
 import Cart from "../components/client/customer/checkout/Cart";
 
-const PublicRoutes = ({ match }) => (
+const PublicRoutes = () => (
   <div>
     <NavigationBar />
 

@@ -5,7 +5,7 @@ import axios from "axios";
 const ProductForm = props => {
   const [inputs, setInputs] = useState();
   const [images, setFiles] = useState();
-  const [response, setResponse] = useState();
+  const [setResponse] = useState();
 
   const handleChange = e => {
     const { name, value } = e.target;

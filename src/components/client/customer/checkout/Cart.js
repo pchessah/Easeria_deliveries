@@ -1,23 +1,10 @@
-import React from "react";
+import React, {useState, useEffect} from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import CssBaseline from "@material-ui/core/CssBaseline";
 import Paper from "@material-ui/core/Paper";
 import Link from "@material-ui/core/Link";
 import Typography from "@material-ui/core/Typography";
 import { Table, Button } from "reactstrap";
-
-function Copyright() {
-  return (
-    <Typography variant="body2" color="textSecondary" align="center">
-      {"Copyright © "}
-      <Link color="inherit" href="/">
-        Easeria Deliveries
-      </Link>{" "}
-      {new Date().getFullYear()}
-      {"."}
-    </Typography>
-  );
-}
 
 const useStyles = makeStyles(theme => ({
   appBar: {
@@ -56,9 +43,13 @@ const useStyles = makeStyles(theme => ({
   }
 }));
 
-export default function Cart() {
+export default function Cart(props) {
   const classes = useStyles();
-
+  const [cartItems, setItems] = useState([]);
+  useEffect(()=>{
+    const cartData = JSON.parse(localStorage.getItem("productData"))
+    setItems([...cartData])
+  })
   return (
     <React.Fragment>
       <CssBaseline />
@@ -75,11 +66,19 @@ export default function Cart() {
                 </tr>
               </thead>
               <tbody>
-                <tr>
-                  <td>Rice allsome</td>
-                  <td>1</td>
-                  <td>Ksh 250</td>
-                </tr>
+                {
+                  cartItems && cartItems.map((item,i)=>{
+                    const {name, price} = item;
+                    return (
+                      <tr>
+                      <td>{name}</td>
+                      <td>1</td>
+                      <td>{price}</td>
+                    </tr>
+                    )
+                  })
+                }
+               
                 <tr className="cartTotal">
                   <td>Total</td>
                   <td>1</td>
@@ -97,5 +96,18 @@ export default function Cart() {
         <Copyright />
       </main>
     </React.Fragment>
+  );
+}
+
+function Copyright() {
+  return (
+    <Typography variant="body2" color="textSecondary" align="center">
+      {"Copyright © "}
+      <Link color="inherit" href="/">
+        Easeria Deliveries
+      </Link>{" "}
+      {new Date().getFullYear()}
+      {"."}
+    </Typography>
   );
 }

@@ -1,6 +1,5 @@
 import React from 'react';
 import { UncontrolledCarousel } from 'reactstrap';
-import Footer from './Footer';
 
 const items = [
   {

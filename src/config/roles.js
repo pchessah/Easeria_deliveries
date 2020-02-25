@@ -123,7 +123,7 @@ const modules = {
 
 // component's access to roles.
 const {
-  shop,
+
   drink,
   others,
   food,
@@ -133,7 +133,6 @@ const {
   otherShops,
   shopOwnerDashboard,
   courierDashboard,
-  admin,
   productForm,
   contactShopOwner,
   contactCourier,
