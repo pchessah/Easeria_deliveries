@@ -47,10 +47,18 @@ export default function Cart(props) {
   const classes = useStyles();
 
   const [cartItems, setItems] = useState([]);
+const defaultItems = [{name: "No item selected", price: 0}]
+
   useEffect(()=>{
     const cartData = JSON.parse(localStorage.getItem("productData"))
-    setItems([...cartData])
+    if (cartData !== null){
+      setItems([...cartData])
+    } else {
+      setItems([...defaultItems])
+    }
+    
   },[])
+
   return (
     <React.Fragment>
       <CssBaseline />
