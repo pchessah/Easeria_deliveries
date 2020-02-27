@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from "react";
+import React, { useState, useEffect } from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import CssBaseline from "@material-ui/core/CssBaseline";
 import Paper from "@material-ui/core/Paper";
@@ -47,17 +47,48 @@ export default function Cart(props) {
   const classes = useStyles();
 
   const [cartItems, setItems] = useState([]);
-const defaultItems = [{name: "No item selected", price: 0}]
+  
+  const defaultItems = [{ name: "No item selected", price: 0 }];
 
-  useEffect(()=>{
-    const cartData = JSON.parse(localStorage.getItem("productData"))
-    if (cartData !== null){
-      setItems([...cartData])
+  useEffect(() => {
+    readItems()
+  }, []);
+
+  function readItems(){
+    const cartData = JSON.parse(localStorage.getItem("productData"));
+    if (cartData !== null) {
+      setItems([...cartData]);
     } else {
-      setItems([...defaultItems])
+      setItems([...defaultItems]);
     }
-    
-  },[])
+  }
+  const handleAdd = (item) => {
+    // let price = cartData.price
+    // price+price
+    let cartProducts = JSON.parse(localStorage.productData);
+    for (let i = 0; i < cartProducts.length; i++) {
+       if(item.name === cartProducts[i].name){  //look for match with name
+        cartProducts[i].quantity= Number(cartProducts[i].quantity)+1 ;  //add two
+           break;  //exit loop since you found the person
+       }
+    }
+    localStorage.setItem("productData", JSON.stringify(cartProducts));  //put the object back
+    return readItems()
+  }
+
+  const handleMinus = (item) => {
+    let cartProducts = JSON.parse(localStorage.productData);
+    for (let i = 0; i < cartProducts.length; i++) {
+       if(item.name === cartProducts[i].name && cartProducts[i].quantity>1){  //look for match with name
+        cartProducts[i].quantity= Number(cartProducts[i].quantity)-1 ;  //add two
+           break;  //exit loop since you found the person
+       }
+    }
+    localStorage.setItem("productData", JSON.stringify(cartProducts));  //put the object back
+    return readItems()
+  }
+
+
 
   return (
     <React.Fragment>
@@ -68,26 +99,25 @@ const defaultItems = [{name: "No item selected", price: 0}]
             Cart
             <Table className="cart" hover responsive>
               <thead>
-                <tr>                 
+                <tr>
                   <th>Item description</th>
                   <th>Quantity</th>
                   <th>Price</th>
                 </tr>
               </thead>
               <tbody>
-                {
-                  cartItems && cartItems.map((item,i)=>{
-                    const {name, price} = item;
+                {cartItems &&
+                  cartItems.map((item, i) => {
+                    const { name, price, quantity } = item;
                     return (
                       <tr key={i}>
-                      <td>{name}</td>
-                      <td>1</td>
-                      <td>{price}</td>
-                    </tr>
-                    )
-                  })
-                }
-               
+                        <td>{name}</td>
+                        <td>{quantity}<button type="button" onClick={()=>handleAdd(item)}>+</button><button onClick={()=>handleMinus(item)}>-</button></td>
+                        <td>{Number(price)*Number(quantity)}</td>
+                      </tr>
+                    );
+                  })}
+
                 <tr className="cartTotal">
                   <td>Total</td>
                   <td>1</td>
@@ -96,9 +126,9 @@ const defaultItems = [{name: "No item selected", price: 0}]
               </tbody>
             </Table>
             <div className="cartButton">
-            <Button color="warning">Shop More</Button>{' '}
-            <Button color="success">Place Order</Button>{' '}
-            <Button color="danger">Cancel Order</Button>{' '}
+              <Button color="warning">Shop More</Button>{" "}
+              <Button color="success">Place Order</Button>{" "}
+              <Button color="danger">Cancel Order</Button>{" "}
             </div>
           </Typography>
         </Paper>
