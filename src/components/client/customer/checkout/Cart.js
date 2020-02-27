@@ -47,14 +47,14 @@ export default function Cart(props) {
   const classes = useStyles();
 
   const [cartItems, setItems] = useState([]);
-  
+
   const defaultItems = [{ name: "No item selected", price: 0 }];
 
   useEffect(() => {
-    readItems()
+    readItems();
   }, []);
 
-  function readItems(){
+  function readItems() {
     const cartData = JSON.parse(localStorage.getItem("productData"));
     if (cartData !== null) {
       setItems([...cartData]);
@@ -62,33 +62,33 @@ export default function Cart(props) {
       setItems([...defaultItems]);
     }
   }
-  const handleAdd = (item) => {
+  const handleAdd = item => {
     // let price = cartData.price
     // price+price
     let cartProducts = JSON.parse(localStorage.productData);
     for (let i = 0; i < cartProducts.length; i++) {
-       if(item.name === cartProducts[i].name){  //look for match with name
-        cartProducts[i].quantity= Number(cartProducts[i].quantity)+1 ;  //add two
-           break;  //exit loop since you found the person
-       }
+      if (item.name === cartProducts[i].name) {
+        //look for match with name
+        cartProducts[i].quantity = Number(cartProducts[i].quantity) + 1; //add two
+        break; //exit loop since you found the person
+      }
     }
-    localStorage.setItem("productData", JSON.stringify(cartProducts));  //put the object back
-    return readItems()
-  }
+    localStorage.setItem("productData", JSON.stringify(cartProducts)); //put the object back
+    return readItems();
+  };
 
-  const handleMinus = (item) => {
+  const handleMinus = item => {
     let cartProducts = JSON.parse(localStorage.productData);
     for (let i = 0; i < cartProducts.length; i++) {
-       if(item.name === cartProducts[i].name && cartProducts[i].quantity>1){  //look for match with name
-        cartProducts[i].quantity= Number(cartProducts[i].quantity)-1 ;  //add two
-           break;  //exit loop since you found the person
-       }
+      if (item.name === cartProducts[i].name && cartProducts[i].quantity > 1) {
+        //look for match with name
+        cartProducts[i].quantity = Number(cartProducts[i].quantity) - 1; //add two
+        break; //exit loop since you found the person
+      }
     }
-    localStorage.setItem("productData", JSON.stringify(cartProducts));  //put the object back
-    return readItems()
-  }
-
-
+    localStorage.setItem("productData", JSON.stringify(cartProducts)); //put the object back
+    return readItems();
+  };
 
   return (
     <React.Fragment>
@@ -101,7 +101,7 @@ export default function Cart(props) {
               <thead>
                 <tr>
                   <th>Item description</th>
-                  <th>Quantity</th>
+                  <th style={{marginLeft:"10px"}}>Quantity</th>
                   <th>Price</th>
                 </tr>
               </thead>
@@ -112,15 +112,32 @@ export default function Cart(props) {
                     return (
                       <tr key={i}>
                         <td>{name}</td>
-                        <td>{quantity}<button type="button" onClick={()=>handleAdd(item)}>+</button><button onClick={()=>handleMinus(item)}>-</button></td>
-                        <td>{Number(price)*Number(quantity)}</td>
+                        <td>
+                          <Button
+                            style={{ marginRight: "12px" }}
+                            color="secondary"
+                            onClick={() => handleAdd(item)}
+                          >
+                            +
+                          </Button>
+                          {quantity}
+                          <Button
+                            style={{ margin: "10px" }}
+                            color="secondary"
+                            onClick={() => handleMinus(item)}
+                          >
+                            -
+                          </Button>
+                        </td>
+
+                        <td>{Number(price) * Number(quantity)}</td>
                       </tr>
                     );
                   })}
 
                 <tr className="cartTotal">
                   <td>Total</td>
-                  <td>1</td>
+                  <td>10000</td>
                   <td>Ksh 250</td>
                 </tr>
               </tbody>
