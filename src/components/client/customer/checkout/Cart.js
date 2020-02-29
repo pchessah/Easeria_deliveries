@@ -79,6 +79,7 @@ export default function Cart(props) {
 
   const handleMinus = item => {
     let cartProducts = JSON.parse(localStorage.productData);
+    console.log(cartProducts);
     for (let i = 0; i < cartProducts.length; i++) {
       if (item.name === cartProducts[i].name && cartProducts[i].quantity > 1) {
         //look for match with name
@@ -89,6 +90,23 @@ export default function Cart(props) {
     localStorage.setItem("productData", JSON.stringify(cartProducts)); //put the object back
     return readItems();
   };
+
+  let total = [];
+  let cartTotal;
+  const handleTotal = () => {
+    let cartProducts = JSON.parse(localStorage.productData);
+
+    for (let i = 0; i < cartProducts.length; i++) {
+      total = [...total, cartProducts[i].quantity * cartProducts[i].price];
+      cartTotal = total.reduce((current, item) => {
+        return item + current;
+      });
+    }
+
+   return (cartTotal)
+  };
+  
+  ;
 
   return (
     <React.Fragment>
@@ -101,7 +119,7 @@ export default function Cart(props) {
               <thead>
                 <tr>
                   <th>Item description</th>
-                  <th style={{marginLeft:"10px"}}>Quantity</th>
+                  <th style={{ marginLeft: "10px" }}>Quantity</th>
                   <th>Price</th>
                 </tr>
               </thead>
@@ -134,11 +152,13 @@ export default function Cart(props) {
                       </tr>
                     );
                   })}
-
+                
                 <tr className="cartTotal">
                   <td>Total</td>
-                  <td>10000</td>
-                  <td>Ksh 250</td>
+                  <td> </td>
+                  <td>
+                   {handleTotal()}
+                  </td>
                 </tr>
               </tbody>
             </Table>
