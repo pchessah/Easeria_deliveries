@@ -48,7 +48,7 @@ export default function Cart(props) {
 
   const [cartItems, setItems] = useState([]);
 
-  const defaultItems = [{ name: "No item selected", price: 0 }];
+  const defaultItems = [{ name: "No item selected", price: 0, quantity: 0 }];
 
   useEffect(() => {
     readItems();
@@ -63,8 +63,6 @@ export default function Cart(props) {
     }
   }
   const handleAdd = item => {
-    // let price = cartData.price
-    // price+price
     let cartProducts = JSON.parse(localStorage.productData);
     for (let i = 0; i < cartProducts.length; i++) {
       if (item.name === cartProducts[i].name) {
@@ -94,19 +92,21 @@ export default function Cart(props) {
   let total = [];
   let cartTotal;
   const handleTotal = () => {
-    let cartProducts = JSON.parse(localStorage.productData);
 
-    for (let i = 0; i < cartProducts.length; i++) {
-      total = [...total, cartProducts[i].quantity * cartProducts[i].price];
-      cartTotal = total.reduce((current, item) => {
-        return item + current;
-      });
+    if ((localStorage.getItem("productData")) === null) {
+      cartTotal = 0;
+    } else {
+      let cartProducts = JSON.parse(localStorage.productData);
+      for (let i = 0; i < cartProducts.length; i++) {
+        total = [...total, cartProducts[i].quantity * cartProducts[i].price];
+        cartTotal = total.reduce((current, item) => {
+          return item + current;
+        });
+      }
     }
 
-   return (cartTotal)
+    return cartTotal;
   };
-  
-  ;
 
   return (
     <React.Fragment>
@@ -115,11 +115,11 @@ export default function Cart(props) {
         <Paper className={classes.paper}>
           <Typography component="h1" variant="h4" align="center">
             Cart
-            <Table className="cart" hover responsive>
+            <Table className="cart container-fluid" hover responsive>
               <thead>
                 <tr>
                   <th>Item description</th>
-                  <th style={{ marginLeft: "10px" }}>Quantity</th>
+                  <th style={{ marginLeft: "18px" }}>Quantity</th>
                   <th>Price</th>
                 </tr>
               </thead>
@@ -152,13 +152,11 @@ export default function Cart(props) {
                       </tr>
                     );
                   })}
-                
+
                 <tr className="cartTotal">
                   <td>Total</td>
                   <td> </td>
-                  <td>
-                   {handleTotal()}
-                  </td>
+                  <td>{handleTotal()}</td>
                 </tr>
               </tbody>
             </Table>
