@@ -26,6 +26,7 @@ import CourierConfirm from '../components/client/courier/CourierConfirm';
 import ProductList from '../components/client/products/ProductList';
 import AvailableOrders from '../components/client/courier/AvailableOrders';
 import Cart from '../components/client/customer/checkout/Cart'
+import DeliveryType from '../components/client/customer/DeliveryType';
 
 
 // Private routes.
@@ -56,6 +57,7 @@ const courierConfirm = ()=> <CourierConfirm/>
 const productList = () => <ProductList/>
 const availableOrders = () => <AvailableOrders/>
 const cart = () => <Cart/>
+const deliveryType = ()=> <DeliveryType/>
 
 export {
   home,
@@ -84,5 +86,6 @@ export {
   courierConfirm,
   productList,
   availableOrders,
-  cart
+  cart,
+  deliveryType
 };

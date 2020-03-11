@@ -22,6 +22,7 @@ import SignupCustomer from "../components/client/customer/signupCustomer";
 import CourierList from "../components/client/courier/CourierList";
 import CourierConfirm from "../components/client/courier/CourierConfirm";
 import Cart from "../components/client/customer/checkout/Cart";
+import DeliveryType from "../components/client/customer/DeliveryType";
 
 const PublicRoutes = () => (
   <div>
@@ -49,6 +50,7 @@ const PublicRoutes = () => (
       <Route path="/courierList" component={CourierList} />
       <Route path="/courierConfirm" component={CourierConfirm} />
       <Route path="/cart" component={Cart}/>
+      <Route path="/deliveryType" component={DeliveryType}/>
 
       {/* <Route component={NotFound} /> */}
     </Switch>

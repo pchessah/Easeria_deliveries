@@ -7,6 +7,7 @@ import {
   Card
 } from "reactstrap";
 
+
 const items = [
   {
     src:
@@ -34,7 +35,7 @@ const items = [
   }
 ];
 
-function Home() {
+function Home(props) {
   return (
     <div>
       <Card
@@ -54,7 +55,13 @@ function Home() {
           <Input placeholder="enter destination location" />
         </InputGroup>
         <hr />
-        <Button color="secondary"> Confirm Order </Button>
+        <Button
+          type="button"
+          color="secondary"
+          onClick={() => props.history.push("/deliveryType")}
+        >
+          Confirm Order
+        </Button>
       </Card>
 
       <UncontrolledCarousel

@@ -24,7 +24,7 @@ function SignupShopOwner() {
   console.log(response);
 
   return (
-    <div>
+    <div className="container">
       <div className="split right">
         <div className="signupcentered signup">
           <h1> Sign Up </h1>

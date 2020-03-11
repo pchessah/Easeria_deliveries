@@ -109,6 +109,11 @@ const components = {
     component: "cart",
     url: "/cart",
     module: 1
+  },
+  deliveryType: {
+    component: "deliveryType",
+    url: "/deliveryType",
+    module: 1
   }
 };
 
@@ -143,7 +148,8 @@ const {
   productList,
   home,
   availableOrders,
-  cart
+  cart,
+  deliveryType
 } = components;
 const rolesConfig = {
   admin: {
@@ -164,7 +170,8 @@ const rolesConfig = {
       contactAdmin,
       courierList,
       courierConfirm,
-      cart
+      cart,
+      deliveryType
     ]
   },
   courier: {
@@ -174,7 +181,8 @@ const rolesConfig = {
       contactShopOwner,
       contactAdmin,
       contactCustomer,
-      availableOrders
+      availableOrders,
+      deliveryType
     ]
   },
   shopOwner: {
@@ -184,7 +192,8 @@ const rolesConfig = {
       contactAdmin,
       contactCourier,
       contactCustomer,
-      productList
+      productList,
+      deliveryType
     ]
   },
   common: {
