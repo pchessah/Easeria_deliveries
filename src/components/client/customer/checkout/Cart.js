@@ -4,7 +4,17 @@ import CssBaseline from "@material-ui/core/CssBaseline";
 import Paper from "@material-ui/core/Paper";
 import Link from "@material-ui/core/Link";
 import Typography from "@material-ui/core/Typography";
-import { Table, Button } from "reactstrap";
+import {
+  Table,
+  Button,
+  Modal,
+  ModalHeader,
+  ModalBody,
+  ModalFooter,
+  InputGroup,
+  Input,
+  Card
+} from "reactstrap";
 
 const useStyles = makeStyles(theme => ({
   appBar: {
@@ -44,7 +54,17 @@ const useStyles = makeStyles(theme => ({
 }));
 
 export default function Cart(props) {
+  const { className } = props;
   const classes = useStyles();
+  const [modal, setModal] = useState(false);
+
+  const toggle = () => setModal(!modal);
+
+  const closeBtn = (
+    <button className="close" onClick={toggle}>
+      &times;
+    </button>
+  );
 
   const [cartItems, setItems] = useState([]);
 
@@ -92,8 +112,7 @@ export default function Cart(props) {
   let total = [];
   let cartTotal;
   const handleTotal = () => {
-
-    if ((localStorage.getItem("productData")) === null) {
+    if (localStorage.getItem("productData") === null) {
       cartTotal = 0;
     } else {
       let cartProducts = JSON.parse(localStorage.productData);
@@ -154,7 +173,7 @@ export default function Cart(props) {
                   })}
 
                 <tr className="cartTotal">
-                  <td>Total</td>
+                  <td>Cart Total</td>
                   <td> </td>
                   <td>{handleTotal()}</td>
                 </tr>
@@ -167,6 +186,45 @@ export default function Cart(props) {
             </div>
           </Typography>
         </Paper>
+        <Button color="primary" onClick={toggle}>
+          Select Delivery Location
+        </Button>
+        <Modal isOpen={modal} toggle={toggle} className={className}>
+          <ModalHeader toggle={toggle} close={closeBtn}>
+         Choose Delivery location and mode
+          </ModalHeader>
+          <ModalBody>
+            <Card
+              style={{
+          
+                padding: "10px",
+
+                zIndex: "2"
+              }}
+            >
+              <InputGroup>
+                <Input placeholder="enter pickup location" />
+              </InputGroup>{" "}
+              <br />
+              <InputGroup>
+                <Input placeholder="enter destination location" />
+              </InputGroup>
+              <hr />
+            </Card>
+          </ModalBody>
+          <ModalFooter>
+            <Button
+              type="button"
+              color="success"
+              onClick={() => props.history.push("/deliveryType")}
+            >
+              Confirm Order
+            </Button>
+            <Button color="danger" onClick={toggle}>
+              Cancel
+            </Button>
+          </ModalFooter>
+        </Modal>
         <Copyright />
       </main>
     </React.Fragment>
