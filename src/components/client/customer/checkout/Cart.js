@@ -13,7 +13,8 @@ import {
   ModalFooter,
   InputGroup,
   Input,
-  Card
+  Card,
+  Fade
 } from "reactstrap";
 
 const useStyles = makeStyles(theme => ({
@@ -57,6 +58,9 @@ export default function Cart(props) {
   const { className } = props;
   const classes = useStyles();
   const [modal, setModal] = useState(false);
+  const [fadeIn, setFadeIn] = useState(false);
+
+  const toggleTotal = () => setFadeIn(!fadeIn);
 
   const toggle = () => setModal(!modal);
 
@@ -181,24 +185,27 @@ export default function Cart(props) {
             </Table>
             <div className="cartButton">
               <Button color="warning">Shop More</Button>{" "}
-              <Button color="success">Place Order</Button>{" "}
+              <Button color="success" onClick={toggleTotal}>
+                Place Order
+              </Button>{" "}              
               <Button color="danger">Cancel Order</Button>{" "}
+              <Fade in={fadeIn} tag="h5" className="mt-3">
+                <p style={{fontWeight: "900", fontSize:"25px"}}>Select delivery location Below </p>
+              </Fade>
             </div>
           </Typography>
         </Paper>
-        <Button color="primary" onClick={toggle}>
+        <Button color="primary" onClick={toggle} style={{width:"100%",marginTop:"-30px", marginBottom:"10px"}}>
           Select Delivery Location
         </Button>
         <Modal isOpen={modal} toggle={toggle} className={className}>
           <ModalHeader toggle={toggle} close={closeBtn}>
-         Choose Delivery location and mode
+            Choose Delivery location and mode
           </ModalHeader>
           <ModalBody>
             <Card
               style={{
-          
                 padding: "10px",
-
                 zIndex: "2"
               }}
             >
@@ -209,6 +216,17 @@ export default function Cart(props) {
               <InputGroup>
                 <Input placeholder="enter destination location" />
               </InputGroup>
+              <br />
+              <InputGroup>
+                <Input type="select">
+                  <option>Select Mode of delivery</option>S
+                  <option>Motorcycle</option>
+                  <option>Foot Courier</option>
+                  <option>Pick Up</option>
+                </Input>
+              </InputGroup>
+              <br />
+              <div>Your Total Price is : KSH 200</div>
               <hr />
             </Card>
           </ModalBody>

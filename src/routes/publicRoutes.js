@@ -11,11 +11,6 @@ import NavigationBar from "../components/client/navbar";
 import Others from "../components/client/products/Others";
 import OtherShops from "../components/client/products/OtherShops";
 import ShopHome from "../components/client/products/ShopHome";
-import AddressForm from "../components/client/customer/checkout/AddressForm";
-import Checkout from "../components/client/customer/checkout/Checkout";
-import PaymentForm from "../components/client/customer/checkout/PaymentForm";
-import Review from "../components/client/customer/checkout/Review";
-import Payment from "../components/client/customer/checkout/Payment";
 import SignupCourier from "../components/client/courier/SignupCourier";
 import SignupShopOwner from "../components/client/shopOwner/SignupShopOwner";
 import SignupCustomer from "../components/client/customer/signupCustomer";
@@ -39,18 +34,14 @@ const PublicRoutes = () => (
       <Route path="/othershop" component={OtherShops} />
       <Route path="/login" component={loginCourier} />
       <Route exact path="/" component={Home} />
-      <Route path="/address" component={AddressForm} />
-      <Route path="/checkout" component={Checkout} />
-      <Route path="/paymentform" component={PaymentForm} />
-      <Route path="/review" component={Review} />
-      <Route path="/payment" component={Payment} />
+
       <Route path="/signupcourier" component={SignupCourier} />
       <Route path="/signupshopowner" component={SignupShopOwner} />
       <Route path="/signupcustomer" component={SignupCustomer} />
       <Route path="/courierList" component={CourierList} />
       <Route path="/courierConfirm" component={CourierConfirm} />
-      <Route path="/cart" component={Cart}/>
-      <Route path="/deliveryType" component={DeliveryType}/>
+      <Route path="/cart" component={Cart} />
+      <Route path="/deliveryType" component={DeliveryType} />
 
       {/* <Route component={NotFound} /> */}
     </Switch>
