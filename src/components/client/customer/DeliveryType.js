@@ -10,6 +10,7 @@ import {
 import { Card } from "react-bootstrap";
 
 function DeliveryType() {
+  const price = JSON.parse(localStorage.getItem("price"));
   return (
     <div>
       <CardGroup style={{ textAlign: "center" }}>
@@ -18,7 +19,7 @@ function DeliveryType() {
             <Card.Header style={{backgroundColor: "#FFF9C9"}}>
               <CardTitle style={{ fontSize: "20px" }}>MotorCycle</CardTitle>
               <CardSubtitle style={{ fontWeight: "900" }}>
-                Price: KSH 100
+                Price: Ksh{price}
               </CardSubtitle>
             </Card.Header>
 

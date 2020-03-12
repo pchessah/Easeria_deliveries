@@ -42,10 +42,15 @@ function Home(props) {
 
   const handleCalculatePrice = (e) => {
    const distance = e.target.value
+   let cash;
     if(distance<3){
-      setPrice(50)
+      cash = 50
+      setPrice(cash)
+      localStorage.setItem("price", JSON.stringify((cash)))
     }else if(distance>3){
-      setPrice(Math.ceil(17*(distance-3) + 50)) 
+      cash = Math.ceil(17*(distance-3) + 50)
+      setPrice(cash)
+      localStorage.setItem("price", JSON.stringify(cash)) 
     }
   };
 console.log(price);
