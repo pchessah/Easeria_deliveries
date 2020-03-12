@@ -40,7 +40,7 @@ function Home(props) {
     <div>
       <Card
         style={{
-          width: "500px",
+          width: "300px",
           padding: "10px",
           position: "fixed",
           zIndex: "2",
