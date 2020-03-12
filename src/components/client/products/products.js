@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import {
-  Card,
   Button,
   CardImg,
   CardTitle,
@@ -9,9 +8,9 @@ import {
   CardSubtitle,
   CardBody
 } from "reactstrap";
+import {Card} from 'react-bootstrap'
 import { toast } from "react-toastify";
 import productData from "../products/products.json";
-
 
 function Products(props) {
   const [data, setData] = useState();
@@ -40,7 +39,9 @@ function Products(props) {
       }
     }
   };
+
   
+
   return (
     <div className="container">
       <div className="row">
@@ -50,6 +51,7 @@ function Products(props) {
               <CardGroup
                 className="col-xm-12 col-sm-6 col-md-4 col-lg-3"
                 key={indx}
+                style={{ marginTop: "10px" }}
               >
                 <Card className="product">
                   <CardImg
@@ -60,11 +62,18 @@ function Products(props) {
                     alt="Card image cap"
                   />
                   <CardBody>
-                    <CardTitle>{productValue.name}</CardTitle>
-                    <CardSubtitle>Ksh {productValue.price}</CardSubtitle>
-                    <CardText>{productValue.description}</CardText>
-                    <br />
-                    <Button onClick={() => handleAddCart(productValue)}>
+                    <hr />
+                    <Card.Header>
+                      <CardTitle>{productValue.name}</CardTitle>
+                      <CardSubtitle>Ksh {productValue.price}</CardSubtitle>
+                      <CardText>{productValue.description}</CardText>
+                    </Card.Header>
+                    <hr />
+                    <Button
+                      style={{ width: "100%" }}
+                      color="success"
+                      onClick={() => handleAddCart(productValue)}
+                    >
                       Add to cart
                     </Button>
                   </CardBody>
