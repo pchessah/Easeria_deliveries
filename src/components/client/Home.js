@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   UncontrolledCarousel,
   InputGroup,
@@ -7,6 +7,7 @@ import {
   Card
 } from "reactstrap";
 
+import { places } from "./places";
 
 const items = [
   {
@@ -36,6 +37,21 @@ const items = [
 ];
 
 function Home(props) {
+  
+  const [price, setPrice]=useState(null)
+
+  const handleCalculatePrice = (e) => {
+   const distance = e.target.value
+    if(distance<3){
+      setPrice(50)
+    }else if(distance>3){
+      setPrice(Math.ceil(17*(distance-3) + 50)) 
+    }
+  };
+console.log(price);
+  
+  // console.log(loc);
+
   return (
     <div>
       <Card
@@ -48,12 +64,22 @@ function Home(props) {
         }}
       >
         <InputGroup>
-          <Input placeholder="enter pickup location" />
+          <Input type="select">
+            <option>LakeHub, Okore Road</option>
+          </Input>
         </InputGroup>{" "}
         <br />
         <InputGroup>
-          <Input placeholder="enter destination location" />
+          <Input type="select" onChange={handleCalculatePrice}>
+            <option> Choose Destination </option>
+            {places.map(({ name, distance }, i) => (
+              <option key={i} value={distance}>
+                {name}
+              </option>
+            ))}
+          </Input>
         </InputGroup>
+            <p>{price?`Estimated price: Ksh ${price}`:""}</p>
         <hr />
         <Button
           type="button"
