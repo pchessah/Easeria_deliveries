@@ -8,6 +8,8 @@ import {
 } from "reactstrap";
 
 import { places } from "./places";
+import { MdDirectionsBike } from "react-icons/md";
+import { FaWalking, FaTruckPickup } from "react-icons/fa";
 
 const items = [
   {
@@ -37,25 +39,38 @@ const items = [
 ];
 
 function Home(props) {
-  
-  const [price, setPrice]=useState(null)
+  const [priceMotorCycle, setPriceMotorCycle] = useState(null);
+  const [priceFoot, setPriceFoot] = useState(null);
+  const [pricePick, setPricePick] = useState(null);
 
-  const handleCalculatePrice = (e) => {
-   const distance = e.target.value
-   let cash;
-    if(distance<3){
-      cash = 50
-      setPrice(cash)
-      localStorage.setItem("price", JSON.stringify((cash)))
-    }else if(distance>3){
-      cash = Math.ceil(17*(distance-3) + 50)
-      setPrice(cash)
-      localStorage.setItem("price", JSON.stringify(cash)) 
+
+  const handleCalculatePrice = e => {
+    const distance = e.target.value;
+    let cash;
+    let cashF;
+    let cashP;
+    if (distance < 3) {
+      cash = 50;
+      cashF = 40;
+      cashP = 150;
+      setPriceMotorCycle(cash);
+      setPriceFoot(cashF)
+      setPricePick(cashP)
+      localStorage.setItem("priceMotorcycle", JSON.stringify(cash));
+      localStorage.setItem("priceFoot", JSON.stringify(cashF));
+      localStorage.setItem("pricePick", JSON.stringify(cashP));
+    } else if (distance > 3) {
+      cash = Math.ceil(17 * (distance - 3) + 50);
+      cashF = Math.ceil(15 * (distance - 3) + 40);
+      cashP = Math.ceil(50 * (distance - 3) + 150);
+      setPriceMotorCycle(cash);
+      setPriceFoot(cashF)
+      setPricePick(cashP)
+      localStorage.setItem("priceMotorcycle", JSON.stringify(cash));
+      localStorage.setItem("priceFoot", JSON.stringify(cashF));
+      localStorage.setItem("pricePick", JSON.stringify(cashP));
     }
-  };
-console.log(price);
-  
-  // console.log(loc);
+  }; 
 
   return (
     <div>
@@ -84,8 +99,18 @@ console.log(price);
             ))}
           </Input>
         </InputGroup>
-            <p>{price?`Estimated price: Ksh ${price}`:""}</p>
-        <hr />
+        <br/>
+        Estimated prices (Ksh)
+              <p>
+                <MdDirectionsBike /> : {priceMotorCycle}
+              </p>
+              <p>
+                <FaWalking /> : {priceFoot}
+              </p>
+              <p>
+                <FaTruckPickup /> : {pricePick}
+              </p>
+              <hr />            
         <Button
           type="button"
           color="secondary"

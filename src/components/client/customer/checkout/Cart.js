@@ -16,6 +16,9 @@ import {
   Card,
   Fade
 } from "reactstrap";
+import { places } from "../../places";
+import { MdDirectionsBike } from "react-icons/md";
+import { FaWalking, FaTruckPickup } from "react-icons/fa";
 
 const useStyles = makeStyles(theme => ({
   appBar: {
@@ -55,10 +58,15 @@ const useStyles = makeStyles(theme => ({
 }));
 
 export default function Cart(props) {
+  const [priceMotorCycle, setPriceMotorCycle] = useState(null);
+  const [priceFoot, setPriceFoot] = useState(null);
+  const [pricePick, setPricePick] = useState(null);
   const { className } = props;
   const classes = useStyles();
   const [modal, setModal] = useState(false);
   const [fadeIn, setFadeIn] = useState(false);
+  const [cartItems, setItems] = useState([]);
+  const defaultItems = [{ name: "No item selected", price: 0, quantity: 0 }];
 
   const toggleTotal = () => setFadeIn(!fadeIn);
 
@@ -70,9 +78,33 @@ export default function Cart(props) {
     </button>
   );
 
-  const [cartItems, setItems] = useState([]);
-
-  const defaultItems = [{ name: "No item selected", price: 0, quantity: 0 }];
+  const handleCalculatePrice = e => {
+    const distance = e.target.value;
+    let cash;
+    let cashF;
+    let cashP;
+    if (distance < 3) {
+      cash = 50;
+      cashF = 40;
+      cashP = 150;
+      setPriceMotorCycle(cash);
+      setPriceFoot(cashF);
+      setPricePick(cashP);
+      localStorage.setItem("priceMotorcycle", JSON.stringify(cash));
+      localStorage.setItem("priceFoot", JSON.stringify(cashF));
+      localStorage.setItem("pricePick", JSON.stringify(cashP));
+    } else if (distance > 3) {
+      cash = Math.ceil(17 * (distance - 3) + 50);
+      cashF = Math.ceil(15 * (distance - 3) + 40);
+      cashP = Math.ceil(50 * (distance - 3) + 150);
+      setPriceMotorCycle(cash);
+      setPriceFoot(cashF);
+      setPricePick(cashP);
+      localStorage.setItem("priceMotorcycle", JSON.stringify(cash));
+      localStorage.setItem("priceFoot", JSON.stringify(cashF));
+      localStorage.setItem("pricePick", JSON.stringify(cashP));
+    }
+  };
 
   useEffect(() => {
     readItems();
@@ -187,17 +219,24 @@ export default function Cart(props) {
               <Button color="warning">Shop More</Button>{" "}
               <Button color="success" onClick={toggleTotal}>
                 Place Order
-              </Button>{" "}              
+              </Button>{" "}
               <Button color="danger">Cancel Order</Button>{" "}
               <Fade in={fadeIn} tag="h5" className="mt-3">
-                <p style={{fontWeight: "900", fontSize:"25px"}}>Select delivery location Below </p>
+                <p style={{ fontWeight: "900", fontSize: "25px" }}>
+                  Select delivery location Below{" "}
+                </p>
               </Fade>
             </div>
           </Typography>
         </Paper>
-        <Button color="primary" onClick={toggle} style={{width:"100%",marginTop:"-30px", marginBottom:"10px"}}>
+        <Button
+          color="primary"
+          onClick={toggle}
+          style={{ width: "100%", marginTop: "-30px", marginBottom: "10px" }}
+        >
           Select Delivery Location
         </Button>
+
         <Modal isOpen={modal} toggle={toggle} className={className}>
           <ModalHeader toggle={toggle} close={closeBtn}>
             Choose Delivery location and mode
@@ -210,24 +249,33 @@ export default function Cart(props) {
               }}
             >
               <InputGroup>
-                <Input placeholder="enter pickup location" />
+                <Input type="select">
+                  <option>LakeHub, Okore Road</option>
+                </Input>
               </InputGroup>{" "}
               <br />
               <InputGroup>
-                <Input placeholder="enter destination location" />
-              </InputGroup>
-              <br />
-              <InputGroup>
-                <Input type="select">
-                  <option>Select Mode of delivery</option>S
-                  <option>Motorcycle</option>
-                  <option>Foot Courier</option>
-                  <option>Pick Up</option>
+                <Input type="select" onChange={handleCalculatePrice}>
+                  <option> Choose Destination </option>
+                  {places.map(({ name, distance }, i) => (
+                    <option key={i} value={distance}>
+                      {name}
+                    </option>
+                  ))}
                 </Input>
               </InputGroup>
               <br />
-              <div>Your Total Price is : KSH 200</div>
-              <hr />
+              Estimated prices (Ksh)
+              <p>
+                <MdDirectionsBike /> : {priceMotorCycle}
+              </p>
+              <p>
+                <FaWalking /> : {priceFoot}
+              </p>
+              <p>
+                <FaTruckPickup /> : {pricePick}
+              </p>
+              <hr />              
             </Card>
           </ModalBody>
           <ModalFooter>

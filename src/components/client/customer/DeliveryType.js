@@ -10,7 +10,9 @@ import {
 import { Card } from "react-bootstrap";
 
 function DeliveryType() {
-  const price = JSON.parse(localStorage.getItem("price"));
+  const priceMotorcycle = JSON.parse(localStorage.getItem("priceMotorcycle"));
+  const priceFoot = JSON.parse(localStorage.getItem("priceFoot"));
+  const pricePick = JSON.parse(localStorage.getItem("pricePick"));
   return (
     <div>
       <CardGroup style={{ textAlign: "center" }}>
@@ -19,7 +21,7 @@ function DeliveryType() {
             <Card.Header style={{backgroundColor: "#FFF9C9"}}>
               <CardTitle style={{ fontSize: "20px" }}>MotorCycle</CardTitle>
               <CardSubtitle style={{ fontWeight: "900" }}>
-                Price: Ksh{price}
+                Price: Ksh{priceMotorcycle}
               </CardSubtitle>
             </Card.Header>
 
@@ -48,7 +50,7 @@ function DeliveryType() {
             <Card.Header style={{backgroundColor: "#FFF9C9"}}>
               <CardTitle style={{ fontSize: "20px" }}>Foot Courier</CardTitle>
               <CardSubtitle style={{ fontWeight: "900" }}>
-                Price: KSH 70
+                Price: KSH {priceFoot}
               </CardSubtitle>
             </Card.Header>
             <CardImg
@@ -77,7 +79,7 @@ function DeliveryType() {
             <Card.Header style={{backgroundColor: "#FFF9C9"}}>
               <CardTitle style={{ fontSize: "20px" }}>Pick Up</CardTitle>
               <CardSubtitle style={{ fontWeight: "900" }}>
-                Price: KSH 200
+                Price: KSH {pricePick}
               </CardSubtitle>
             </Card.Header>
             <CardImg
