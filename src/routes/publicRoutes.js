@@ -18,11 +18,12 @@ import CourierList from "../components/client/courier/CourierList";
 import CourierConfirm from "../components/client/courier/CourierConfirm";
 import Cart from "../components/client/customer/checkout/Cart";
 import DeliveryType from "../components/client/customer/DeliveryType";
+import FinalConfirm from "../components/client/customer/checkout/FinalConfirm";
+
 
 const PublicRoutes = () => (
   <div>
     <NavigationBar />
-
     <Switch>
       <Route path="/login" component={Login} />
       <Route path="/about" component={Aboutus} />
@@ -42,6 +43,7 @@ const PublicRoutes = () => (
       <Route path="/courierConfirm" component={CourierConfirm} />
       <Route path="/cart" component={Cart} />
       <Route path="/deliveryType" component={DeliveryType} />
+      <Route path="/finalConfirm" component={FinalConfirm}/>
 
       {/* <Route component={NotFound} /> */}
     </Switch>

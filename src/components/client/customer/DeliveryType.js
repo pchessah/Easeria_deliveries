@@ -60,7 +60,6 @@ function DeliveryType() {
               src="https://images.pexels.com/photos/1466852/pexels-photo-1466852.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
               alt="Card image cap"
             />
-
             <Button
               style={{
                 marginTop: "10px",

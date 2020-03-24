@@ -114,6 +114,11 @@ const components = {
     component: "deliveryType",
     url: "/deliveryType",
     module: 1
+  },
+  finalConfirm: {
+    component: "finalConfirm",
+    url: "/finalConfirm",
+    module: 1
   }
 };
 
@@ -149,7 +154,8 @@ const {
   home,
   availableOrders,
   cart,
-  deliveryType
+  deliveryType,
+  finalConfirm
 } = components;
 const rolesConfig = {
   admin: {
@@ -171,7 +177,8 @@ const rolesConfig = {
       courierList,
       courierConfirm,
       cart,
-      deliveryType
+      deliveryType,
+      finalConfirm
     ]
   },
   courier: {
@@ -182,7 +189,8 @@ const rolesConfig = {
       contactAdmin,
       contactCustomer,
       availableOrders,
-      deliveryType
+      deliveryType,
+      finalConfirm
     ]
   },
   shopOwner: {
@@ -193,7 +201,8 @@ const rolesConfig = {
       contactCourier,
       contactCustomer,
       productList,
-      deliveryType
+      deliveryType,
+      finalConfirm
     ]
   },
   common: {

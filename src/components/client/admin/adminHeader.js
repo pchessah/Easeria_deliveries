@@ -13,7 +13,7 @@ import ChevronLeftIcon from "@material-ui/icons/ChevronLeft";
 // import mainListItems from "../client/sidebar";
 import Avatar from "@material-ui/icons/Person";
 import ListItem from "@material-ui/core/ListItem";
-import {Container} from "react-bootstrap"
+import { Container } from "react-bootstrap";
 
 import ListItemText from "@material-ui/core/ListItemText";
 import { makeStyles } from "@material-ui/core/styles";
@@ -111,60 +111,60 @@ const Header = ({ sideLinks }) => {
   return (
     <div>
       <Container>
-      <AppBar
-        style={{ height: "2px" }}
-        position="absolute"
-        className={clsx(classes.appBar, open && classes.appBarShift)}
-      >
-        <Navbar />
-        <Toolbar className={`navcolor ${classes.toolbar}`}>
-          <IconButton
-            edge="start"
-            color="default"
-            aria-label="open drawer"
-            onClick={handleDrawerOpen}
-            className={clsx(
-              classes.menuButton,
-              open && classes.menuButtonHidden
-            )}
-          >
-            <MenuIcon />
-          </IconButton>
-          <div className={classes.title}></div>
+        <AppBar
+          style={{ height: "2px" }}
+          position="absolute"
+          className={clsx(classes.appBar, open && classes.appBarShift)}
+        >
+          <Navbar />
+          <Toolbar className={`navcolor ${classes.toolbar}`}>
+            <IconButton
+              edge="start"
+              color="default"
+              aria-label="open drawer"
+              onClick={handleDrawerOpen}
+              className={clsx(
+                classes.menuButton,
+                open && classes.menuButtonHidden
+              )}
+            >
+              <MenuIcon />
+            </IconButton>
+            <div className={classes.title}></div>
 
-          <ProfileDropdown logout={handleLogout} />
-        </Toolbar>
-      </AppBar>
-      <Drawer
-        variant="permanent"
-        classes={{
-          paper: clsx(classes.drawerPaper, !open && classes.drawerPaperClose)
-        }}
-        open={open}
-      >
-        <div className={classes.toolbarIcon}>
-          <span style={{ color: "white" }}></span>
-          <IconButton onClick={handleDrawerClose}>
-            <ChevronLeftIcon style={{ color: "#ffff" }} />
-          </IconButton>
-        </div>
-        <Divider />
-        <List className="sideText">
-          {sideLinks &&
-            sideLinks.map((item, i) => {
-              const { name, link } = item;
-              return (
-                <div key={i} className="sideText">
-                  <Link to={link}>
-                    <ListItem button>
-                      <ListItemText primary={name} />
-                    </ListItem>
-                  </Link>
-                </div>
-              );
-            })}
-        </List>
-      </Drawer>
+            <ProfileDropdown logout={handleLogout} />
+          </Toolbar>
+        </AppBar>
+        <Drawer
+          variant="permanent"
+          classes={{
+            paper: clsx(classes.drawerPaper, !open && classes.drawerPaperClose)
+          }}
+          open={open}
+        >
+          <div className={classes.toolbarIcon}>
+            <span style={{ color: "white" }}></span>
+            <IconButton onClick={handleDrawerClose}>
+              <ChevronLeftIcon style={{ color: "#ffff" }} />
+            </IconButton>
+          </div>
+          <Divider />
+          <List className="sideText">
+            {sideLinks &&
+              sideLinks.map((item, i) => {
+                const { name, link } = item;
+                return (
+                  <div key={i} className="sideText">
+                    <Link to={link}>
+                      <ListItem button>
+                        <ListItemText primary={name} />
+                      </ListItem>
+                    </Link>
+                  </div>
+                );
+              })}
+          </List>
+        </Drawer>
       </Container>
     </div>
   );
