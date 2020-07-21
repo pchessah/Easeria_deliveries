@@ -4,7 +4,11 @@ import {
   InputGroup,
   Button,
   Input,
-  Card
+  Card,
+  Modal,
+  ModalHeader,
+  ModalBody,
+  ModalFooter,
 } from "reactstrap";
 
 import { places } from "./places";
@@ -43,6 +47,21 @@ function Home(props) {
   const [priceFoot, setPriceFoot] = useState(null);
   const [pricePick, setPricePick] = useState(null);
 
+  
+  const [modal, setModal] = useState(true);
+  const [fadeIn, setFadeIn] = useState(false);
+  const toggleTotal = () => setFadeIn(!fadeIn);
+  const { className } = props;
+
+  const toggle = () => setModal(!modal);
+
+  const closeBtn = (
+    <button className="close" onClick={toggle}>
+      &times;
+    </button>
+  );
+
+
 
   const handleCalculatePrice = e => {
     const distance = e.target.value;
@@ -74,33 +93,35 @@ function Home(props) {
 
   return (
     <div>
-      <Card
-        style={{
-          width: "300px",
-          padding: "10px",
-          position: "fixed",
-          zIndex: "2",
-          right: "5px"
-        }}
-      >
-        <InputGroup>
-          <Input type="select">
-            <option>LakeHub, Okore Road</option>
-          </Input>
-        </InputGroup>{" "}
-        <br />
-        <InputGroup>
-          <Input type="select" onChange={handleCalculatePrice}>
-            <option> Choose Destination </option>
-            {places.map(({ name, distance }, i) => (
-              <option key={i} value={distance}>
-                {name}
-              </option>
-            ))}
-          </Input>
-        </InputGroup>
-        <br/>
-        Estimated prices (Ksh)
+       <Modal isOpen={modal} toggle={toggle} className={className}>
+          <ModalHeader toggle={toggle} close={closeBtn}>
+            Choose Delivery location and mode
+          </ModalHeader>
+          <ModalBody>
+            <Card
+              style={{
+                padding: "10px",
+                zIndex: "2"
+              }}
+            >
+              <InputGroup>
+                <Input type="select">
+                  <option>LakeHub, Okore Road</option>
+                </Input>
+              </InputGroup>{" "}
+              <br />
+              <InputGroup>
+                <Input type="select" onChange={handleCalculatePrice}>
+                  <option> Choose Destination </option>
+                  {places.map(({ name, distance }, i) => (
+                    <option key={i} value={distance}>
+                      {name}
+                    </option>
+                  ))}
+                </Input>
+              </InputGroup>
+              <br />
+              Estimated prices (Ksh)
               <p>
                 <MdDirectionsBike /> : {priceMotorCycle}
               </p>
@@ -110,15 +131,23 @@ function Home(props) {
               <p>
                 <FaTruckPickup /> : {pricePick}
               </p>
-              <hr />            
-        <Button
-          type="button"
-          color="secondary"
-          onClick={() => props.history.push("/deliveryType")}
-        >
-          Confirm Order
-        </Button>
-      </Card>
+              <hr />              
+            </Card>
+          </ModalBody>
+          <ModalFooter>
+            <Button
+              type="button"
+              color="success"
+              onClick={() => props.history.push("/deliveryType")}
+            >
+              Confirm Order
+            </Button>
+            <Button color="danger" onClick={toggle}>
+              Cancel
+            </Button>
+          </ModalFooter>
+        </Modal>
+ 
 
       <UncontrolledCarousel
         className="homeCarousel"

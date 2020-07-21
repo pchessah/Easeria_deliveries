@@ -14,15 +14,10 @@
 }
 
 @media (max-width: 600px){
-  .left{
-    display: none !important;
-    opacity: 0.0;
-    visibility: hidden;
-    position: absolute;
-    left:-99999px;
-
-  }
-  
+ .split{
+   display: flex;
+   flex-wrap: wrap-reverse;
+ }
 }
 
 html{

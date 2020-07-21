@@ -1,5 +1,5 @@
-import React from "react";
-import { Nav, Navbar } from "react-bootstrap";
+import React, { useState } from "react";
+import { Nav, Navbar, Button } from "react-bootstrap";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 
@@ -18,11 +18,29 @@ const Styles = styled.div`
 `;
 
 function NavigationBar() {
+  const [modal, setModal] = useState(true);
+  const toggle = () => setModal(!modal);
   return (
     <Styles>
       <Navbar expand="lg">
         <Navbar.Brand>
-          <h2 className="home-link">Easeria Deliveries </h2>
+          <div style={{display:"flex"}}>
+            <h2 className="home-link">Easeria Deliveries </h2>
+          
+            <Button
+              
+              onClick={toggle}
+              style={{
+                width: "100%",
+                marginTop: "5px",
+                marginLeft: "6rem",
+                marginBottom: "10px",
+                backgroundColor: "#3A20B35"
+              }}
+            >
+              Select Delivery Location
+            </Button>
+          </div>
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse
